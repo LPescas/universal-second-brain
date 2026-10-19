@@ -103,6 +103,71 @@ class TestFrontendOverhaul(unittest.TestCase):
         self.assertIn("initAurelioChat", js)
         self.assertIn("checkOllamaStatus", js)
 
+    def test_06_dashboard_clean_and_removed_tabs(self):
+        """Validates that Por Projeto, Histórico, and Evolução were completely removed."""
+        index_html = os.path.join(BASE_DIR, "frontend", "index.html")
+        with open(index_html, "r", encoding="utf-8") as f:
+            html = f.read()
+
+        self.assertNotIn("Por Projeto", html)
+        self.assertNotIn('data-section="history"', html)
+        self.assertNotIn('data-section="evolution"', html)
+        self.assertNotIn('id="section-history"', html)
+        self.assertNotIn('id="section-evolution"', html)
+
+    def test_07_repos_hub_git_commit_metadata_and_add_box(self):
+        """Validates commit date format (dia/mês/ano às horário) and dynamic add box."""
+        index_html = os.path.join(BASE_DIR, "frontend", "index.html")
+        with open(index_html, "r", encoding="utf-8") as f:
+            html = f.read()
+
+        self.assertIn("add-repo-box", html)
+        self.assertIn("new-repo-url", html)
+        self.assertIn("add-repo-btn", html)
+
+        repos_data_path = os.path.join(BASE_DIR, "frontend", "repos_data.json")
+        with open(repos_data_path, "r", encoding="utf-8") as f:
+            repos = json.load(f)
+
+        self.assertGreaterEqual(len(repos), 25)
+        for r in repos:
+            self.assertIn("last_commit_date", r)
+            self.assertIn("git_version", r)
+            self.assertIn("às", r["last_commit_date"], f"Commit date '{r['last_commit_date']}' must contain 'às'")
+
+    def test_08_knowledge_domains_and_details_api(self):
+        """Validates KNOWLEDGE_DOMAINS and user preferences."""
+        import server
+        self.assertIn("rpa_architecture", server.KNOWLEDGE_DOMAINS)
+        self.assertIn("frontend_patterns", server.KNOWLEDGE_DOMAINS)
+        self.assertIn("python_patterns", server.KNOWLEDGE_DOMAINS)
+        self.assertIn("user_preferences", server.KNOWLEDGE_DOMAINS)
+
+        rpa = server.KNOWLEDGE_DOMAINS["rpa_architecture"]
+        self.assertGreaterEqual(len(rpa["rules"]), 5)
+        self.assertIn("user_preferences", rpa)
+        self.assertIn("linguagem_preferida", rpa["user_preferences"])
+
+    def test_09_aurelio_ai_personas_and_visibility(self):
+        """Validates Aurelio AI persona selector, mind banner, and fixed visibility."""
+        index_html = os.path.join(BASE_DIR, "frontend", "index.html")
+        with open(index_html, "r", encoding="utf-8") as f:
+            html = f.read()
+
+        self.assertIn("aurelio-persona-select", html)
+        self.assertIn("aurelio-mind-banner", html)
+        self.assertNotIn('id="section-aurelio" class="section" style="display: none', html, "Aurelio must NOT have inline display: none")
+
+        backend_aurelio = os.path.join(BASE_DIR, "backend", "aurelio")
+        if backend_aurelio not in sys.path:
+            sys.path.insert(0, backend_aurelio)
+        from agent import agent
+        self.assertIn("aurelio_master", agent.PERSONAS_DEFINITIONS)
+        self.assertIn("frontend_specialist", agent.PERSONAS_DEFINITIONS)
+        self.assertIn("rpa_specialist", agent.PERSONAS_DEFINITIONS)
+        self.assertIn("zero_trust_guardian", agent.PERSONAS_DEFINITIONS)
+        self.assertGreaterEqual(len(agent.PERSONAS_DEFINITIONS), 8)
+
 
 if __name__ == "__main__":
     unittest.main()

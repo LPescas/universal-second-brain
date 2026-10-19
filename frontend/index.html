@@ -32,23 +32,14 @@
           <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
           Projetos
         </a>
-        <a href="#" class="nav-item" data-section="history">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Histórico
-        </a>
         <a href="#" class="nav-item" data-section="health">
           <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           Saúde
         </a>
         <a href="#" class="nav-item" data-section="knowledge">
           <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Conhecimento
+          Base de Conhecimento
         </a>
-        <a href="#" class="nav-item" data-section="evolution">
-          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          Evolução
-        </a>
-      
         <a href="#" class="nav-item" data-section="repos">
           <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
           Hub Repositórios
@@ -170,14 +161,6 @@
             </div>
             <div class="chart-area" id="timeline-chart">
               <canvas id="timeline-canvas"></canvas>
-            </div>
-          </div>
-
-          <div class="chart-card">
-            <div class="chart-header">
-              <h3>Por Projeto</h3>
-            </div>
-            <div id="project-bars"></div>
           </div>
         </div>
 
@@ -238,36 +221,7 @@
         </div>
       </section>
 
-      <!-- SECTION: History -->
-      <section id="section-history" class="section">
-        <div class="section-description">Histórico de utilizações do Second Brain</div>
-        <div class="history-filters">
-          <input type="text" id="history-search" placeholder="Filtrar por projeto ou tarefa..." class="filter-input" />
-          <select id="history-period" class="filter-select">
-            <option value="7">Últimas 7 sessões</option>
-            <option value="30" selected>Últimas 30 sessões</option>
-            <option value="all">Todo o histórico</option>
-          </select>
-        </div>
-        <div class="history-table-wrap">
-          <table class="history-table">
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>Projeto</th>
-                <th>Tarefa</th>
-                <th>Tokens Gastos</th>
-                <th>Arq. Analisados</th>
-                <th>Duração (min)</th>
-                <th>Atualiz. SB</th>
-              </tr>
-            </thead>
-            <tbody id="history-tbody">
-              <tr><td colspan="7" class="loading-cell">Carregando histórico...</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+
 
       <!-- SECTION: Health -->
       <section id="section-health" class="section">
@@ -286,18 +240,43 @@
         </div>
       </section>
 
-      <!-- SECTION: Evolution -->
-      <section id="section-evolution" class="section">
-        <div class="section-description">Autoevolução e aprendizado contínuo do Second Brain</div>
-        <div class="evolution-timeline" id="evolution-timeline">
-          <div class="loading-state">Carregando histórico de evolução...</div>
-        </div>
-      </section>
-
       <!-- SECTION: Hub de Repositórios -->
       <section id="section-repos" class="section">
         <div class="section-description">
-          Hub Universal de 25 Repositórios Especializados com Proteção Cold Snapshot
+          Hub Universal de Repositórios Especializados com Proteção Cold Snapshot & Sincronização Automática
+        </div>
+
+        <!-- Barra de Adição de Novo Repositório -->
+        <div class="add-repo-box">
+          <div class="add-repo-header">
+            <div class="add-repo-title">
+              <span>➕</span> Adicionar Novo Repositório ao Second Brain
+            </div>
+            <div class="add-repo-subtitle">
+              Cole o link do GitHub. O agente baixará com proteção Cold Snapshot, gerará o AI_GUIDE.md, registrará os commits com dia/mês/ano e horário, e integrará à governança.
+            </div>
+          </div>
+          <form id="add-repo-form" class="add-repo-form" onsubmit="return false;">
+            <div class="add-repo-inputs">
+              <input type="url" id="new-repo-url" placeholder="https://github.com/usuario/nome-do-repositorio" class="filter-input" required style="flex: 2; min-width: 260px;" />
+              <select id="new-repo-category" class="filter-select" style="flex: 1.2; min-width: 170px;">
+                <option value="auto">Categoria: Auto-detectar</option>
+                <option value="media_processing">Mídia, Vídeo & Áudio</option>
+                <option value="dev_reverse_engineering">Código & Eng. Reversa</option>
+                <option value="ui_ux_design">UI/UX & Design Premium</option>
+                <option value="orchestration_governance">Orquestração & 5Ps</option>
+                <option value="routing_gateways">Roteamento & LLMs Grátis</option>
+                <option value="memory_rag_graphs">Memória Persistente & RAG</option>
+                <option value="document_web_parsers">Parsers & Web Scraping</option>
+                <option value="cloud_security_b2b">Cloud, OWASP & SaaS</option>
+              </select>
+              <input type="text" id="new-repo-desc" placeholder="Finalidade ou descrição (opcional)" class="filter-input" style="flex: 1.5; min-width: 200px;" />
+              <button type="button" id="add-repo-btn" class="add-repo-button">
+                <span>➕</span> Adicionar Repositório
+              </button>
+            </div>
+            <div id="add-repo-feedback" class="add-repo-feedback" style="display: none;"></div>
+          </form>
         </div>
         <div class="repos-toolbar">
           <div class="repos-categories" id="repos-categories-filter">
@@ -362,8 +341,52 @@
         </div>
       </div>
 
+      <!-- Modal: Inspetor de Conhecimento & Preferências do Usuário -->
+      <div id="knowledge-details-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card knowledge-modal-card">
+          <div class="modal-header">
+            <div class="knowledge-modal-title-wrap">
+              <span id="kmodal-icon" class="kmodal-icon">🤖</span>
+              <div>
+                <h3 id="kmodal-title">RPA Architecture & Automação UNIQ</h3>
+                <span id="kmodal-category" class="kmodal-badge">Robótica & Automação Web</span>
+              </div>
+            </div>
+            <button id="kmodal-close-btn" class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body knowledge-modal-body">
+            <!-- Tabs -->
+            <div class="kmodal-tabs">
+              <button class="kmodal-tab active" data-tab="rules">📋 Regras da Área</button>
+              <button class="kmodal-tab" data-tab="preferences">👤 Preferências do Desenvolvedor</button>
+              <button class="kmodal-tab" data-tab="evolution">🔄 Retroalimentação Contínua</button>
+              <button class="kmodal-tab" data-tab="raw">📄 Markdown Completo (.md)</button>
+            </div>
+            <div id="kmodal-tab-rules" class="kmodal-tab-content active">
+              <div class="kmodal-section-title">Regras e Diretrizes Registradas para esta Área</div>
+              <div class="kmodal-notice">Quando um agente de IA executa uma tarefa neste domínio, estas regras são injetadas mandatoriamente na memória de trabalho.</div>
+              <ul id="kmodal-rules-list" class="kmodal-list"></ul>
+            </div>
+            <div id="kmodal-tab-preferences" class="kmodal-tab-content">
+              <div class="kmodal-section-title">Como o Desenvolvedor desta Máquina Gosta do Trabalho</div>
+              <div class="kmodal-notice">Perfil persistido no Second Brain para garantir que todo código e resposta fiquem com a cara do usuário.</div>
+              <div id="kmodal-preferences-grid" class="kmodal-pref-grid"></div>
+            </div>
+            <div id="kmodal-tab-evolution" class="kmodal-tab-content">
+              <div class="kmodal-section-title">Histórico de Retroalimentação Automática do Second Brain</div>
+              <div class="kmodal-notice">Eventos e aprendizados capturados automaticamente a partir das execuções nesta máquina.</div>
+              <div id="kmodal-evolution-list" class="kmodal-evo-list"></div>
+            </div>
+            <div id="kmodal-tab-raw" class="kmodal-tab-content">
+              <div class="kmodal-section-title">Conteúdo do Arquivo Físico (<span id="kmodal-file-path"></span>)</div>
+              <pre id="kmodal-raw-content" class="kmodal-code-block"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- SECTION: Aurelio Chat -->
-      <section id="section-aurelio" class="section" style="display: none; height: 100%; flex-direction: column;">
+      <section id="section-aurelio" class="section" style="height: 100%; flex-direction: column;">
         <div class="chat-container">
           <!-- Aurelio Header & Model Switcher -->
           <div class="aurelio-chat-header">
@@ -379,6 +402,18 @@
             </div>
 
             <div class="aurelio-controls">
+              <!-- Seletor de Agente / Persona -->
+              <select id="aurelio-persona-select" class="aurelio-select" title="Selecione o Agente de IA especialista">
+                <option value="aurelio_master" selected>🧠 Aurélio Master (Arquiteto Global)</option>
+                <option value="frontend_specialist">🎨 Frontend Specialist (UI/UX & Design)</option>
+                <option value="rpa_specialist">🤖 RPA Specialist (Selenium & UNIQ)</option>
+                <option value="zero_trust_guardian">🛡️ Zero Trust Guardian (Governança & Audit)</option>
+                <option value="devops_engineer">⚡ DevOps Engineer (Deploy & Servidores)</option>
+                <option value="systematic_debugger">🔍 Systematic Debugger (Causa Raiz 4-Fases)</option>
+                <option value="explorer_intel">🗺️ Explorer & Intel (Censo de Projetos)</option>
+                <option value="project_planner">📋 Project Planner (Planejamento Socrático)</option>
+              </select>
+
               <select id="aurelio-model-select" class="aurelio-select" title="Selecione o modelo Ollama">
                 <option value="qwen2.5-coder:7b" selected>qwen2.5-coder:7b [4.7GB] (Recomendado)</option>
                 <option value="qwen2.5:3b">qwen2.5:3b [2.2GB] (Ultra-Leve)</option>
@@ -388,6 +423,14 @@
               <button id="aurelio-mode-btn" class="chat-mode-badge" data-mode="restrito" title="Alternar entre modo restrito ao Second Brain ou expandido">Modo: Restrito (Second Brain)</button>
               <button id="aurelio-clear-btn" class="chat-action-btn" title="Limpar conversa">Limpar</button>
             </div>
+          </div>
+
+          <!-- Banner de Contexto da Mente do Aurélio -->
+          <div class="aurelio-mind-banner" id="aurelio-mind-banner">
+            <div class="mind-pill">🧠 <strong>Agente Ativo:</strong> <span id="mind-persona-name">Aurélio Master</span></div>
+            <div class="mind-pill">💻 <strong>Ambiente:</strong> Windows (Projetos: RPA, WRPE, SecondBrain)</div>
+            <div class="mind-pill">⚙️ <strong>Preferências:</strong> pt-BR sênior, código inglês, Clean Code, Zero Trust</div>
+            <div class="mind-pill">📚 <strong>Skills Ativas:</strong> <span id="mind-skills-text">@clean-code + @architecture + @governance</span></div>
           </div>
 
           <!-- Quick Prompts Chips -->

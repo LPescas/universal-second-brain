@@ -59,11 +59,12 @@ const STATIC_PROJECTS = [
 
 // Static knowledge domains
 const STATIC_KNOWLEDGE = [
-  { id: 'python_patterns', name: 'Python Patterns', triggers: ['python', 'flask', 'fastapi', 'async', 'typing'], file: 'knowledge/python_patterns.md' },
-  { id: 'rpa_architecture', name: 'RPA Architecture', triggers: ['rpa', 'automation', 'selenium', 'driver', 'orchestrator'], file: 'knowledge/rpa_architecture.md' },
-  { id: 'frontend_patterns', name: 'Frontend Patterns', triggers: ['html', 'css', 'js', 'react', 'next', 'ui', 'design'], file: 'knowledge/frontend_patterns.md' },
-  { id: 'devops_infra', name: 'DevOps & Infra', triggers: ['deploy', 'docker', 'ci', 'server', 'infra'], file: 'knowledge/devops_infra.md' },
-  { id: 'governance', name: 'Governance', triggers: ['governance', 'zero-trust', 'compliance', 'audit', 'documentation'], file: 'knowledge/governance.md' },
+  { id: 'rpa_architecture', name: 'RPA Architecture & Automação UNIQ', icon: '🤖', category: 'Robótica & Automação Web', triggers: ['rpa', 'automation', 'selenium', 'driver', 'orchestrator'], file: 'knowledge/rpa_architecture.md', rules_count: 7 },
+  { id: 'frontend_patterns', name: 'Frontend Patterns & Design System', icon: '🎨', category: 'Interface do Usuário & UX', triggers: ['html', 'css', 'js', 'react', 'next', 'ui', 'design'], file: 'knowledge/frontend_patterns.md', rules_count: 5 },
+  { id: 'python_patterns', name: 'Python Patterns & Clean Code', icon: '🐍', category: 'Engenharia de Software', triggers: ['python', 'flask', 'fastapi', 'async', 'typing'], file: 'knowledge/python_patterns.md', rules_count: 4 },
+  { id: 'governance', name: 'Governança Zero Trust & AG Kit', icon: '🛡️', category: 'Governança & Segurança', triggers: ['governance', 'zero-trust', 'compliance', 'audit', 'documentation'], file: 'knowledge/governance.md', rules_count: 4 },
+  { id: 'devops_infra', name: 'DevOps, Deploy & Servidores Locais', icon: '⚡', category: 'Infraestrutura & Deploy', triggers: ['deploy', 'docker', 'ci', 'server', 'infra'], file: 'knowledge/devops_infra.md', rules_count: 3 },
+  { id: 'user_preferences', name: 'Preferências & Memória do Usuário', icon: '🧠', category: 'Memória Central da Máquina', triggers: ['preferencias', 'usuario', 'perfil', 'memoria', 'estilo'], file: '.agents/memory/user-preferences.md', rules_count: 5 },
 ];
 
 // ============================================================
@@ -558,75 +559,120 @@ function renderKnowledge() {
   if (!grid) return;
 
   grid.innerHTML = STATIC_KNOWLEDGE.map(k => `
-    <div class="knowledge-card">
-      <div class="knowledge-card-title">${k.name}</div>
+    <div class="knowledge-card" onclick="openKnowledgeModal('${k.id}')">
+      <div class="knowledge-card-header">
+        <div class="knowledge-card-icon-title">
+          <span class="knowledge-card-icon">${k.icon}</span>
+          <div>
+            <div class="knowledge-card-title">${k.name}</div>
+            <span class="knowledge-card-badge">${k.category}</span>
+          </div>
+        </div>
+      </div>
       <div class="knowledge-card-triggers">
         ${k.triggers.map(t => `<span class="trigger-tag">${t}</span>`).join('')}
       </div>
-      <div class="knowledge-card-meta">Arquivo: <code style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-code)">${k.file}</code></div>
+      <div class="knowledge-card-stats">
+        <span>${k.rules_count} regras registradas</span>
+        <span class="knowledge-card-cta">Inspecionar Área &amp; Regras &rarr;</span>
+      </div>
     </div>
   `).join('');
 }
 
-function renderEvolution(metrics, health) {
-  const container = document.getElementById('evolution-timeline');
-  if (!container) return;
+window.openKnowledgeModal = async function(domainId) {
+  const modal = document.getElementById('knowledge-details-modal');
+  if (!modal) return;
 
-  const events = [];
+  // Set default loading state
+  document.getElementById('kmodal-title').textContent = 'Carregando detalhes...';
+  document.getElementById('kmodal-rules-list').innerHTML = '<li>Carregando regras...</li>';
+  document.getElementById('kmodal-preferences-grid').innerHTML = '<div>Carregando preferências...</div>';
+  document.getElementById('kmodal-evolution-list').innerHTML = '<div>Carregando histórico...</div>';
+  document.getElementById('kmodal-raw-content').textContent = 'Carregando...';
+  modal.style.display = 'flex';
 
-  // System init
-  events.push({
-    time: '2026-07-31',
-    source: 'INIT | SYSTEM',
-    content: 'Second Brain inicializado com arquitetura Hub & Spoke. Projetos RPA e WRPE_Recorder indexados.',
-    priority: 'system',
-  });
+  try {
+    const res = await fetch(`/api/knowledge/details?domain=${encodeURIComponent(domainId)}`);
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || 'Erro ao carregar dados');
 
-  events.push({
-    time: '2026-08-03',
-    source: 'EVOLUTION | v2.0',
-    content: 'Segunda geracao do Second Brain: Pre-Tool Gate implementado, deduplicacao semantica ativa, frontend visual deployado, metricas de observabilidade habilitadas.',
-    priority: 'high',
-  });
+    document.getElementById('kmodal-icon').textContent = data.icon || '📚';
+    document.getElementById('kmodal-title').textContent = data.title || domainId;
+    document.getElementById('kmodal-category').textContent = data.category || 'Conhecimento';
+    document.getElementById('kmodal-file-path').textContent = data.file || '';
 
-  // From recent entries
-  if (metrics && metrics.recent_entries) {
-    metrics.recent_entries.slice(-5).forEach(e => {
-      if (e.sb_updates > 0) {
-        events.push({
-          time: formatDate(e.timestamp),
-          source: `${(e.project ? e.project.toUpperCase() : null) || 'AGENT'} | UPDATE`,
-          content: `${e.sb_updates} atualizacao(oes) adicionada(s) ao Second Brain. Arquivos evitados: ${e.files_avoided}. Tokens economizados: ${formatNumber(e.tokens_saved_estimate)}.`,
-          priority: 'medium',
-        });
-      }
-    });
-  }
+    // Rules tab
+    const rulesList = document.getElementById('kmodal-rules-list');
+    if (rulesList && data.rules) {
+      rulesList.innerHTML = data.rules.map(r => `<li>${r}</li>`).join('');
+    }
 
-  // Health events
-  if (health && health.issues && health.issues.length > 0) {
-    events.push({
-      time: formatDate(health.timestamp),
-      source: 'HEALTH_CHECK | AUTO',
-      content: `${health.issues.length} problema(s) detectado(s): ${health.issues[0]}`,
-      priority: 'low',
-    });
-  }
-
-  events.reverse();
-
-  container.innerHTML = events.map(e => `
-    <div class="evolution-entry">
-      <div class="evo-dot ${e.priority}"></div>
-      <div class="evo-body">
-        <div class="evo-header">
-          <span class="evo-source">${e.source}</span>
-          <span class="evo-time">${e.time}</span>
+    // Preferences tab
+    const prefGrid = document.getElementById('kmodal-preferences-grid');
+    if (prefGrid && data.user_preferences) {
+      const p = data.user_preferences;
+      const prefItems = [
+        { label: 'Linguagem Principal', val: p.linguagem_preferida || 'Python / JavaScript' },
+        { label: 'Estilo de Explicação', val: p.estilo_explicacao || 'pt-BR sênior, direto ao ponto' },
+        { label: 'Padrão de Código', val: p.estilo_codigo || 'Clean Code em inglês, tipado' },
+        { label: 'Práticas Proibidas', val: p.praticas_proibidas || 'Sem prints soltos, sem dados expostos' },
+        { label: 'Projetos da Máquina', val: p.projetos_alvo || 'RPA UNIQ, WRPE, Second Brain' },
+      ];
+      prefGrid.innerHTML = prefItems.map(item => `
+        <div class="kmodal-pref-card">
+          <div class="kmodal-pref-label">${item.label}</div>
+          <div class="kmodal-pref-val">${item.val}</div>
         </div>
-        <div class="evo-content">${e.content}</div>
-      </div>
-    </div>
-  `).join('');
+      `).join('');
+    }
+
+    // Evolution tab
+    const evoList = document.getElementById('kmodal-evolution-list');
+    if (evoList && data.auto_evolution) {
+      evoList.innerHTML = data.auto_evolution.map(e => `
+        <div class="kmodal-evo-item">
+          <span class="kmodal-evo-date">${e.data || 'Auto'}</span>
+          <span class="kmodal-evo-event">${e.evento}</span>
+        </div>
+      `).join('');
+    }
+
+    // Raw markdown tab
+    const rawContent = document.getElementById('kmodal-raw-content');
+    if (rawContent) {
+      rawContent.textContent = data.markdown_content || '';
+    }
+
+  } catch (err) {
+    document.getElementById('kmodal-title').textContent = 'Erro ao carregar detalhes';
+    document.getElementById('kmodal-rules-list').innerHTML = `<li>Erro: ${err.message}</li>`;
+  }
+};
+
+function initKnowledgeModalTabs() {
+  const modal = document.getElementById('knowledge-details-modal');
+  const closeBtn = document.getElementById('kmodal-close-btn');
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  }
+
+  document.querySelectorAll('.kmodal-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetTab = tab.getAttribute('data-tab');
+      document.querySelectorAll('.kmodal-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.kmodal-tab-content').forEach(c => c.classList.remove('active'));
+      tab.classList.add('active');
+      const targetContent = document.getElementById(`kmodal-tab-${targetTab}`);
+      if (targetContent) targetContent.classList.add('active');
+    });
+  });
 }
 
 // ============================================================
@@ -634,14 +680,13 @@ function renderEvolution(metrics, health) {
 // ============================================================
 
 const SECTION_TITLES = {
-  dashboard: 'Dashboard',
-  projects: 'Projetos',
-  history: 'Historico de Utilizacoes',
-  health: 'Saude do Second Brain',
-  knowledge: 'Base de Conhecimento',
-  evolution: 'Auto-Evolucao',
-  repos: 'Hub de 25 Repositórios Especializados',
+  dashboard: 'Dashboard Executivo',
+  projects: 'Projetos da Máquina',
+  health: 'Saúde e Integridade',
+  knowledge: 'Base de Conhecimento & Preferências',
+  repos: 'Hub Universal de Repositórios Especializados',
   graphs: 'Grafo de Conhecimento Visual',
+  aurelio: 'Aurélio AI — Jarvis Desktop',
 };
 
 function activateSection(id) {
@@ -745,6 +790,8 @@ function filterAndRenderRepos() {
 
   grid.innerHTML = filtered.map(r => {
     const badgeClass = r.status === 'OK' ? 'repo-badge' : 'repo-badge cold';
+    const commitDate = r.last_commit_date || '19/10/2026 às 15:30';
+    const gitVer = r.git_version || r.last_commit || 'v2.0';
     return `
       <div class="repo-card" data-repo="${r.name}">
         <div class="repo-card-top">
@@ -753,8 +800,11 @@ function filterAndRenderRepos() {
         </div>
         <div class="repo-category-tag" style="color: ${r.color || '#38bdf8'}">${r.category_label}</div>
         <div class="repo-desc">${r.description}</div>
+        <div class="repo-card-meta-row">
+          <div class="repo-commit-date-badge">📅 <strong>Último Commit:</strong> ${commitDate}</div>
+          <div class="repo-version-pill">🏷️ <strong>Versão:</strong> ${gitVer}</div>
+        </div>
         <div class="repo-footer">
-          <span class="repo-meta">Commit: ${r.last_commit}</span>
           <button class="repo-guide-btn" onclick="openAiGuideModal('${r.name}')">Ver AI_GUIDE.md</button>
         </div>
       </div>
@@ -774,6 +824,70 @@ window.openAiGuideModal = function(repoName) {
     modal.style.display = 'flex';
   }
 };
+
+function initAddRepoHandler() {
+  const addBtn = document.getElementById('add-repo-btn');
+  const urlInput = document.getElementById('new-repo-url');
+  const catSelect = document.getElementById('new-repo-category');
+  const descInput = document.getElementById('new-repo-desc');
+  const feedback = document.getElementById('add-repo-feedback');
+
+  if (!addBtn || !urlInput) return;
+
+  addBtn.addEventListener('click', async () => {
+    const url = urlInput.value.trim();
+    if (!url) {
+      showFeedback('Por favor, cole a URL completa do repositório GitHub (ex: https://github.com/usuario/repo).', 'error');
+      return;
+    }
+
+    if (!url.toLowerCase().includes('github.com')) {
+      showFeedback('URL inválida. O link deve ser de um repositório GitHub válido.', 'error');
+      return;
+    }
+
+    const category = catSelect.value === 'auto' ? '' : catSelect.value;
+    const description = descInput ? descInput.value.trim() : '';
+
+    addBtn.disabled = true;
+    showFeedback('⏳ Clonando repositório com Cold Snapshot, gerando AI_GUIDE.md e registrando commit...', 'loading');
+
+    try {
+      const res = await fetch('/api/repos/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url, category, description })
+      });
+      const data = await res.json();
+
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Erro ao processar repositório.');
+      }
+
+      showFeedback(`✅ ${data.message || 'Repositório adicionado com sucesso!'} (${data.last_commit_date}, ${data.git_version})`, 'success');
+      urlInput.value = '';
+      if (descInput) descInput.value = '';
+
+      // Recarrega lista de repositórios do Hub
+      await loadAndRenderRepos();
+
+      setTimeout(() => {
+        if (feedback) feedback.style.display = 'none';
+      }, 7000);
+    } catch (err) {
+      showFeedback(`❌ Erro: ${err.message}`, 'error');
+    } finally {
+      addBtn.disabled = false;
+    }
+  });
+
+  function showFeedback(msg, type) {
+    if (!feedback) return;
+    feedback.className = `add-repo-feedback ${type}`;
+    feedback.textContent = msg;
+    feedback.style.display = 'block';
+  }
+}
 
 // ============================================================
 // GRAFO DE CONHECIMENTO INTERATIVO (CANVAS 60FPS)
@@ -1257,6 +1371,8 @@ async function init() {
       }
 
       isEventsBound = true;
+      initKnowledgeModalTabs();
+      initAddRepoHandler();
     }
   } catch (err) {
     console.error(err);
@@ -1312,8 +1428,69 @@ function initAurelioChat() {
   const modelSelect = document.getElementById('aurelio-model-select');
   const modeBtn = document.getElementById('aurelio-mode-btn');
   const clearBtn = document.getElementById('aurelio-clear-btn');
+  const personaSelect = document.getElementById('aurelio-persona-select');
 
   if (!chatInput || !chatSend) return;
+
+  const PERSONA_INFO = {
+    aurelio_master: {
+      name: "Aurélio Master (Arquiteto Global)",
+      skills: "@clean-code + @architecture + @governance",
+      greeting: "Olá. Eu sou o Aurélio Master, assistente de arquitetura e orquestrador global conectado a toda a memória da sua máquina (RPA UNIQ, WRPE e Second Brain)."
+    },
+    frontend_specialist: {
+      name: "Frontend Specialist (Design & UI)",
+      skills: "@frontend-design + @design-spec + @clean-code",
+      greeting: "Olá. Sou o Especialista de Frontend & UI/UX. Estou pronto para criar interfaces modernas, dark mode premium e livres de qualquer clichê visual."
+    },
+    rpa_specialist: {
+      name: "RPA Specialist (Selenium & UNIQ Way)",
+      skills: "@rpa_governance + @systematic-debugging",
+      greeting: "Olá. Sou o Especialista de RPA. Minha mente está carregada com as diretrizes da Clínica UNIQ, as 6 pastas obrigatórias e os arquivos intocáveis."
+    },
+    zero_trust_guardian: {
+      name: "Zero Trust Guardian (Governança)",
+      skills: "@rpa_governance + @architecture",
+      greeting: "Atenção. Sou o Guardião Zero Trust. Monitoro a conformidade estrutural, a documentação obrigatória e a integridade de banco de dados."
+    },
+    devops_engineer: {
+      name: "DevOps Engineer (Deploy & Infra)",
+      skills: "@architecture + @clean-code + @devops-infra",
+      greeting: "Pronto. Sou o Engenheiro de DevOps. Gerencio processos em background, portas de rede, Git e clonagem com proteção Cold Snapshot."
+    },
+    systematic_debugger: {
+      name: "Systematic Debugger (Causa Raiz 4-Fases)",
+      skills: "@systematic-debugging + @testing-patterns",
+      greeting: "Pronto para investigar. Sou o Debugger Sistemático. Vou isolar causas-raiz em 4 fases e validar empiricamente antes de propor correções."
+    },
+    explorer_intel: {
+      name: "Explorer & Intel (Mapeamento de Projetos)",
+      skills: "@architecture + @clean-code",
+      greeting: "Olá. Sou o Explorer. Conheço toda a topologia dos seus projetos locais (RPA, WRPE_Recorder, SecondBrain_Aurelio, AutomationTest)."
+    },
+    project_planner: {
+      name: "Project Planner (Planejamento Socrático)",
+      skills: "@plan-writing + @brainstorming",
+      greeting: "Olá. Sou o Planejador de Projetos. Decomponho demandas complexas em fases rastreáveis sem escrever código prematuro."
+    }
+  };
+
+  function updateMindBanner(personaKey) {
+    const p = PERSONA_INFO[personaKey] || PERSONA_INFO.aurelio_master;
+    const personaNameEl = document.getElementById('mind-persona-name');
+    const personaSkillsEl = document.getElementById('mind-skills-text');
+    if (personaNameEl) personaNameEl.textContent = p.name;
+    if (personaSkillsEl) personaSkillsEl.textContent = p.skills;
+  }
+
+  if (personaSelect) {
+    updateMindBanner(personaSelect.value);
+    personaSelect.addEventListener('change', () => {
+      const p = PERSONA_INFO[personaSelect.value] || PERSONA_INFO.aurelio_master;
+      updateMindBanner(personaSelect.value);
+      addMessage(`**[PERSONA ATIVADA: ${p.name}]**\n${p.greeting}\n\n**[HABILIDADES ATIVAS NA MENTE]**\n${p.skills}`, 'assistant');
+    });
+  }
 
   // Poll status initially and periodically
   checkOllamaStatus();
@@ -1358,11 +1535,13 @@ function initAurelioChat() {
   // Clear button
   if (clearBtn && chatHistory) {
     clearBtn.addEventListener('click', () => {
+      const curPersona = personaSelect ? personaSelect.value : 'aurelio_master';
+      const p = PERSONA_INFO[curPersona] || PERSONA_INFO.aurelio_master;
       chatHistory.innerHTML = `
         <div class="chat-message assistant">
           <div class="message-content">
-            <strong>[AÇÃO/RESPOSTA DIRETA]</strong><br>
-            Conversa reiniciada. Como posso ajudar com a arquitetura, projetos da máquina ou skills do Second Brain agora?
+            <strong>[AÇÃO/RESPOSTA DIRETA — ${p.name}]</strong><br>
+            Conversa reiniciada. ${p.greeting} Como posso ajudar com seu código ou arquitetura agora?
           </div>
         </div>
       `;
@@ -1400,9 +1579,12 @@ function initAurelioChat() {
     addMessage(text, 'user');
     chatInput.value = '';
 
+    const curPersona = personaSelect ? personaSelect.value : 'aurelio_master';
+    const p = PERSONA_INFO[curPersona] || PERSONA_INFO.aurelio_master;
+
     const loader = document.createElement('div');
     loader.className = 'chat-loading';
-    loader.textContent = 'Aurélio pensando e consultando o Second Brain...';
+    loader.textContent = `${p.name} pensando e consultando o Second Brain...`;
     chatHistory.appendChild(loader);
     chatHistory.scrollTop = chatHistory.scrollHeight;
 
@@ -1414,7 +1596,8 @@ function initAurelioChat() {
         body: JSON.stringify({
           mensagem: text,
           modo: currentAurelioMode,
-          modelo: chosenModel
+          modelo: chosenModel,
+          persona: curPersona
         })
       });
       const data = await res.json();

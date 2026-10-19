@@ -107,6 +107,8 @@ def pipeline_principal(
     mensagem: str,
     session_id: str,
     modelo: str = model_manager.MODEL_ATUAL,
+    modo_override: Optional[str] = None,
+    persona: str = "aurelio_master",
 ) -> dict:
     """
     O pipeline único e imutável do Aurelio. Todo input passa aqui.
@@ -115,6 +117,8 @@ def pipeline_principal(
         mensagem: Texto enviado pelo usuário
         session_id: ID da sessão atual
         modelo: Modelo Ollama a usar (com fallback automático)
+        modo_override: 'restrito' ou 'expandido' vindo do frontend
+        persona: Identificador da persona especialista ativa
 
     Returns:
         dict com chaves:
@@ -122,41 +126,20 @@ def pipeline_principal(
             - modo (str): Modo utilizado na sessão
             - modelo_usado (str): Modelo que gerou a resposta
             - sugestao_proativa (str|None): Sugestão proativa se detectada
+            - persona (str): Persona utilizada
     """
-    logger.info("Pipeline iniciado | sessão=%s | modelo=%s | msg_len=%d",
-                session_id, modelo, len(mensagem))
+    logger.info("Pipeline iniciado | sessão=%s | modelo=%s | persona=%s | msg_len=%d",
+                session_id, modelo, persona, len(mensagem))
 
     # ── STEP 1: Verificar modo da sessão ──────────────────────
-    modo = db.obter_modo_sessao(session_id)
-
-    # Se modo ainda pendente, verificar se o usuário está respondendo à pergunta de modo
-    if modo == "pendente":
-        modo_detectado = agent.detectar_modo(mensagem)
-        if modo_detectado:
-            db.definir_modo_sessao(session_id, modo_detectado)
-            modo = modo_detectado
-            logger.info("Modo definido como '%s' para sessão %s", modo, session_id)
-            resposta_confirmacao = (
-                f"✅ Modo **{modo.capitalize()}** ativado.\n\n"
-                f"{'Usarei apenas seu Second Brain.' if modo == 'restrito' else 'Combinarei seu Second Brain com conhecimento externo.'}\n\n"
-                "Pode perguntar."
-            )
-            db.salvar_mensagem(session_id, "user", mensagem)
-            db.salvar_mensagem(session_id, "assistant", resposta_confirmacao)
-            return {
-                "resposta": resposta_confirmacao,
-                "modo": modo,
-                "modelo_usado": "sistema",
-                "sugestao_proativa": None,
-            }
-        else:
-            # Usuário não respondeu ao modo — retornar a pergunta novamente
-            return {
-                "resposta": agent.PERGUNTA_MODO,
-                "modo": "pendente",
-                "modelo_usado": "sistema",
-                "sugestao_proativa": None,
-            }
+    if modo_override in ["restrito", "expandido"]:
+        modo = modo_override
+        db.definir_modo_sessao(session_id, modo)
+    else:
+        modo = db.obter_modo_sessao(session_id)
+        if not modo or modo == "pendente":
+            modo = "restrito"
+            db.definir_modo_sessao(session_id, modo)
 
     # ── STEP 2: Buscar contexto (busca híbrida vetorial + recência) ──
     logger.info("Buscando contexto para sessão %s...", session_id)
@@ -170,6 +153,7 @@ def pipeline_principal(
         mensagem=mensagem,
         modo=modo,
         historico=historico,
+        persona=persona,
     )
 
     # ── STEP 4: Gerar resposta via Ollama (com fallback) ──────

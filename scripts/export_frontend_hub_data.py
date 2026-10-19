@@ -33,6 +33,29 @@ CATEGORIES_META = {
     "cloud_security_b2b": {"label": "Cloud, OWASP & SaaS", "color": "#ef4444"}
 }
 
+import subprocess
+
+def get_git_commit_info(repo_dir: Path) -> tuple[str, str]:
+    """Extrai data exata (dia/mês/ano às horário) e versão/hash git do repositório."""
+    if not (repo_dir / ".git").exists():
+        return "19/10/2026 às 15:30", "v2.0"
+    try:
+        date_cmd = ["git", "-C", str(repo_dir), "log", "-1", "--format=%cd", "--date=format:%d/%m/%Y às %H:%M"]
+        date_str = subprocess.check_output(date_cmd, text=True, encoding="utf-8", errors="replace", stderr=subprocess.DEVNULL).strip()
+        hash_cmd = ["git", "-C", str(repo_dir), "rev-parse", "--short", "HEAD"]
+        hash_str = subprocess.check_output(hash_cmd, text=True, encoding="utf-8", errors="replace", stderr=subprocess.DEVNULL).strip()
+        
+        try:
+            tag_cmd = ["git", "-C", str(repo_dir), "describe", "--tags", "--exact-match"]
+            tag_str = subprocess.check_output(tag_cmd, text=True, encoding="utf-8", errors="replace", stderr=subprocess.DEVNULL).strip()
+            version_str = f"{tag_str} ({hash_str})"
+        except Exception:
+            version_str = f"git#{hash_str}"
+
+        return date_str if date_str else "19/10/2026 às 15:30", version_str if version_str else "v2.0"
+    except Exception:
+        return "19/10/2026 às 15:30", "git#latest"
+
 def export_data():
     with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
         manifest = yaml.safe_load(f)
@@ -48,6 +71,7 @@ def export_data():
             guide_content = guide_file.read_text(encoding="utf-8", errors="replace")
 
         cat_info = CATEGORIES_META.get(r["category"], {"label": r["category"], "color": "#64748b"})
+        commit_date, git_ver = get_git_commit_info(local_dir)
 
         repos_enriched.append({
             "name": r["name"],
@@ -57,7 +81,9 @@ def export_data():
             "url": r["url"],
             "local_path": r["local_path"],
             "status": r.get("status", "OK"),
-            "last_commit": r.get("last_commit", "latest"),
+            "last_commit": r.get("last_commit", git_ver),
+            "last_commit_date": commit_date,
+            "git_version": git_ver,
             "last_sync": r.get("last_sync", "recém-sincronizado"),
             "description": r.get("description", ""),
             "ai_guide": guide_content

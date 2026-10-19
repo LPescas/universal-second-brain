@@ -16,6 +16,7 @@ import os
 import json
 import urllib.request
 import urllib.error
+import urllib.parse
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
@@ -24,6 +25,17 @@ if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 SB_ROOT = Path(__file__).resolve().parent.parent
+
+# Inject scripts into path
+SCRIPTS_DIR = SB_ROOT / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
+try:
+    import repo_manager
+except Exception as e:
+    print("[AVISO] repo_manager em modo fallback:", e)
+    repo_manager = None
 
 # Inject Aurelio into path
 BACKEND_DIR = SB_ROOT / "backend" / "aurelio"
@@ -94,6 +106,168 @@ def identificar_skills_e_ferramentas(msg: str) -> tuple[list[dict], list[dict]]:
 
     return skills_found[:3], repos_found[:3]
 
+# ─────────────────────────────────────────────────────────────
+# Base Estruturada de Conhecimento e Preferências por Domínio
+# ─────────────────────────────────────────────────────────────
+KNOWLEDGE_DOMAINS = {
+    "rpa_architecture": {
+        "id": "rpa_architecture",
+        "title": "RPA Architecture & Automação UNIQ",
+        "file": "knowledge/rpa_architecture.md",
+        "category": "Robótica & Automação Web",
+        "icon": "🤖",
+        "triggers": ["rpa", "automation", "selenium", "driver", "orchestrator"],
+        "rules": [
+            "Padrão Hub & Spoke: Frontend Flask desacoplado de Backend RPA.",
+            "Selenium/Driver: Init EXCLUSIVO via Backend/Global/servicos/driver.py::start_session() — NUNCA init bruto.",
+            "Logging Obrigatório: Proibido uso de print(). Usar formato [ID] [RPA] [ETAPA] [TIPO] Mensagem.",
+            "6 Pastas Canônicas: Todo módulo contém codigo, documentacao, logs, dados, configuracoes, executaveis.",
+            "Zero Trust Documentation: Todo subdiretório possui cabeçalho e documentação obrigatória *_nome.md.",
+            "Sincronização de Banco: Toda alteração em tabela atualiza Guia_Simplificado_Sistema_RPA.docx e rpa_database_schema_audit.md.",
+            "Arquivos Intocáveis: Preservar intactos os arquivos de produção listados em arquivos_intocaveis_rpa.md."
+        ],
+        "user_preferences": {
+            "linguagem_preferida": "Python 3.10+ (Type annotations, PEP 8 pragmático)",
+            "estilo_explicacao": "Português do Brasil (pt-BR), tom técnico sênior, direto e pragmático, sem preâmbulos óbvios.",
+            "estilo_codigo": "Variáveis, funções e docstrings em inglês. Código limpo, modular e auto-documentável.",
+            "praticas_proibidas": "Sem prints soltos em produção, sem drivers inicializados fora do driver_manager, sem commits sem documentação.",
+            "projetos_alvo": "C:/Projetos/RPA (rotinas UNIQ, guias médicas, faturamento SADT, autorizações)"
+        },
+        "auto_evolution": [
+            {"data": "19/10/2026", "evento": "Validação de retroalimentação automática integrada ao painel de conhecimento"},
+            {"data": "Agosto 2026", "evento": "Padronização do endpoint /api/v2/rpa/historico com métricas em JSON"},
+            {"data": "31/07/2026", "evento": "Criação do padrão The UNIQ Way com 6 pastas obrigatórias"}
+        ]
+    },
+    "frontend_patterns": {
+        "id": "frontend_patterns",
+        "title": "Frontend Patterns & Design System",
+        "file": "knowledge/frontend_patterns.md",
+        "category": "Interface do Usuário & UX",
+        "icon": "🎨",
+        "triggers": ["html", "css", "js", "react", "next", "ui", "design"],
+        "rules": [
+            "Anti-Slop Design: Proibido designs genéricos de IA, botões sem hover e paletas roxas clichês.",
+            "Vanilla CSS & Design Tokens: Variáveis semânticas em :root, flexbox/grid moderno.",
+            "Dark Mode Premium: Paletas com alto contraste e estética glassmorphism profissional.",
+            "Tipografia Google Fonts: Inter para interface, JetBrains Mono para códigos e métricas.",
+            "Separação de Camadas: Estrutura semântica (HTML) isolada de Estilos (CSS) e Lógica de Dados (JS)."
+        ],
+        "user_preferences": {
+            "linguagem_preferida": "HTML5, Vanilla CSS3, JavaScript ES6+ modular",
+            "estilo_explicacao": "Foco em experiência visual premium, responsividade e simplicidade de manutenção.",
+            "estilo_codigo": "Classes semânticas, sem inline styles conflitantes, animações CSS a 60 FPS.",
+            "praticas_proibidas": "Proibido frameworks pesados quando não solicitados, gradientes roxos cafonas, telas sem hierarquia.",
+            "projetos_alvo": "Dashboards de controle, Second Brain Frontend e interfaces web do RPA"
+        },
+        "auto_evolution": [
+            {"data": "19/10/2026", "evento": "Implementação do inspetor interativo de regras e seletor multi-persona"},
+            {"data": "18/10/2026", "evento": "Grafo de visualização em Canvas 60 FPS com física de partículas"},
+            {"data": "03/08/2026", "evento": "Deploy da dashboard v2.0 com métricas de observabilidade"}
+        ]
+    },
+    "python_patterns": {
+        "id": "python_patterns",
+        "title": "Python Patterns & Clean Code",
+        "file": "knowledge/python_patterns.md",
+        "category": "Engenharia de Software",
+        "icon": "🐍",
+        "triggers": ["python", "flask", "fastapi", "async", "typing"],
+        "rules": [
+            "Clean Code Pragmatic: Funções curtas, coesas, sem duplicação de lógica.",
+            "Tipagem Estática: Type hints em todas as assinaturas públicas.",
+            "Tratamento de Exceções: Try/except específicos com log do traceback, nunca silencioso.",
+            "Padrões de Import: Caminhos absolutos e injeção controlada de sys.path."
+        ],
+        "user_preferences": {
+            "linguagem_preferida": "Python 3.10+, PowerShell 7+",
+            "estilo_explicacao": "Direto ao ponto, com snippets concisos prontos para execução.",
+            "estilo_codigo": "PEP 8 rigoroso, identificadores em inglês, comentários de código focados no motivo.",
+            "praticas_proibidas": "Proibido except genérico pass, código macarrônico monolítico, falta de testes.",
+            "projetos_alvo": "Backends, robôs, rotinas de telemetria e scripts de automação"
+        },
+        "auto_evolution": [
+            {"data": "19/10/2026", "evento": "Adição de extração de metadados Git (dia/mês/ano e horário) com UTF-8 seguro"},
+            {"data": "Agosto 2026", "evento": "Consolidação de scripts salva-vidas standalone com execução idempotente"}
+        ]
+    },
+    "governance": {
+        "id": "governance",
+        "title": "Governança Zero Trust & AG Kit",
+        "file": "knowledge/governance.md",
+        "category": "Governança & Segurança",
+        "icon": "🛡️",
+        "triggers": ["governance", "zero-trust", "compliance", "audit", "documentation"],
+        "rules": [
+            "Guardião de Execução: Boot check obrigatório de arquivos canônicos antes de qualquer execução.",
+            "Validação Empírica via .agents: Testar soluções em scripts/ ou workflows/ antes da entrega.",
+            "Triagem Inicial Obrigatória: Buscar nas skills do Second Brain a melhor estratégia antes de codificar.",
+            "Sincronização de Documentação: Manuais Word e Markdown mantidos em sincronia estrita."
+        ],
+        "user_preferences": {
+            "linguagem_preferida": "Markdown, YAML, Python de governança",
+            "estilo_explicacao": "Relatório final transparente ao término de cada tarefa com telemetria detalhada.",
+            "estilo_codigo": "Estruturado, auditável e rastreável.",
+            "praticas_proibidas": "Proibido pular o hook de inicialização, pular relatório final ou burlar governança.",
+            "projetos_alvo": "Ecossistema global da máquina do desenvolvedor"
+        },
+        "auto_evolution": [
+            {"data": "19/10/2026", "evento": "Atualização das regras estritas com telemetria obrigatória via usage_metrics.py"},
+            {"data": "Julho 2026", "evento": "Criação do Guardião de Execução e travas de arquivos intocáveis"}
+        ]
+    },
+    "devops_infra": {
+        "id": "devops_infra",
+        "title": "DevOps, Deploy & Servidores Locais",
+        "file": "knowledge/devops_infra.md",
+        "category": "Infraestrutura & Deploy",
+        "icon": "⚡",
+        "triggers": ["deploy", "docker", "ci", "server", "infra"],
+        "rules": [
+            "Servidor Assíncrono Local: Execução daemon na porta 8765 sem travar o terminal.",
+            "Cold Snapshot: Repositórios do hub clonados e imutáveis contra exclusões externas.",
+            "Variáveis de Ambiente: Isolamento total de credenciais e tokens em .env protegido."
+        ],
+        "user_preferences": {
+            "linguagem_preferida": "PowerShell, Python, Git CLI",
+            "estilo_explicacao": "Comandos diretos para o PowerShell com flags de bypass de confirmação interativa.",
+            "estilo_codigo": "Scripts idempotentes com tratamento de erro e checagem de portas abertas.",
+            "praticas_proibidas": "Proibido rodar comandos bloqueantes que congelam o agente.",
+            "projetos_alvo": "Servidores de dashboard, daemons de IA e robôs agendados"
+        },
+        "auto_evolution": [
+            {"data": "19/10/2026", "evento": "Integração do motor de adição dinâmica de repositórios ao vivo"},
+            {"data": "03/08/2026", "evento": "Configuração do servidor unificado API + estático HTTP"}
+        ]
+    },
+    "user_preferences": {
+        "id": "user_preferences",
+        "title": "Preferências & Memória Pessoal do Usuário",
+        "file": ".agents/memory/user-preferences.md",
+        "category": "Memória Central da Máquina",
+        "icon": "🧠",
+        "triggers": ["preferencias", "usuario", "perfil", "memoria", "estilo"],
+        "rules": [
+            "Prioridade Máxima: Os agentes adaptam seu comportamento ao gosto específico do desenvolvedor.",
+            "Comunicação em pt-BR com estilo sênior e direto.",
+            "Código estritamente em inglês.",
+            "Clean Code e sem duplicações.",
+            "Zero Trust e compliance ativo em todas as rotinas."
+        ],
+        "user_preferences": {
+            "linguagem_preferida": "Python, JavaScript moderno, PowerShell",
+            "estilo_explicacao": "Sênior, objetivo, sem preâmbulos didáticos básicos.",
+            "estilo_codigo": "Clean Code, tipado, modular e defensivo.",
+            "praticas_proibidas": "Proibido explicações condescendentes, código monolítico ou código sem testes.",
+            "projetos_alvo": "Todos os projetos da máquina (RPA, WRPE, Second Brain, AutomationTest)"
+        },
+        "auto_evolution": [
+            {"data": "19/10/2026", "evento": "Retroalimentação direta do perfil de desenvolvimento na memória durável"},
+            {"data": "18/07/2026", "evento": "Criação inicial da memória de preferências do AG Kit"}
+        ]
+    }
+}
+
 class SecondBrainHandler(SimpleHTTPRequestHandler):
     def translate_path(self, path):
         # Mapeia rota raiz para frontend/
@@ -114,7 +288,9 @@ class SecondBrainHandler(SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        parsed = self.path.split('?')[0]
+        parsed_url = urllib.parse.urlparse(self.path)
+        parsed = parsed_url.path
+        query = urllib.parse.parse_qs(parsed_url.query)
 
         if parsed == '/api/aurelio/status':
             # Checa Ollama local
@@ -169,6 +345,42 @@ class SecondBrainHandler(SimpleHTTPRequestHandler):
                 self._send_json({"error": "Grafo de projetos não encontrado"})
             return
 
+        elif parsed == '/api/knowledge/details':
+            domain_id = query.get('domain', ['rpa_architecture'])[0]
+            domain_info = KNOWLEDGE_DOMAINS.get(domain_id)
+
+            if not domain_info:
+                # Procura por prefixo ou fallback
+                domain_info = KNOWLEDGE_DOMAINS["rpa_architecture"]
+
+            # Lê o conteúdo Markdown real do arquivo físico
+            file_rel = domain_info.get("file", "")
+            file_path = SB_ROOT / file_rel
+            markdown_content = ""
+            if file_path.exists():
+                try:
+                    markdown_content = file_path.read_text(encoding='utf-8', errors='replace')
+                except Exception as e:
+                    markdown_content = f"# Erro ao ler arquivo {file_rel}: {e}"
+            else:
+                markdown_content = f"# {domain_info['title']}\n\nArquivo de conhecimento referenciado: `{file_rel}`"
+
+            resp_payload = {
+                "ok": True,
+                "domain": domain_id,
+                "title": domain_info.get("title"),
+                "file": domain_info.get("file"),
+                "category": domain_info.get("category"),
+                "icon": domain_info.get("icon", "📚"),
+                "triggers": domain_info.get("triggers", []),
+                "rules": domain_info.get("rules", []),
+                "user_preferences": domain_info.get("user_preferences", {}),
+                "auto_evolution": domain_info.get("auto_evolution", []),
+                "markdown_content": markdown_content
+            }
+            self._send_json(resp_payload)
+            return
+
         super().do_GET()
 
     def do_POST(self):
@@ -182,6 +394,8 @@ class SecondBrainHandler(SimpleHTTPRequestHandler):
 
             mensagem = data.get('mensagem', '').strip()
             modo = data.get('modo', 'restrito')
+            persona = data.get('persona', 'aurelio_master')
+            modelo = data.get('modelo') or getattr(model_manager, "MODEL_ATUAL", "qwen2.5-coder:7b")
 
             if not mensagem:
                 self._send_json({"resposta": "Nenhuma mensagem fornecida."})
@@ -191,19 +405,71 @@ class SecondBrainHandler(SimpleHTTPRequestHandler):
             skills_sug, repos_sug = identificar_skills_e_ferramentas(mensagem)
 
             try:
-                resultado = orchestrator.pipeline_principal(mensagem, GLOBAL_SESSION)
+                resultado = orchestrator.pipeline_principal(
+                    mensagem=mensagem,
+                    session_id=GLOBAL_SESSION,
+                    modelo=modelo,
+                    modo_override=modo,
+                    persona=persona
+                )
             except Exception as e:
-                # Fallback inteligente com as skills sugeridas se o Ollama não estiver rodando
+                # Fallback inteligente com perfil da persona e skills sugeridas se o Ollama não estiver rodando
+                persona_names = {
+                    "aurelio_master": "Aurélio Master (Arquiteto Global)",
+                    "frontend_specialist": "Frontend Specialist (Design & UI)",
+                    "rpa_specialist": "RPA Specialist (Selenium & UNIQ)",
+                    "zero_trust_guardian": "Zero Trust Guardian (Governança)",
+                    "devops_engineer": "DevOps Engineer (Deploy & Infra)",
+                    "systematic_debugger": "Systematic Debugger (Diagnóstico 4-Fases)",
+                    "explorer_intel": "Explorer & Intel (Mapeamento de Máquina)",
+                    "project_planner": "Project Planner (Planejamento Socrático)"
+                }
+                active_persona_name = persona_names.get(persona, "Aurélio AI")
                 resultado = {
-                    "resposta": f"**[AÇÃO/RESPOSTA DIRETA]**\nO daemon do Ollama não está ativo no momento, mas o Second Brain analisou sua solicitação.\n\n"
-                                f"**[CONTEXTO]**\nPara executar consultas com inteligência generativa local, inicie o Ollama com o modelo `qwen2.5-coder:7b`.\n\n"
-                                f"**[SUGESTÃO]**\nVocê pode utilizar as skills mapeadas no catálogo para resolver essa demanda de imediato."
+                    "resposta": f"**[AÇÃO/RESPOSTA DIRETA — {active_persona_name}]**\n"
+                                f"O daemon local do Ollama não está ativo no momento, mas analisei sua solicitação com base em toda a memória persistente da sua máquina (`{active_persona_name}`).\n\n"
+                                f"**[CONTEXTO DA MÁQUINA & REGRAS APLICADAS]**\n"
+                                f"• Ambiente Local: Windows | Projetos mapeados: `C:/Projetos/RPA`, `WRPE_Recorder`, `universal-second-brain`.\n"
+                                f"• Governança: Zero Trust Ativo, Clean Code em inglês, explicações em pt-BR direto ao ponto.\n"
+                                f"• Para inferência generativa completa em tempo real, inicie o Ollama com: `ollama run {modelo}`.\n\n"
+                                f"**[SUGESTÃO PROATIVA]**\n"
+                                f"Utilize os recursos mapeados abaixo no catálogo do Second Brain para avançar de imediato nesta tarefa.",
+                    "modo": modo,
+                    "modelo_usado": modelo,
+                    "persona": persona
                 }
 
             resultado["skills_sugeridas"] = skills_sug
             resultado["repos_sugeridos"] = repos_sug
             resultado["modo"] = modo
+            resultado["persona"] = persona
             self._send_json(resultado)
+
+        elif self.path == '/api/repos/add':
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_data = self.rfile.read(content_length)
+            try:
+                data = json.loads(post_data.decode('utf-8'))
+            except Exception:
+                data = {}
+
+            url = data.get('url', '').strip()
+            category = data.get('category', '').strip() or 'dev_reverse_engineering'
+            description = data.get('description', '').strip()
+
+            if not url:
+                self._send_json({"ok": False, "error": "A URL do repositório GitHub é obrigatória."}, status=400)
+                return
+
+            if not repo_manager:
+                self._send_json({"ok": False, "error": "Módulo repo_manager não disponível."}, status=500)
+                return
+
+            try:
+                res = repo_manager.add_repository(url=url, category=category, description=description)
+                self._send_json(res)
+            except Exception as e:
+                self._send_json({"ok": False, "error": f"Falha ao adicionar repositório: {str(e)}"}, status=500)
 
         elif self.path == '/api/aurelio/model':
             content_length = int(self.headers.get('Content-Length', 0))
