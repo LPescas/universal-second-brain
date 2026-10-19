@@ -1,0 +1,250 @@
+version: '2.0'
+hub_path: C:/Users/USER/.second_brain
+owner: USER
+global:
+  rules: global_rules.md
+  master_documentation: projeto_second_brain.md
+  portal_readme: README.md
+  governance_core: core/governanca/
+  guardian: core/governanca/guardiao_execucao.py
+  behavior: behavioral_patterns.yaml
+  enforcement: active_behavior_rules.yaml
+  learning_log: C:/.agents/memory/feedback-history.md
+  learning_priority: C:/.agents/memory/user-preferences.md
+ag_kit:
+  base_path: C:/.agents
+  architecture: ARCHITECTURE.md
+  agents_dir: agents/
+  skills_dir: skills/
+  workflows_dir: workflows/
+  scripts_dir: scripts/
+  rules_dir: rules/
+  hooks_dir: hooks/
+  memory_dir: memory/
+  schemas_dir: schemas/
+  ag_kit_dir: .ag-kit/
+  temp_ag_kit_dir: .temp_ag_kit/
+global_skills:
+  base_path: C:/Users/USER/.gemini/config/skills
+  rpa_governance: rpa_governance/SKILL.md
+projects:
+  rpa:
+    path: C:/Projetos/RPA
+    context: projects/rpa_context.md
+    domain:
+    - rpa
+    - automation
+    - selenium
+    - flask
+    - uniq
+    - guia
+    - emissao
+    - lancamento
+    - consolidacao
+    - contrato
+    - collectaba
+    - autorizar
+    tech:
+    - python
+    - flask
+    - selenium
+    - sqlite
+    - html
+    - js
+    governance: projeto_uniq_rpa.md
+    protected_files: arquivos_intocaveis_rpa.md
+  wrpe_recorder:
+    path: C:/Projetos/WRPE_Recorder
+    context: projects/wrpe_recorder_context.md
+    domain:
+    - recorder
+    - wrpe
+    - playwright
+    - chrome-extension
+    - capture
+    - replay
+    tech:
+    - python
+    - playwright
+    - selenium
+    - sqlite
+    - chrome-extension
+    governance: projeto_uniq_recorder.md
+  automationtest_122844:
+    path: C:\Projetos\AutomationTest_122844
+    context: projects/automationtest_122844_context.md
+    domain:
+    - python
+    - selenium
+    - automationtest_122844
+    tech:
+    - python
+    - selenium
+    auto_detected: '2026-07-31'
+  .agents:
+    path: C:\Projetos\.agents
+    context: projects/.agents_context.md
+    domain:
+    - .agents
+    - python
+    tech:
+    - python
+    auto_detected: '2026-09-18'
+  secondbrain_aurelio:
+    path: C:\Projetos\SecondBrain_Aurelio
+    context: projects/secondbrain_aurelio_context.md
+    domain:
+    - secondbrain_aurelio
+    - python
+    tech:
+    - python
+    auto_detected: '2026-09-22'
+knowledge:
+  python_patterns:
+    file: knowledge/python_patterns.md
+    triggers:
+    - python
+    - flask
+    - fastapi
+    - async
+    - typing
+  rpa_architecture:
+    file: knowledge/rpa_architecture.md
+    triggers:
+    - rpa
+    - automation
+    - selenium
+    - driver
+    - orchestrator
+  frontend_patterns:
+    file: knowledge/frontend_patterns.md
+    triggers:
+    - html
+    - css
+    - js
+    - react
+    - next
+    - ui
+    - design
+  devops_infra:
+    file: knowledge/devops_infra.md
+    triggers:
+    - deploy
+    - docker
+    - ci
+    - server
+    - infra
+  governance:
+    file: knowledge/governance.md
+    triggers:
+    - governance
+    - zero-trust
+    - compliance
+    - audit
+    - documentation
+  project_decisions:
+    file: knowledge/project_decisions.md
+    triggers:
+    - plan
+    - planner
+    - architecture
+    - design
+    - decisions
+    - preferences
+  installed_assets_catalog:
+    file: knowledge/installed_assets_catalog.md
+    triggers:
+    - hub
+    - repos
+    - repositories
+    - assets
+    - tools
+    - catalog
+repositories_hub:
+  manifest: repos/repos_manifest.yaml
+  catalog: knowledge/installed_assets_catalog.md
+  sync_engine: scripts/repo_sync_engine.py
+  categories:
+    media_processing: repos/media_processing/
+    dev_reverse_engineering: repos/dev_reverse_engineering/
+    ui_ux_design: repos/ui_ux_design/
+    orchestration_governance: repos/orchestration_governance/
+    routing_gateways: repos/routing_gateways/
+    memory_rag_graphs: repos/memory_rag_graphs/
+    document_web_parsers: repos/document_web_parsers/
+    cloud_security_b2b: repos/cloud_security_b2b/
+intent_routing:
+  new_project:
+  - global.rules
+  - global.behavior
+  - knowledge.*
+  existing_project:
+  - global.rules
+  - global.behavior
+  - projects.<match>
+  code_review:
+  - global.behavior
+  - projects.<match>
+  debug:
+  - projects.<match>
+  learning:
+  - global.behavior
+  - learning_log
+  media_audio_video:
+  - repositories_hub.categories.media_processing
+  reverse_engineering:
+  - repositories_hub.categories.dev_reverse_engineering
+  ui_design:
+  - repositories_hub.categories.ui_ux_design
+  orchestration_agents:
+  - repositories_hub.categories.orchestration_governance
+  llm_routing_free:
+  - repositories_hub.categories.routing_gateways
+  memory_knowledge_graph:
+  - repositories_hub.categories.memory_rag_graphs
+  document_pdf_scraping:
+  - repositories_hub.categories.document_web_parsers
+  cloud_security_saas:
+  - repositories_hub.categories.cloud_security_b2b
+
+integrations:
+  cursor: integrations/cursorrules_template.md
+  vscode: integrations/vscode_settings.json
+  powershell_profile: integrations/profile_snippet.ps1
+meta:
+  created: '2026-07-31'
+  updated: '2026-08-03'
+  version: '2.0'
+  token_budget: minimal
+  language_data: en
+  language_conversation: pt-BR
+  language_docs: pt-BR
+  master_index_line_limit: 300
+  health_check_notes: Line limit updated from 100 to 300 to accommodate project growth
+usage_metrics:
+  file: scripts/usage_metrics.json
+  track:
+  - sb_consulted
+  - files_read
+  - files_avoided
+  - tokens_saved_estimate
+  - sb_updates
+  dashboard: frontend/index.html
+rules:
+  global:
+  - "# \U0001F504 MUDANÇA DE COMPORTAMENTO ABSOLUTA (Atualização Segura do AG Kit)\n\
+    \nSempre que houver a necessidade de atualizar a infraestrutura da pasta `.agents`,\
+    \ regras, habilidades ou fluxos do repositório remoto (AG Kit - vudovn/ag-kit),\
+    \ você **DEVE OBRIGATORIAMENTE**:\n\n1. Utilizar EXCLUSIVAMENTE o comando de atualização\
+    \ segura do AG Kit:\n   `ag-kit update`\n2. **NUNCA** sobrescrever os arquivos\
+    \ manualmente de forma que apague as personalizações do usuário, pois o `ag-kit\
+    \ update` faz o merge preservando os arquivos do usuário modificados localmente.\n\
+    3. Se precisar visualizar o plano de atualização antes: `ag-kit update --dry-run`.\n\
+    4. Caso dê algo errado, utilizar `ag-kit rollback` para retornar ao backup pré-atualização\
+    \ mais recente.\n5. Em novos projetos, inicialize sempre com `ag-kit init`. Não\
+    \ adicione `.agents/` ao `.gitignore` se o Antigravity precisar indexar as regras.\
+    \ Use `.git/info/exclude` se precisar mantê-lo fora do versionamento público sem\
+    \ perder a descoberta.\n\n**Justificativa:** O usuário exigiu que a atualização\
+    \ dos recursos ligados à pasta `.agents` utilize o motor nativo do AG Kit para\
+    \ mesclar atualizações sem destruir as regras customizadas, scripts e outras customizações\
+    \ colocadas por ele próprio.\n"

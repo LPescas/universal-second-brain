@@ -1,0 +1,2 @@
+
+- [2026-08-27] Verificação do fluxo de Rascunhos no RPA de Lançamentos de guias concluída com sucesso. Código contém etapas completas de filtros (inicio de ano até hoje), grid e loop de finalização e voltar. XPath idênticos aos solicitados.

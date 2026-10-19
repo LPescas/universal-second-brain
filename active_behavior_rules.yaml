@@ -1,0 +1,343 @@
+# active_behavior_rules.yaml — auto-updated by learn_detector.py
+# Last scan: 2026-08-03T12:28:09.124867
+version: '1.0'
+enforcement: MANDATORY
+load_order: 3
+meta:
+  override_default_reasoning: true
+  skip_if_trivial: false
+  apply_before_execution: true
+  dedup_enforced: true
+  last_dedup: '2026-08-03'
+second_brain_rules:
+- id: SB-001
+  rule: 'Before using view_file, list_dir, grep_search, or run_command to explore
+    files, consult the Second Brain (MASTER_INDEX.yaml + matched project context)
+    first. File reads require explicit justification if Second Brain has the information.
+
+    '
+  trigger:
+  - view_file
+  - list_dir
+  - grep_search
+  - read_file
+  enforcement: MANDATORY_CHECK
+  source: SECOND_BRAIN_EVOLUTION | 2026-08-03
+- id: SB-002
+  rule: 'After completing any task, run Post-Task Checklist and update Second Brain
+    if any new decision, preference, solution, or context was created. No information
+    must remain only in the conversation or files.
+
+    '
+  trigger:
+  - task_complete
+  - end_of_turn
+  enforcement: APPLY_ALWAYS
+  source: SECOND_BRAIN_EVOLUTION | 2026-08-03
+- id: SB-003
+  rule: 'Before writing any new entry to learning_log.md or active_behavior_rules.yaml,
+    perform semantic deduplication check. If equivalent rule already exists, skip.
+    Log internally: [DEDUP] Entry already exists: <existing_id>
+
+    '
+  trigger:
+  - learning_log
+  - active_behavior_rules
+  - append
+  enforcement: MANDATORY_CHECK
+  source: SECOND_BRAIN_EVOLUTION | 2026-08-03
+communication_rules:
+- id: CR-001
+  rule: Response language is always PT-BR. Code, variables, comments always in English.
+  enforcement: BLOCK_RESPONSE_IF_VIOLATED
+  source: INIT | 2026-07-31
+- id: CR-002
+  rule: No emoji under any circumstance in responses.
+  enforcement: BLOCK_RESPONSE_IF_VIOLATED
+  source: AUDIT | 2026-07-31
+- id: CR-003
+  rule: No basic explanations. Assume senior-level comprehension. Skip known context.
+  enforcement: APPLY_ALWAYS
+  source: INIT | 2026-07-31
+- id: CR-004
+  rule: 'Prefer direct code output over prose explanation. Ratio: 80% code, 20% prose
+    max.'
+  enforcement: APPLY_ALWAYS
+  source: INIT | 2026-07-31
+- id: CR-005
+  rule: 'At the end of EVERY response, the agent MUST append exactly the Markdown block "## 🧠 Second Brain - Relatório de Execução", completely filled out dynamically with execution stats (Agents used, Tokens, Rules, etc). The old simple sign-off is deprecated.'
+  enforcement: BLOCK_RESPONSE_IF_VIOLATED
+  source: USER_EXPLICIT | 2026-08-03
+- id: CR-006
+  rule: 'When the user requests an architectural or logical change to a project, the agent MUST stop execution, generate a detailed Implementation Plan (Planner), and read knowledge/project_decisions.md to check past user preferences. Any unknown preferences must be asked in the "Open Questions" section of the plan. Wait for user approval before writing code.'
+  enforcement: BLOCK_EXECUTION_IF_UNPLANNED
+  source: USER_EXPLICIT | 2026-08-03
+code_rules:
+- id: CODE-001
+  rule: 'Python: print() is forbidden. Use logger with format [ID] [MODULE] [STEP]
+    [TYPE] Message.'
+  trigger:
+  - python
+  - .py
+  - 'def '
+  - 'class '
+  enforcement: BLOCK_OUTPUT_IF_VIOLATED
+  source: RPA_GOVERNANCE | 2026-07-31
+- id: CODE-002
+  rule: 'Python: All functions must have type hints. No untyped parameters or return
+    values.'
+  trigger:
+  - python
+  - 'def '
+  - async def
+  enforcement: APPLY_ALWAYS
+  source: BEHAVIORAL_PATTERNS | 2026-07-31
+- id: CODE-003
+  rule: 'Python: No bare except or generic Exception catch. Always use specific exception
+    types.'
+  trigger:
+  - try
+  - except
+  - python
+  enforcement: BLOCK_OUTPUT_IF_VIOLATED
+  source: BEHAVIORAL_PATTERNS | 2026-07-31
+- id: CODE-004
+  rule: 'JavaScript: Never use var. const > let. Semicolons mandatory. Single quotes.'
+  trigger:
+  - javascript
+  - .js
+  - .ts
+  - function
+  - const
+  - let
+  enforcement: APPLY_ALWAYS
+  source: BEHAVIORAL_PATTERNS | 2026-07-31
+- id: CODE-005
+  rule: No accented characters in Python filenames. Snake_case only.
+  trigger:
+  - create file
+  - new file
+  - .py
+  enforcement: BLOCK_OUTPUT_IF_VIOLATED
+  source: RPA_GOVERNANCE | 2026-07-31
+governance_rules:
+- id: GOV-001
+  rule: Before modifying any file in C:/Projetos/RPA, check arquivos_intocaveis_rpa.md
+    first.
+  trigger:
+  - rpa
+  - lancamento
+  - emissao
+  - consolidacao
+  - contrato
+  - collectaba
+  - autorizar
+  enforcement: MANDATORY_CHECK
+  file_to_read: C:/Projetos/RPA/arquivos_intocaveis_rpa.md
+  source: RPA_GOVERNANCE | 2026-07-31
+- id: GOV-002
+  rule: Every new subfolder created in UNIQ projects must immediately get a *_nome.md
+    file.
+  trigger:
+  - mkdir
+  - new folder
+  - create directory
+  - rpa
+  - recorder
+  enforcement: APPLY_ALWAYS
+  source: RPA_GOVERNANCE | 2026-07-31
+- id: GOV-003
+  rule: Credentials never hardcoded. Always reference Backend/Global/infraestrutura/.env
+  trigger:
+  - password
+  - token
+  - api_key
+  - secret
+  - credential
+  enforcement: BLOCK_OUTPUT_IF_VIOLATED
+  source: RPA_GOVERNANCE | 2026-07-31
+- id: GOV-004
+  rule: Selenium driver init always via Global/servicos/driver.py::start_session().
+    Never raw ChromeDriver.
+  trigger:
+  - selenium
+  - chrome
+  - driver
+  - webdriver
+  enforcement: BLOCK_OUTPUT_IF_VIOLATED
+  source: RPA_ARCHITECTURE | 2026-07-31
+architecture_rules:
+- id: ARCH-001
+  rule: 'New UNIQ RPA modules must follow 6-folder structure: codigo, documentacao,
+    logs, dados, configuracoes, executaveis.'
+  trigger:
+  - new module
+  - novo modulo
+  - create rpa
+  - criar rpa
+  enforcement: APPLY_ALWAYS
+  source: RPA_GOVERNANCE | 2026-07-31
+- id: ARCH-002
+  rule: AI memory files stay in C:/Users/USER/.second_brain/. Never persist inside
+    project repos.
+  trigger:
+  - save context
+  - save memory
+  - store learning
+  enforcement: APPLY_ALWAYS
+  source: AUDIT | 2026-07-31
+learning_triggers:
+  correction_keywords:
+  - nao e assim
+  - nao quero assim
+  - prefiro
+  - faz diferente
+  - errado
+  - nao gostei
+  - muda isso
+  - that's wrong
+  - not like that
+  - prefer
+  action_on_correction:
+    immediate: apply_correction_in_next_response
+    log: append_to_learning_log
+    flag: mark_as_promotion_candidate
+    dedup_check: true
+  promotion_threshold: 3
+  auto_promotion_schedule: weekly
+  auto_promotion_script: C:/Users/USER/.second_brain/scripts/auto_consolidate.py
+promoted_rules:
+- id: PROM-001
+  rule: 'User correction (HIGH): report counting was wrong — showed 12 missing but
+    should be 17 missing and 3 errors. Counting logic must be verified against full
+    dataset.
+
+    '
+  occurrences: 3
+  first_seen: '2026-07-31'
+  promoted_on: '2026-08-03'
+  source: REPEATED_PATTERN | 3x | CLEANED_BY_DEDUP_v2
+candidate_rules:
+- id: CAND-001
+  rule: 'User preference: extreme token efficiency, no basic explanations'
+  trigger: prefer
+  occurrences: 1
+  first_seen: '2026-07-31'
+  last_seen: '2026-07-31'
+  status: pending
+  source: CORRECTION | INIT
+  fingerprint: pref_token_efficiency_no_basic
+- id: CAND-002
+  rule: 'User preference: all automation must be automatic, no manual steps'
+  trigger: prefer
+  occurrences: 1
+  first_seen: '2026-07-31'
+  last_seen: '2026-07-31'
+  status: pending
+  source: CORRECTION | INIT
+  fingerprint: pref_full_automation_no_manual
+- id: CAND-003
+  rule: 'User correction (HIGH): admin credentials for uniq_launcher were wrong. The
+    correct credentials must be referenced from .env, never hardcoded.
+
+    '
+  trigger: errado
+  occurrences: 1
+  first_seen: '2026-07-31'
+  last_seen: '2026-07-31'
+  status: pending
+  source: CORRECTION | SCANNER
+  fingerprint: corr_uniq_launcher_credentials
+- id: CAND-004
+  rule: 'User correction (HIGH): Never use print(), always use logger.'
+  trigger: nao e assim
+  occurrences: 1
+  first_seen: '2026-07-31'
+  last_seen: '2026-07-31'
+  status: pending
+  source: CORRECTION | SCANNER
+  fingerprint: corr_no_print_use_logger
+- id: CAND-CORR-2026-08-03-000
+  rule: 'User preference: extreme token efficiency, no basic explanations'
+  trigger: prefer
+  occurrences: 1
+  first_seen: '2026-07-31'
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | INIT
+- id: CAND-CORR-2026-08-03-001
+  rule: 'User preference: all automation must be automatic, no manual steps'
+  trigger: prefer
+  occurrences: 1
+  first_seen: '2026-07-31'
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | INIT
+- id: CAND-CORR-2026-08-03-002
+  rule: '[RECOVERED|HIGH|explicit_correction] o admin e a senha esta errado para entrar
+    no uniq_laucher o correto é: (src: ANTIGRAVITY:2b859b7b)'
+  trigger: errado
+  occurrences: 1
+  first_seen: 2026-07-31 12:49
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | SCANNER
+- id: CAND-CORR-2026-08-03-003
+  rule: '[RECOVERED|HIGH|explicit_correction] mas quando vejo sem abrir esse relatorio
+    desse dia esta mostrando apenas 12 faltante que ainda esta errado pois eram pra
+    ser 17 faltantes e 3 erros (src: ANTIGRAVITY:9e801578)'
+  trigger: errado
+  occurrences: 1
+  first_seen: 2026-07-31 12:49
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | SCANNER
+- id: CAND-CORR-2026-08-03-004
+  rule: '[RECOVERED|HIGH|explicit_correction] Nao e assim, nunca use print() sempre
+    use o logger (src: ANTIGRAVITY:00000000)'
+  trigger: nao e assim
+  occurrences: 1
+  first_seen: 2026-07-31 12:55
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | SCANNER
+- id: CAND-CORR-2026-08-03-005
+  rule: '[RECOVERED|HIGH|explicit_correction] mas quando vejo sem abrir esse relatorio
+    desse dia esta mostrando apenas 12 faltante que ainda esta errado pois eram pra
+    ser 17 faltantes e 3 erros (src: ANTIGRAVITY:9e801578)'
+  trigger: errado
+  occurrences: 1
+  first_seen: 2026-07-31 18:47
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | SCANNER
+- id: CAND-CORR-2026-08-03-006
+  rule: '[RECOVERED|HIGH|explicit_correction] mas quando vejo sem abrir esse relatorio
+    desse dia esta mostrando apenas 12 faltante que ainda esta errado pois eram pra
+    ser 17 faltantes e 3 erros (src: ANTIGRAVITY:9e801578)'
+  trigger: errado
+  occurrences: 1
+  first_seen: 2026-08-01 00:47
+  last_seen: '2026-08-03'
+  status: pending
+  source: CORRECTION | SCANNER
+- id: CAND-REPEAT-2026-08-03-000
+  rule: '[RECOVERED|HIGH|explicit_correction] mas quando vejo sem abrir esse relatorio
+    desse dia esta mostrando apenas 12 faltante que ainda esta errado pois eram pra
+    ser 17 faltantes e 3 erros (src: ANTIGRAVITY:9e801578)'
+  occurrences: 3
+  first_seen: 2026-07-31 12:49
+  last_seen: '2026-08-03'
+  status: promotion_candidate
+  source: REPEATED_PATTERN | 3x
+- id: CAND-REPEAT-2026-08-03-001
+  rule: 'HEALTH_ISSUE: MASTER_INDEX exceeds 100 lines (144 lines)'
+  occurrences: 3
+  first_seen: 2026-08-01 07:00
+  last_seen: '2026-08-03'
+  status: promotion_candidate
+  source: REPEATED_PATTERN | 3x
+
+  - id: rule_ag_kit_mandatory
+    description: 'O agente DEVE OBRIGATORIAMENTE varrer, carregar e utilizar os recursos da pasta C:\.agents (.shared, agents, rules, scripts, skills, workflows, .ag-kit, .temp_ag_kit, hooks, memory, schemas) em qualquer projeto e relat�-los na sa�da.'
+    enforcement_level: strict

@@ -1,0 +1,137 @@
+# ============================================================
+# learning_priority.yaml — Learning Classification System
+# PURPOSE: Define priority tiers for all learning events.
+#          Controls recovery guarantee and retention policy.
+# ============================================================
+
+version: "1.0"
+last_updated: "2026-07-31"
+
+# ============================================================
+# PRIORITY TIERS
+# ============================================================
+
+tiers:
+
+  HIGH:
+    description: "Explicit corrections and architectural decisions. NEVER lost."
+    recovery_guarantee: "100%"
+    scan_frequency: "every_6h + on_logon"
+    retention: "permanent"
+    auto_promote_after_occurrences: 1  # HIGH corrections promote immediately
+    patterns:
+      - trigger: "nao e assim"
+        category: explicit_correction
+      - trigger: "nao quero assim"
+        category: explicit_correction
+      - trigger: "errado"
+        category: explicit_correction
+      - trigger: "nao gostei"
+        category: explicit_correction
+      - trigger: "muda isso"
+        category: explicit_correction
+      - trigger: "that's wrong"
+        category: explicit_correction
+      - trigger: "not like that"
+        category: explicit_correction
+      - trigger: "nunca faca"
+        category: architectural
+      - trigger: "sempre use"
+        category: architectural
+      - trigger: "never do"
+        category: architectural
+      - trigger: "always use"
+        category: architectural
+
+  MEDIUM:
+    description: "Style and preference signals. Recovered within 6h."
+    recovery_guarantee: "~100% practical"
+    scan_frequency: "every_6h"
+    retention: "90_days_then_review"
+    auto_promote_after_occurrences: 3
+    patterns:
+      - trigger: "prefiro"
+        category: style_preference
+      - trigger: "prefer"
+        category: style_preference
+      - trigger: "faz diferente"
+        category: style_preference
+      - trigger: "de outra forma"
+        category: style_preference
+      - trigger: "gostaria que"
+        category: style_preference
+
+  LOW:
+    description: "Minor phrasing adjustments. Best-effort recovery."
+    recovery_guarantee: "best_effort"
+    scan_frequency: "weekly"
+    retention: "30_days"
+    auto_promote_after_occurrences: 5
+    patterns:
+      - trigger: "pode mudar"
+        category: phrasing
+      - trigger: "menos detalhes"
+        category: phrasing
+      - trigger: "nao precisa tao"
+        category: phrasing
+
+# ============================================================
+# RECOVERY PIPELINE
+# ============================================================
+
+pipeline:
+
+  stage_1_soft:
+    name: "Agent Self-Write"
+    mechanism: "SKILL.md / CLAUDE.md / GEMINI.md post-response protocol"
+    reliability: "best_effort"
+    covers: "HIGH, MEDIUM, LOW"
+    failure_mode: "agent_skips_instruction"
+
+  stage_2_recovery:
+    name: "Transcript Scanner"
+    mechanism: "conversation_scanner.py reads transcript.jsonl at OS level"
+    reliability: "high"
+    covers: "HIGH, MEDIUM (6h), LOW (weekly)"
+    failure_mode: "transcript not yet written at scan time"
+    scripts:
+      - "scripts/conversation_scanner.py"
+    schedule:
+      - trigger: "logon"
+        task: "SecondBrain_ConvScanner_Logon"
+      - trigger: "every_6h"
+        task: "SecondBrain_ConvScanner_6h"
+      - trigger: "weekly_sunday"
+        task: "SecondBrain_AutoConsolidate"
+
+  stage_3_external:
+    name: "Health Check Backfill"
+    mechanism: "health_check.py detects gaps and flags for manual review"
+    reliability: "verification"
+    covers: "integrity check only"
+    scripts:
+      - "scripts/health_check.py"
+    schedule:
+      - trigger: "daily_07h"
+        task: "SecondBrain_HealthCheck_Daily"
+
+# ============================================================
+# CONVERGENCE GUARANTEE
+# ============================================================
+
+convergence:
+  description: >
+    Even if Stage 1 (agent) fails 100% of the time, Stage 2 (scanner)
+    recovers HIGH and MEDIUM events within 6 hours.
+    The system converges toward complete learning capture over time.
+    Zero permanent loss for HIGH priority events is the practical guarantee.
+
+  max_loss_window:
+    HIGH: "6 hours (next scheduled scan)"
+    MEDIUM: "6 hours (next scheduled scan)"
+    LOW: "7 days (weekly scan)"
+
+  failure_tolerance:
+    agent_skip_rate: "up to 100% — scanner still recovers"
+    transcript_delay: "transcripts written synchronously by IDE runtime"
+    scan_gap: "max 6h for HIGH/MEDIUM"

@@ -1,0 +1,635 @@
+{
+  "nodes": [
+    {
+      "id": "second_brain",
+      "label": "Second Brain Core",
+      "type": "core",
+      "group": "core",
+      "color": "#38bdf8",
+      "radius": 24,
+      "desc": "Hub Central de Conhecimento, Memória e Governança Universal"
+    },
+    {
+      "id": "cat_media_processing",
+      "label": "Mídia, Vídeo & Áudio",
+      "type": "category",
+      "group": "media_processing",
+      "color": "#06b6d4",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_dev_reverse_engineering",
+      "label": "Código & Eng. Reversa",
+      "type": "category",
+      "group": "dev_reverse_engineering",
+      "color": "#3b82f6",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_ui_ux_design",
+      "label": "UI/UX & Design Premium",
+      "type": "category",
+      "group": "ui_ux_design",
+      "color": "#ec4899",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_orchestration_governance",
+      "label": "Orquestração & 5Ps",
+      "type": "category",
+      "group": "orchestration_governance",
+      "color": "#10b981",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_routing_gateways",
+      "label": "Roteamento & LLMs Grátis",
+      "type": "category",
+      "group": "routing_gateways",
+      "color": "#f59e0b",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_memory_rag_graphs",
+      "label": "Memória Persistente & RAG",
+      "type": "category",
+      "group": "memory_rag_graphs",
+      "color": "#8b5cf6",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_document_web_parsers",
+      "label": "Parsers & Web Scraping",
+      "type": "category",
+      "group": "document_web_parsers",
+      "color": "#14b8a6",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "cat_cloud_security_b2b",
+      "label": "Cloud, OWASP & SaaS",
+      "type": "category",
+      "group": "cloud_security_b2b",
+      "color": "#ef4444",
+      "radius": 16,
+      "desc": "Categoria tática do Hub de Ferramentas"
+    },
+    {
+      "id": "repo_VoiceStudio",
+      "label": "VoiceStudio",
+      "type": "repository",
+      "group": "media_processing",
+      "color": "#06b6d4",
+      "radius": 10,
+      "desc": "Síntese TTS, clonagem vocal e estúdio de processamento de áudio com IA",
+      "status": "OK",
+      "url": "https://github.com/debpalash/VoiceStudio"
+    },
+    {
+      "id": "repo_editonny",
+      "label": "editonny",
+      "type": "repository",
+      "group": "media_processing",
+      "color": "#06b6d4",
+      "radius": 10,
+      "desc": "Edição automatizada de vídeo e imagem com IA",
+      "status": "OK",
+      "url": "https://github.com/soumatheusgomes/editonny"
+    },
+    {
+      "id": "repo_diagram-design",
+      "label": "diagram-design",
+      "type": "repository",
+      "group": "media_processing",
+      "color": "#06b6d4",
+      "radius": 10,
+      "desc": "Padronização e blueprints de diagramas visuais e ASCII para documentação técnica",
+      "status": "OK",
+      "url": "https://github.com/cathrynlavery/diagram-design"
+    },
+    {
+      "id": "repo_paperclip",
+      "label": "paperclip",
+      "type": "repository",
+      "group": "media_processing",
+      "color": "#06b6d4",
+      "radius": 10,
+      "desc": "Extração visual e conversão de designs/telas para código fonte",
+      "status": "OK",
+      "url": "https://github.com/paperclipai/paperclip"
+    },
+    {
+      "id": "repo_rea",
+      "label": "rea",
+      "type": "repository",
+      "group": "dev_reverse_engineering",
+      "color": "#3b82f6",
+      "radius": 10,
+      "desc": "Engenharia reversa, análise de binários e descompilação assistida por LLM",
+      "status": "OK",
+      "url": "https://github.com/morluto/rea"
+    },
+    {
+      "id": "repo_ECC",
+      "label": "ECC",
+      "type": "repository",
+      "group": "dev_reverse_engineering",
+      "color": "#3b82f6",
+      "radius": 10,
+      "desc": "Everything Claude Code — coletânea de prompts, workflows e ferramentas CLI para Claude",
+      "status": "OK",
+      "url": "https://github.com/affaan-m/ECC"
+    },
+    {
+      "id": "repo_vibe-coding-toolkit",
+      "label": "vibe-coding-toolkit",
+      "type": "repository",
+      "group": "dev_reverse_engineering",
+      "color": "#3b82f6",
+      "radius": 10,
+      "desc": "Boilerplates ultra-rápidos e snippets de prototipagem ágil para qualquer stack",
+      "status": "OK",
+      "url": "https://github.com/soumatheusgomes/vibe-coding-toolkit"
+    },
+    {
+      "id": "repo_andrej-karpathy-skills",
+      "label": "andrej-karpathy-skills",
+      "type": "repository",
+      "group": "dev_reverse_engineering",
+      "color": "#3b82f6",
+      "radius": 10,
+      "desc": "Princípios de Deep Learning, nanoGPT e boas práticas de ML por Andrej Karpathy",
+      "status": "OK",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills"
+    },
+    {
+      "id": "repo_superpowers",
+      "label": "superpowers",
+      "type": "repository",
+      "group": "dev_reverse_engineering",
+      "color": "#3b82f6",
+      "radius": 10,
+      "desc": "Habilidades mestras de TDD rigoroso, debugging sistemático e desenvolvimento disciplinado",
+      "status": "OK",
+      "url": "https://github.com/obra/superpowers"
+    },
+    {
+      "id": "repo_impeccable",
+      "label": "impeccable",
+      "type": "repository",
+      "group": "ui_ux_design",
+      "color": "#ec4899",
+      "radius": 10,
+      "desc": "Princípios anti-slop de design de interfaces — micro-interações, tipografia e acabamento premium",
+      "status": "OK",
+      "url": "https://github.com/pbakaus/impeccable"
+    },
+    {
+      "id": "repo_ruflo",
+      "label": "ruflo",
+      "type": "repository",
+      "group": "orchestration_governance",
+      "color": "#10b981",
+      "radius": 10,
+      "desc": "Runtime de orquestração multi-agente de alta velocidade com suporte a workflows paralelos",
+      "status": "OK",
+      "url": "https://github.com/ruvnet/ruflo"
+    },
+    {
+      "id": "repo_agentville",
+      "label": "agentville",
+      "type": "repository",
+      "group": "orchestration_governance",
+      "color": "#10b981",
+      "radius": 10,
+      "desc": "Ambiente de simulação e colaboração entre agentes de IA especializados",
+      "status": "OK",
+      "url": "https://github.com/soumatheusgomes/agentville"
+    },
+    {
+      "id": "repo_framework-5p",
+      "label": "framework-5p",
+      "type": "repository",
+      "group": "orchestration_governance",
+      "color": "#10b981",
+      "radius": 10,
+      "desc": "Metodologia dos 5Ps para estruturação e governança de projetos e negócios",
+      "status": "OK",
+      "url": "https://github.com/soumatheusgomes/framework-5p"
+    },
+    {
+      "id": "repo_claude-plugins-official",
+      "label": "claude-plugins-official",
+      "type": "repository",
+      "group": "orchestration_governance",
+      "color": "#10b981",
+      "radius": 10,
+      "desc": "Catálogo oficial de extensões e plugins da Anthropic para Claude Code e Claude.ai",
+      "status": "OK",
+      "url": "https://github.com/anthropics/claude-plugins-official"
+    },
+    {
+      "id": "repo_OmniRoute",
+      "label": "OmniRoute",
+      "type": "repository",
+      "group": "routing_gateways",
+      "color": "#f59e0b",
+      "radius": 10,
+      "desc": "Roteador inteligente de LLMs com fallback automático, balanceamento e custo zero",
+      "status": "OK",
+      "url": "https://github.com/diegosouzapw/OmniRoute"
+    },
+    {
+      "id": "repo_freellmapi",
+      "label": "freellmapi",
+      "type": "repository",
+      "group": "routing_gateways",
+      "color": "#f59e0b",
+      "radius": 10,
+      "desc": "Gateway agregador de provedores de LLMs gratuitos com API compatível com OpenAI",
+      "status": "OK",
+      "url": "https://github.com/tashfeenahmed/freellmapi"
+    },
+    {
+      "id": "repo_claude-mem",
+      "label": "claude-mem",
+      "type": "repository",
+      "group": "memory_rag_graphs",
+      "color": "#8b5cf6",
+      "radius": 10,
+      "desc": "Sistema de memória contínua cross-session para agentes de IA com persistência em arquivos",
+      "status": "OK",
+      "url": "https://github.com/thedotmack/claude-mem"
+    },
+    {
+      "id": "repo_hindsight",
+      "label": "hindsight",
+      "type": "repository",
+      "group": "memory_rag_graphs",
+      "color": "#8b5cf6",
+      "radius": 10,
+      "desc": "Avaliação reflexiva de contexto RAG e memória adaptativa pós-execução",
+      "status": "OK",
+      "url": "https://github.com/vectorize-io/hindsight"
+    },
+    {
+      "id": "repo_graphify",
+      "label": "graphify",
+      "type": "repository",
+      "group": "memory_rag_graphs",
+      "color": "#8b5cf6",
+      "radius": 10,
+      "desc": "Converte código, documentos e repositórios em Grafos de Conhecimento relacionais",
+      "status": "OK",
+      "url": "https://github.com/Graphify-Labs/graphify"
+    },
+    {
+      "id": "repo_docling",
+      "label": "docling",
+      "type": "repository",
+      "group": "document_web_parsers",
+      "color": "#14b8a6",
+      "radius": 10,
+      "desc": "Extrator e parser multimodal ultra-acurado de PDF, Word, Excel e tabelas para Markdown",
+      "status": "OK",
+      "url": "https://github.com/docling-project/docling"
+    },
+    {
+      "id": "repo_ponytail",
+      "label": "ponytail",
+      "type": "repository",
+      "group": "document_web_parsers",
+      "color": "#14b8a6",
+      "radius": 10,
+      "desc": "Scraper web headless ultrarrápido sem overhead de navegador completo",
+      "status": "OK",
+      "url": "https://github.com/DietrichGebert/ponytail"
+    },
+    {
+      "id": "repo_scientific-agent-skills",
+      "label": "scientific-agent-skills",
+      "type": "repository",
+      "group": "document_web_parsers",
+      "color": "#14b8a6",
+      "radius": 10,
+      "desc": "Skills especializadas para pesquisa científica, cálculos, leitura de artigos e dados acadêmicos",
+      "status": "OK",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills"
+    },
+    {
+      "id": "repo_security-audit-skill",
+      "label": "security-audit-skill",
+      "type": "repository",
+      "group": "cloud_security_b2b",
+      "color": "#ef4444",
+      "radius": 10,
+      "desc": "Skill oficial Cloudflare para auditoria de vulnerabilidades OWASP e postura de segurança",
+      "status": "OK",
+      "url": "https://github.com/cloudflare/security-audit-skill"
+    },
+    {
+      "id": "repo_Octop",
+      "label": "Octop",
+      "type": "repository",
+      "group": "cloud_security_b2b",
+      "color": "#ef4444",
+      "radius": 10,
+      "desc": "Gestão e automação de infraestrutura multi-cloud unificada da Tencent Cloud",
+      "status": "OK",
+      "url": "https://github.com/TencentCloud/Octop"
+    },
+    {
+      "id": "repo_nango",
+      "label": "nango",
+      "type": "repository",
+      "group": "cloud_security_b2b",
+      "color": "#ef4444",
+      "radius": 10,
+      "desc": "Conector unificado para 250+ integrações SaaS com suporte a OAuth, webhooks e sincronização",
+      "status": "OK",
+      "url": "https://github.com/NangoHQ/nango"
+    },
+    {
+      "id": "proj_rpa",
+      "label": "UNIQ RPA",
+      "type": "project",
+      "group": "project",
+      "color": "#10b981",
+      "radius": 14,
+      "desc": "Automação corporativa com Selenium, Flask e Guias TISS"
+    },
+    {
+      "id": "proj_wrpe",
+      "label": "WRPE Recorder",
+      "type": "project",
+      "group": "project",
+      "color": "#6366f1",
+      "radius": 14,
+      "desc": "Gravador e player de sessões web em Playwright"
+    },
+    {
+      "id": "proj_aurelio",
+      "label": "Aurelio AI",
+      "type": "project",
+      "group": "project",
+      "color": "#f59e0b",
+      "radius": 14,
+      "desc": "Agente autônomo local sobre Ollama com SQLite"
+    }
+  ],
+  "links": [
+    {
+      "source": "second_brain",
+      "target": "cat_media_processing",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_dev_reverse_engineering",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_ui_ux_design",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_orchestration_governance",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_routing_gateways",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_memory_rag_graphs",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_document_web_parsers",
+      "value": 3
+    },
+    {
+      "source": "second_brain",
+      "target": "cat_cloud_security_b2b",
+      "value": 3
+    },
+    {
+      "source": "cat_media_processing",
+      "target": "repo_VoiceStudio",
+      "value": 1
+    },
+    {
+      "source": "cat_media_processing",
+      "target": "repo_editonny",
+      "value": 1
+    },
+    {
+      "source": "cat_media_processing",
+      "target": "repo_diagram-design",
+      "value": 1
+    },
+    {
+      "source": "cat_media_processing",
+      "target": "repo_paperclip",
+      "value": 1
+    },
+    {
+      "source": "cat_dev_reverse_engineering",
+      "target": "repo_rea",
+      "value": 1
+    },
+    {
+      "source": "cat_dev_reverse_engineering",
+      "target": "repo_ECC",
+      "value": 1
+    },
+    {
+      "source": "cat_dev_reverse_engineering",
+      "target": "repo_vibe-coding-toolkit",
+      "value": 1
+    },
+    {
+      "source": "cat_dev_reverse_engineering",
+      "target": "repo_andrej-karpathy-skills",
+      "value": 1
+    },
+    {
+      "source": "cat_dev_reverse_engineering",
+      "target": "repo_superpowers",
+      "value": 1
+    },
+    {
+      "source": "cat_ui_ux_design",
+      "target": "repo_impeccable",
+      "value": 1
+    },
+    {
+      "source": "cat_orchestration_governance",
+      "target": "repo_ruflo",
+      "value": 1
+    },
+    {
+      "source": "cat_orchestration_governance",
+      "target": "repo_agentville",
+      "value": 1
+    },
+    {
+      "source": "cat_orchestration_governance",
+      "target": "repo_framework-5p",
+      "value": 1
+    },
+    {
+      "source": "cat_orchestration_governance",
+      "target": "repo_claude-plugins-official",
+      "value": 1
+    },
+    {
+      "source": "cat_routing_gateways",
+      "target": "repo_OmniRoute",
+      "value": 1
+    },
+    {
+      "source": "cat_routing_gateways",
+      "target": "repo_freellmapi",
+      "value": 1
+    },
+    {
+      "source": "cat_memory_rag_graphs",
+      "target": "repo_claude-mem",
+      "value": 1
+    },
+    {
+      "source": "cat_memory_rag_graphs",
+      "target": "repo_hindsight",
+      "value": 1
+    },
+    {
+      "source": "cat_memory_rag_graphs",
+      "target": "repo_graphify",
+      "value": 1
+    },
+    {
+      "source": "cat_document_web_parsers",
+      "target": "repo_docling",
+      "value": 1
+    },
+    {
+      "source": "cat_document_web_parsers",
+      "target": "repo_ponytail",
+      "value": 1
+    },
+    {
+      "source": "cat_document_web_parsers",
+      "target": "repo_scientific-agent-skills",
+      "value": 1
+    },
+    {
+      "source": "cat_cloud_security_b2b",
+      "target": "repo_security-audit-skill",
+      "value": 1
+    },
+    {
+      "source": "cat_cloud_security_b2b",
+      "target": "repo_Octop",
+      "value": 1
+    },
+    {
+      "source": "cat_cloud_security_b2b",
+      "target": "repo_nango",
+      "value": 1
+    },
+    {
+      "source": "second_brain",
+      "target": "proj_rpa",
+      "value": 2
+    },
+    {
+      "source": "second_brain",
+      "target": "proj_wrpe",
+      "value": 2
+    },
+    {
+      "source": "second_brain",
+      "target": "proj_aurelio",
+      "value": 2
+    },
+    {
+      "source": "proj_rpa",
+      "target": "repo_docling",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_rpa",
+      "target": "repo_superpowers",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_rpa",
+      "target": "repo_diagram-design",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_rpa",
+      "target": "repo_VoiceStudio",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_wrpe",
+      "target": "repo_paperclip",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_wrpe",
+      "target": "repo_editonny",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_wrpe",
+      "target": "repo_rea",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "repo_claude-mem",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "repo_OmniRoute",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "repo_freellmapi",
+      "value": 1.5,
+      "dashed": true
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "repo_graphify",
+      "value": 1.5,
+      "dashed": true
+    }
+  ]
+}

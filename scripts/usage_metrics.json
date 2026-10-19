@@ -1,0 +1,5282 @@
+[
+  {
+    "timestamp": "2026-08-03T11:58:52.433083",
+    "conversation_id": "unknown",
+    "project": "Ecosistema Global",
+    "task_description": "Mapeamento massivo de pastas com 16.842 arquivos filtrando modulos e binarios para reduzir analise de agentes e enriquecer contexto",
+    "tokens_spent": 45000,
+    "files_read": 3,
+    "duration_minutes": 12.0,
+    "sb_updates": 4
+  },
+  {
+    "timestamp": "2026-08-03T13:08:38.942913",
+    "conversation_id": "2b09bdc6-a251-43ba-8055-1395d7071b25",
+    "project": "RPA",
+    "task_description": "Fixing Database Consolidation Errors / UI improvements",
+    "tokens_spent": 38000,
+    "files_read": 4,
+    "duration_minutes": 8.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-03T14:45:07.737265",
+    "conversation_id": "625ad5c4-2e03-45f9-8493-03f68c5e3382",
+    "project": "Ecosistema Global",
+    "task_description": "Implementação do Relatório de Execução Markdown e Banco de Decisões",
+    "tokens_spent": 9800,
+    "files_read": 3,
+    "duration_minutes": 5.0,
+    "sb_updates": 3
+  },
+  {
+    "timestamp": "2026-08-03T15:30:46.666311",
+    "conversation_id": "2b09bdc6-a251-43ba-8055-1395d7071b25",
+    "project": "RPA",
+    "task_description": "Fix RPA consolidate UI and log insert",
+    "tokens_spent": 4500,
+    "files_read": 7,
+    "duration_minutes": 2.5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-03T16:07:41.506518",
+    "conversation_id": "unknown",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 4,
+    "duration_minutes": 1.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-03T16:08:05.060055",
+    "conversation_id": "unknown",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 4,
+    "duration_minutes": 1.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-03T16:10:27.677924",
+    "conversation_id": "unknown",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 0.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-03T16:15:07.950339",
+    "conversation_id": "unknown",
+    "project": "Global",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-03T17:38:04.018436",
+    "conversation_id": "798dc8ae-89cd-4174-8d46-c80376c6f002",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 8,
+    "duration_minutes": 5.0,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-03T17:38:14.067700",
+    "conversation_id": "798dc8ae-89cd-4174-8d46-c80376c6f002",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 8,
+    "duration_minutes": 5.0,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-03T17:40:22.413705",
+    "conversation_id": "798dc8ae-89cd-4174-8d46-c80376c6f002",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 0,
+    "duration_minutes": 1.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-03T17:42:52.966040",
+    "conversation_id": "798dc8ae-89cd-4174-8d46-c80376c6f002",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 2.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-04T17:24:13.435285",
+    "conversation_id": "4c20ae1d-3446-4b27-a320-48529a96ce02",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15200,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-04T17:38:03.195411",
+    "conversation_id": "4c20ae1d-3446-4b27-a320-48529a96ce02",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-04T17:51:03.367655",
+    "conversation_id": "4c20ae1d-3446-4b27-a320-48529a96ce02",
+    "project": "second_brain",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 4
+  },
+  {
+    "timestamp": "2026-08-04T17:56:41.209123",
+    "conversation_id": "4c20ae1d-3446-4b27-a320-48529a96ce02",
+    "project": "second_brain",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 4
+  },
+  {
+    "timestamp": "2026-08-04T17:59:45.956951",
+    "conversation_id": "4c20ae1d-3446-4b27-a320-48529a96ce02",
+    "project": "second_brain",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-04T18:43:19.697223",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 10,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-04T18:45:09.750209",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-04T18:50:06.245424",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 2,
+    "duration_minutes": 1,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-04T19:00:27.404426",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-04T19:31:22.180872",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-04T19:35:17.856657",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-04T19:44:07.977472",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-04T20:03:30.348603",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 8,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-04T20:12:54.271715",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-04T20:29:39.764185",
+    "conversation_id": "59e0e7e2-3c47-4dbf-94ca-5832fbb9213a",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 650,
+    "files_read": 6,
+    "duration_minutes": 12,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-05T15:30:13.588763",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 45000,
+    "files_read": 6,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-05T15:56:27.912190",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 62000,
+    "files_read": 12,
+    "duration_minutes": 25,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-05T16:11:43.816773",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 0,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-05T16:15:44.015659",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-05T16:20:26.745775",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2000,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-05T16:23:32.719131",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-05T16:27:58.340657",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-05T16:29:39.527511",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-05T16:41:24.717339",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-05T16:42:15.005106",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-05T16:50:01.961007",
+    "conversation_id": "60d0d817-19ee-461e-9ea3-e8b0dc0e3090",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T11:20:42.596977",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 4,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-06T11:32:39.062574",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T12:19:20.053344",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T12:31:55.642356",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4100,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T12:43:48.759706",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T12:47:33.823180",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-06T17:19:42.684884",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2000,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T17:28:53.424191",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T18:06:22.549449",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T18:24:21.994820",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T19:19:16.717110",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 950,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T19:26:15.629738",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 850,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T21:10:43.963073",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2200,
+    "files_read": 3,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T21:21:59.235589",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 7,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T21:25:05.733894",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T21:41:21.124777",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-06T22:43:46.318876",
+    "conversation_id": "906b0135-487a-4da5-be37-d8435eea6efd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T16:30:35.991540",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 42000,
+    "files_read": 28,
+    "duration_minutes": 45,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-12T16:39:42.579211",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 35000,
+    "files_read": 50,
+    "duration_minutes": 25,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-12T16:43:38.626293",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T16:47:19.163193",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 38000,
+    "files_read": 40,
+    "duration_minutes": 25,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-12T16:49:51.324394",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 6000,
+    "files_read": 2,
+    "duration_minutes": 8,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T16:58:50.664746",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-12T17:02:04.851283",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:04:26.202469",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:07:03.732292",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 16,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:09:20.015514",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 700,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:10:45.001693",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 300,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:13:55.083705",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:27:11.831254",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 8,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:28:55.227863",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 300,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:32:35.005638",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:33:41.418769",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:42:07.455266",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 350,
+    "files_read": 2,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:46:06.532514",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 300,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:50:49.448802",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:52:05.673667",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 50,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T17:54:56.317080",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 320,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-12T18:00:24.004411",
+    "conversation_id": "852a6c4f-f858-4c73-99d1-63849ebb3165",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 350,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T16:30:59.966595",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA_Frontend_Backend_Fixes",
+    "task_description": "",
+    "tokens_spent": 15200,
+    "files_read": 10,
+    "duration_minutes": 35,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-16T17:02:13.352739",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 6,
+    "duration_minutes": 60,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-16T17:12:12.113271",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-16T17:19:35.363185",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T17:34:13.494999",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2000,
+    "files_read": 1,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-16T17:39:47.712779",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T17:45:17.285269",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-16T17:52:26.238180",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-16T17:56:58.360557",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T18:02:07.186333",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T18:09:00.907445",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T18:13:13.483611",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T18:16:53.088929",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T18:21:04.490346",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T18:23:29.285328",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-16T20:25:52.161474",
+    "conversation_id": "a4b065f1-19ff-423d-acc6-2a814868c037",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-17T16:56:57.929563",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "CORE_RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-17T17:10:51.337994",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "CORE_RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 5,
+    "duration_minutes": 7,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-17T17:35:06.918758",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "CORE_RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 6,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-17T17:39:11.137343",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "CORE_RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-17T17:55:19.970264",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 6,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-17T18:01:52.392888",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-17T18:03:23.012217",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-17T18:05:55.638704",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-17T18:10:53.936857",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 0,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T13:39:22.501937",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T13:42:08.266150",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T13:58:47.187396",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 2,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:07:54.710680",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:12:50.897025",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 350,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:38:07.328222",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 700,
+    "files_read": 4,
+    "duration_minutes": 8,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:42:25.215845",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 850,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:48:48.760356",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:54:27.479666",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T14:59:48.125577",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T15:33:23.977099",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 6,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-18T16:39:09.240486",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 8,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-18T16:58:26.300494",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 3,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-19T13:39:53.031187",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15500,
+    "files_read": 6,
+    "duration_minutes": 35,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-19T14:22:25.704488",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "rpa_saude",
+    "task_description": "",
+    "tokens_spent": 42000,
+    "files_read": 18,
+    "duration_minutes": 60,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-19T14:51:08.378206",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 42000,
+    "files_read": 6,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-19T15:01:12.890331",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 5,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T15:04:27.867381",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 25000,
+    "files_read": 5,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T15:10:50.202736",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 6,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T16:29:15.637644",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T16:42:36.598921",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 13000,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T16:47:33.141859",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T16:55:56.903010",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Portal",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-19T17:40:07.418724",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 6500,
+    "files_read": 15,
+    "duration_minutes": 10,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-21T13:58:59.062942",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-21T14:12:43.229580",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Consolidacao",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-21T14:19:45.381615",
+    "conversation_id": "8722d9b8-1397-40a7-b080-d444a7494386",
+    "project": "RPA_Evolutivo",
+    "task_description": "",
+    "tokens_spent": 1100,
+    "files_read": 3,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-24T18:00:19.127788",
+    "conversation_id": "22eb232e-56c9-4123-9cf5-278e623a3b40",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 25000,
+    "files_read": 6,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-24T18:12:29.210392",
+    "conversation_id": "22eb232e-56c9-4123-9cf5-278e623a3b40",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 5,
+    "duration_minutes": 15,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-24T18:15:15.231244",
+    "conversation_id": "22eb232e-56c9-4123-9cf5-278e623a3b40",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2000,
+    "files_read": 0,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-24T18:17:38.973495",
+    "conversation_id": "22eb232e-56c9-4123-9cf5-278e623a3b40",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-24T19:29:02.943430",
+    "conversation_id": "07899d61-83ff-4dd5-a42f-14e0a4cf8288",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 5,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-24T20:00:17.584573",
+    "conversation_id": "07899d61-83ff-4dd5-a42f-14e0a4cf8288",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 25000,
+    "files_read": 15,
+    "duration_minutes": 35,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-24T21:49:41.404088",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 35000,
+    "files_read": 6,
+    "duration_minutes": 15,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-24T23:39:38.085646",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T00:03:01.093925",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 5,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T00:09:51.988780",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T00:21:15.035395",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T00:28:31.452243",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T00:33:27.608054",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T00:41:33.195083",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T01:01:20.814543",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 6,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T01:06:04.663146",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T11:45:27.483137",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 5500,
+    "files_read": 12,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T12:46:14.268022",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 8000,
+    "files_read": 15,
+    "duration_minutes": 12,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T13:02:31.217436",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 4,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T13:09:00.797092",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T13:11:41.906105",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T13:19:12.146813",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_gestao",
+    "task_description": "",
+    "tokens_spent": 1600,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T13:52:06.967254",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_frontend",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 4,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T14:14:02.074066",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "rpa_frontend",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T14:37:02.476762",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 500000,
+    "files_read": 3,
+    "duration_minutes": 20,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T14:51:15.339186",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T14:56:29.107978",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 40000,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T15:15:50.812050",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 85000,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T15:21:46.396761",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T15:34:55.020829",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-25T15:44:11.632970",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T15:47:10.040847",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 8000,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T15:57:44.584595",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T16:05:20.560913",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 8000,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T16:21:59.711646",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 16000,
+    "files_read": 4,
+    "duration_minutes": 7,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T16:26:58.065510",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4000,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T16:35:05.530664",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T16:45:32.158519",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T16:49:50.185164",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T17:14:48.260339",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T17:17:33.121315",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T17:28:33.022521",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 8,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T17:43:11.029234",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-25T17:50:21.420912",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 2,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T12:37:15.676581",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 22000,
+    "files_read": 18,
+    "duration_minutes": 25,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-26T12:56:35.155634",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 5,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-26T13:02:13.974584",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T13:08:39.935173",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T13:16:46.613884",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T13:24:26.891928",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T13:28:41.604798",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T13:48:06.296177",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-26T13:51:35.584925",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T13:54:38.937273",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 2,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T14:28:30.959260",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Emissao_Guias",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T14:53:59.739901",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Historico_Consolidacao_Evolutivo",
+    "task_description": "",
+    "tokens_spent": 12500,
+    "files_read": 8,
+    "duration_minutes": 35,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-27T14:56:30.897873",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Limpeza",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T15:12:50.085141",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Consolidacao_Historico",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T15:14:34.891366",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Limpeza_Frontend",
+    "task_description": "",
+    "tokens_spent": 1000,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T15:15:30.128839",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Limpeza_Logs",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T15:19:59.162554",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Limpeza_Raiz",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T15:23:07.361818",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_MD_Update",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 5,
+    "duration_minutes": 3,
+    "sb_updates": 5
+  },
+  {
+    "timestamp": "2026-08-27T15:44:56.973884",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Bat_Update",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:04:38.669123",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Investigacao_CID",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:14:44.755699",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Auditoria_F84",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:20:52.099653",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Refactoring_Sincronia",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:22:51.461820",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Refactoring_Sincronia_Applied",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:25:20.748214",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Atalho_Windows",
+    "task_description": "",
+    "tokens_spent": 100,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:33:16.951744",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Refactoring",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:37:45.397684",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Refactoring_Applied",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T16:45:39.949629",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_CSS_Refactoring",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 4,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-27T17:03:52.441082",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 48500,
+    "files_read": 12,
+    "duration_minutes": 42,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:11:20.816625",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:15:32.443375",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 14500,
+    "files_read": 6,
+    "duration_minutes": 25,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:20:16.591238",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Autorizar",
+    "task_description": "",
+    "tokens_spent": 9500,
+    "files_read": 2,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:28:21.030907",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Emissao",
+    "task_description": "",
+    "tokens_spent": 6500,
+    "files_read": 2,
+    "duration_minutes": 7,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:32:04.651667",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Lancamento",
+    "task_description": "",
+    "tokens_spent": 6500,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:35:10.671655",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Lancamento",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-27T17:40:03.189790",
+    "conversation_id": "b743011b-7b99-4499-a9aa-00f209d2291d",
+    "project": "RPA_Frontend_Consolidacao",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-28T11:11:17.074314",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 5000,
+    "files_read": 6,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-28T13:15:30.418870",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 4,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-28T13:25:14.014069",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 5,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-28T13:30:35.597129",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Backend",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-28T13:39:39.645336",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Backend",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T13:44:44.567805",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T13:49:39.203529",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Backend",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T14:02:51.727155",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 4,
+    "duration_minutes": 8,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T14:17:02.718738",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Frontend",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T14:49:08.544213",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Master",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 7,
+    "duration_minutes": 15,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-28T14:53:42.653315",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Master",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T15:57:53.967214",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Master",
+    "task_description": "",
+    "tokens_spent": 100,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-28T16:03:37.610054",
+    "conversation_id": "58d50e1b-83e9-4d8b-8636-7e29e570d8c5",
+    "project": "RPA_Master",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-29T11:10:55.368196",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 5000,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-29T11:23:29.325460",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 5,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T13:35:35.943903",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T13:52:31.359513",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T13:58:45.305480",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1600,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T14:12:54.705241",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T14:15:58.193769",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T14:42:25.136633",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Medical",
+    "task_description": "",
+    "tokens_spent": 6500,
+    "files_read": 11,
+    "duration_minutes": 18,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T14:48:08.550015",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Medical",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T14:52:57.342142",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Medical",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T15:23:09.898689",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 85000,
+    "files_read": 15,
+    "duration_minutes": 40,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-31T15:29:02.454600",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T16:11:48.738869",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T17:56:06.857322",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 1400,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T21:55:39.008791",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA_Global",
+    "task_description": "",
+    "tokens_spent": 1600,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-08-31T22:06:28.315812",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "rpa_lancamento",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 5,
+    "duration_minutes": 18,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-08-31T22:47:34.477003",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "rpa_lancamento",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-08-31T23:00:58.762984",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "rpa_lancamento",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-01T15:31:51.560562",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 35,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-01T18:02:13.531078",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "rpa_magic",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 7,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:03:06.174040",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:12:36.653441",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 3,
+    "duration_minutes": 7,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:19:20.186571",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:28:12.424836",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:32:41.010529",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:35:47.680294",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1100,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:42:40.438918",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T00:53:57.245762",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-02T01:05:14.372741",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1400,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T01:10:13.743164",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 950,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T16:53:37.663688",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 650,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T17:01:00.545285",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-02T17:08:25.901451",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 450,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-02T21:37:13.138822",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-02T21:41:40.061210",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T21:57:06.763243",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-02T22:36:44.103385",
+    "conversation_id": "c3769e0d-b07c-45ea-8a81-2b04e2350593",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-03T12:38:12.548756",
+    "conversation_id": "a6666bbc-d5fd-4436-b1af-2c6d3588cbc1",
+    "project": "RPA_Autorizar",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 12,
+    "duration_minutes": 28,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-03T22:27:33.947260",
+    "conversation_id": "a6666bbc-d5fd-4436-b1af-2c6d3588cbc1",
+    "project": "RPA_Autorizar",
+    "task_description": "",
+    "tokens_spent": 6800,
+    "files_read": 18,
+    "duration_minutes": 82,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-03T22:34:19.439329",
+    "conversation_id": "a6666bbc-d5fd-4436-b1af-2c6d3588cbc1",
+    "project": "RPA_Autorizar",
+    "task_description": "",
+    "tokens_spent": 2100,
+    "files_read": 4,
+    "duration_minutes": 12,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-09T16:16:28.796914",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 6,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-09T16:35:00.414112",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 18000,
+    "files_read": 18,
+    "duration_minutes": 20,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-09-09T19:37:52.403573",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 4,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-09T19:44:09.167920",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 5,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-09T20:31:37.846801",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 16500,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-09T21:03:19.908906",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 6500,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-09T21:11:00.125262",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-09T21:29:46.116328",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-09T21:33:34.471997",
+    "conversation_id": "76f8ac7c-3a0c-4b8f-ac1c-8b4b8c64fc79",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-14T16:15:40.536689",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T16:25:32.533347",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T16:32:03.080997",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T16:38:22.712264",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-14T16:46:14.817306",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T16:52:49.648941",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-14T17:06:08.497524",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T17:08:59.419717",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-14T17:13:11.160560",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-14T17:27:33.524996",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 10,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-14T17:40:38.631496",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 18000,
+    "files_read": 12,
+    "duration_minutes": 25,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T21:35:20.932615",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-14T23:38:48.076880",
+    "conversation_id": "2d7982b2-1788-4ce4-84b6-e4837b05a1df",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-15T14:24:41.131590",
+    "conversation_id": "6626d25f-2097-48fd-898c-b897bf6f7fd4",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 28000,
+    "files_read": 12,
+    "duration_minutes": 30,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-16T16:26:55.788673",
+    "conversation_id": "68aa60c6-9baa-4ed4-9c20-ad533abc1c42",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 5,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T16:57:49.351231",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:03:17.192788",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:09:27.188631",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:18:33.746321",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 12400,
+    "files_read": 6,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:24:18.775193",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 14200,
+    "files_read": 4,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:29:09.721373",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 8900,
+    "files_read": 3,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:34:42.935214",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 11200,
+    "files_read": 4,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:38:20.755506",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 6800,
+    "files_read": 2,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T17:58:20.477450",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 6500,
+    "files_read": 2,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T18:04:04.331993",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 5200,
+    "files_read": 3,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T18:17:20.521809",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 16500,
+    "files_read": 6,
+    "duration_minutes": 12,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-17T18:28:45.255891",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 19800,
+    "files_read": 8,
+    "duration_minutes": 15,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-09-17T18:31:54.965631",
+    "conversation_id": "a696c6a4-0ac6-4b7b-8942-b56bd165afe1",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T13:02:40.814934",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 5000,
+    "files_read": 2,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-18T13:20:49.959160",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T13:38:41.723475",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 18000,
+    "files_read": 14,
+    "duration_minutes": 12,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-09-18T13:51:52.789756",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 8,
+    "duration_minutes": 6,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-09-18T14:02:13.089807",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-18T14:09:03.518563",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T14:13:17.260114",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T14:19:45.548200",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-18T14:22:26.646046",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-18T14:26:09.605010",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T14:29:17.022899",
+    "conversation_id": "933e8f35-3c26-456b-bc13-ef8dd327e71e",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T15:35:04.361643",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 4,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T15:36:28.251390",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T16:32:05.801550",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T16:36:38.347270",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T16:41:24.054607",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T16:44:19.854650",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T16:54:53.374720",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:01:39.886434",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:08:41.251738",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:19:30.934906",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:25:49.197972",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 180,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:28:50.547957",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:33:41.289120",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 120,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:37:08.102256",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 120,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-18T17:38:30.540846",
+    "conversation_id": "cc22d74c-153f-445b-86b0-c7609201d396",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 120,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-21T17:34:49.548256",
+    "conversation_id": "e58a17a1-fcc7-4844-8a1f-386964f0f6e5",
+    "project": "RPA_Evolutivo",
+    "task_description": "",
+    "tokens_spent": 32000,
+    "files_read": 14,
+    "duration_minutes": 18,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-22T16:10:41.917041",
+    "conversation_id": "0590a47e-a2f4-4640-9f1b-17b115ca7a3b",
+    "project": "prompt_migration",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-22T16:12:59.011569",
+    "conversation_id": "0590a47e-a2f4-4640-9f1b-17b115ca7a3b",
+    "project": "prompt_migration",
+    "task_description": "",
+    "tokens_spent": 1000,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-22T16:14:30.493486",
+    "conversation_id": "0590a47e-a2f4-4640-9f1b-17b115ca7a3b",
+    "project": "prompt_migration",
+    "task_description": "",
+    "tokens_spent": 2000,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-22T16:19:24.460142",
+    "conversation_id": "0590a47e-a2f4-4640-9f1b-17b115ca7a3b",
+    "project": "RPA_evolutivo",
+    "task_description": "",
+    "tokens_spent": 5000,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-22T18:14:44.282725",
+    "conversation_id": "60992a32-8691-4122-90e7-3cc9ca29aedb",
+    "project": "SecondBrain_Aurelio",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-23T14:21:32.307043",
+    "conversation_id": "c38b795f-d58a-40f4-906a-2480b5d6cb12",
+    "project": "Evolutivo",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-23T14:28:10.458285",
+    "conversation_id": "c38b795f-d58a-40f4-906a-2480b5d6cb12",
+    "project": "Evolutivo",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-23T14:30:52.824053",
+    "conversation_id": "c38b795f-d58a-40f4-906a-2480b5d6cb12",
+    "project": "Evolutivo",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-23T14:34:25.551860",
+    "conversation_id": "c38b795f-d58a-40f4-906a-2480b5d6cb12",
+    "project": "Evolutivo",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-23T18:19:18.425053",
+    "conversation_id": "29424732-9c76-4c4d-80eb-f5fc4b7a21f4",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T13:58:23.287014",
+    "conversation_id": "63014ecf-741f-4a6d-8148-274df70f854f",
+    "project": "second_brain",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T14:05:17.373124",
+    "conversation_id": "63014ecf-741f-4a6d-8148-274df70f854f",
+    "project": "SecondBrain_Aurelio",
+    "task_description": "",
+    "tokens_spent": 14000,
+    "files_read": 5,
+    "duration_minutes": 12,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-09-24T14:14:54.029639",
+    "conversation_id": "63014ecf-741f-4a6d-8148-274df70f854f",
+    "project": "second_brain",
+    "task_description": "",
+    "tokens_spent": 16500,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T15:41:49.453724",
+    "conversation_id": "3cd75325-cb54-4f18-bed6-33899a84fa83",
+    "project": "general",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-24T15:44:14.780152",
+    "conversation_id": "3cd75325-cb54-4f18-bed6-33899a84fa83",
+    "project": "general",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T15:47:37.384739",
+    "conversation_id": "3cd75325-cb54-4f18-bed6-33899a84fa83",
+    "project": "general",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-24T15:50:00.184552",
+    "conversation_id": "3cd75325-cb54-4f18-bed6-33899a84fa83",
+    "project": "general",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-24T15:52:34.248438",
+    "conversation_id": "3cd75325-cb54-4f18-bed6-33899a84fa83",
+    "project": "general",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T15:55:29.626843",
+    "conversation_id": "1e0d48de-2f8d-49b9-abf7-ea148d65b675",
+    "project": "AI_Workflow_Documentation",
+    "task_description": "",
+    "tokens_spent": 450,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-24T15:56:39.378782",
+    "conversation_id": "1e0d48de-2f8d-49b9-abf7-ea148d65b675",
+    "project": "RPA_Documentation",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-24T16:01:46.947091",
+    "conversation_id": "7a26df0e-e66b-47e6-be5d-49b377a1390c",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 5000,
+    "files_read": 3,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-24T16:06:14.064166",
+    "conversation_id": "7a26df0e-e66b-47e6-be5d-49b377a1390c",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T16:39:55.639975",
+    "conversation_id": "7a26df0e-e66b-47e6-be5d-49b377a1390c",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-24T16:45:57.077793",
+    "conversation_id": "7a26df0e-e66b-47e6-be5d-49b377a1390c",
+    "project": "rpa_evolutivo",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-25T16:51:18.853863",
+    "conversation_id": "2a8907fd-0f23-4e1d-aa36-32a71adf4a45",
+    "project": "RPA_Evolutivo",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 12,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-25T18:03:16.813037",
+    "conversation_id": "2a8907fd-0f23-4e1d-aa36-32a71adf4a45",
+    "project": "RPA_Evolutivo",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 60,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-25T18:04:27.359406",
+    "conversation_id": "2a8907fd-0f23-4e1d-aa36-32a71adf4a45",
+    "project": "RPA_Evolutivo",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-25T18:29:13.024569",
+    "conversation_id": "06c21120-e8f7-4aff-80f1-a68640bbe0dd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 5500,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-25T18:33:13.510982",
+    "conversation_id": "06c21120-e8f7-4aff-80f1-a68640bbe0dd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-25T18:37:59.239494",
+    "conversation_id": "06c21120-e8f7-4aff-80f1-a68640bbe0dd",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-29T15:14:28.421705",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:18:50.859024",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:23:23.829749",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:36:27.113197",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:45:20.880839",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 3,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:48:04.852524",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:57:09.840080",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T15:58:44.641982",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T16:15:23.323183",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T16:43:23.929916",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T16:54:59.844823",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 2,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:05:04.353541",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1600,
+    "files_read": 3,
+    "duration_minutes": 7,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:13:30.698926",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1000,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:17:15.451434",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:20:59.796361",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:30:16.047233",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:36:40.124136",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:40:15.045801",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-29T17:45:17.768969",
+    "conversation_id": "c8162f71-690f-4d93-8730-9b9204ac9868",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-30T13:12:45.280171",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T13:35:45.702734",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 18000,
+    "files_read": 14,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T14:01:39.598497",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 6000,
+    "files_read": 4,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T14:11:33.190953",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 450,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T14:32:41.549430",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T14:53:41.874923",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 2,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:08:56.967432",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:17:25.492725",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 4100,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:31:17.577694",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:34:24.155930",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 450,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:36:07.980455",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 650,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:40:41.074007",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "gestao_profissionais_v2",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-09-30T15:49:53.205832",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "agente_ia_evolutivo",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T15:53:27.281313",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "agente_ia_evolutivo",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T16:06:30.247085",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "rpa_pacientes",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-09-30T16:14:49.278213",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "rpa_pacientes",
+    "task_description": "",
+    "tokens_spent": 1100,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-01T14:40:22.112481",
+    "conversation_id": "3dd8f893-d9d9-4c26-ba0d-ca1345bb5f69",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 10,
+    "duration_minutes": 45,
+    "sb_updates": 3
+  },
+  {
+    "timestamp": "2026-10-01T15:28:36.478083",
+    "conversation_id": "6c34c89e-08ce-4a95-bba2-4d97c7d1eb69",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 5,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-01T15:32:13.458282",
+    "conversation_id": "6c34c89e-08ce-4a95-bba2-4d97c7d1eb69",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-03T19:34:16.788004",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "Uniq-RPA",
+    "task_description": "",
+    "tokens_spent": 3000,
+    "files_read": 3,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-03T21:34:51.340647",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "Uniq-RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 2,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-04T11:59:31.353015",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "Uniq-RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-04T16:05:43.729757",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "Uniq-RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 3,
+    "duration_minutes": 10,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-04T16:08:05.778401",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "Uniq-RPA",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 0,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-04T16:23:46.512386",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 60000,
+    "files_read": 6,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-04T16:45:03.397596",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 5,
+    "duration_minutes": 15,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T01:06:13.288923",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T13:15:03.337486",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 2,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T13:56:19.460783",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 3,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T13:59:25.508279",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T14:02:17.682584",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T14:37:27.836196",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 250000,
+    "files_read": 25,
+    "duration_minutes": 55,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-10-05T14:44:18.370518",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 20000,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T15:21:48.223713",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 40000,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T15:43:51.552236",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 25000,
+    "files_read": 2,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T16:09:38.566747",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T16:49:22.592660",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T19:30:53.292274",
+    "conversation_id": "81c3a549-b565-4413-bddc-fe338ac8a585",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 1,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T19:33:34.591276",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T19:37:20.201691",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T19:41:27.098283",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 700,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T19:48:06.714226",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 10,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T19:53:59.941385",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T20:00:28.208101",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T20:08:02.914425",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T20:18:13.005592",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T20:44:53.803614",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 3500,
+    "files_read": 4,
+    "duration_minutes": 10,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-10-05T20:48:22.978676",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T20:50:32.878170",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T20:56:24.221919",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T21:43:45.705005",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 2,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T21:47:17.972979",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:03:31.413405",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 0,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T22:12:39.074841",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 95000,
+    "files_read": 10,
+    "duration_minutes": 15,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:19:01.544007",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:21:19.041403",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2600,
+    "files_read": 4,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:23:36.196175",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:28:20.156934",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 2800,
+    "files_read": 4,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:34:04.159607",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:37:20.165419",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T22:55:02.674338",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:00:59.070613",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 1400,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:17:31.672070",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 900,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-05T23:20:31.725325",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:23:57.613572",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:30:23.026501",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:38:39.397008",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:44:16.327302",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 600,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:47:52.627530",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-05T23:57:39.235681",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 500,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T00:04:07.801117",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T00:06:57.975773",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 400,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T00:09:18.208107",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 200,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T00:12:32.924282",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 0,
+    "duration_minutes": 1,
+    "sb_updates": 3
+  },
+  {
+    "timestamp": "2026-10-06T00:17:02.769073",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T00:27:15.513680",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T00:32:30.342407",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 250,
+    "files_read": 1,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T08:00:29.802671",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 120,
+    "files_read": 4,
+    "duration_minutes": 6,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T13:28:47.967017",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 50,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T13:34:46.355706",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 150,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T13:35:44.407414",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 40,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T13:36:39.342956",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T13:39:24.858161",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T13:52:06.245907",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T14:00:04.522447",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "LPescas/uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 5,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T14:09:11.836956",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "LPescas/uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 950,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T14:25:06.940071",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "LPescas/uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 850,
+    "files_read": 2,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T14:31:21.433724",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "LPescas/uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T14:35:46.796064",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "LPescas/uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T14:57:04.675685",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4200,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T15:08:03.778981",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 4,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T15:12:48.998424",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1200,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-06T15:16:36.613632",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T15:22:38.993154",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1800,
+    "files_read": 2,
+    "duration_minutes": 4,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T15:59:35.814374",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 2500,
+    "files_read": 3,
+    "duration_minutes": 7,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T16:12:25.907004",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1300,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T16:41:18.033650",
+    "conversation_id": "47b0ce4f-c719-42c9-8f84-388fc03f2328",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1400,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-06T17:52:13.132346",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_agenda_semanal",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T13:09:26.968904",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_reemissao",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T13:23:38.562070",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_historico",
+    "task_description": "",
+    "tokens_spent": 14000,
+    "files_read": 4,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T14:16:25.091356",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_historico_fix",
+    "task_description": "",
+    "tokens_spent": 16000,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T14:30:41.579327",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_frontend_historico",
+    "task_description": "",
+    "tokens_spent": 14000,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T14:35:56.663009",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_frontend_historico",
+    "task_description": "",
+    "tokens_spent": 14000,
+    "files_read": 3,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T14:55:17.087083",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_frontend_historico",
+    "task_description": "",
+    "tokens_spent": 14000,
+    "files_read": 3,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T15:04:57.242788",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "rpa_frontend_historico",
+    "task_description": "",
+    "tokens_spent": 8000,
+    "files_read": 1,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-07T15:57:44.065735",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 14500,
+    "files_read": 7,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-07T16:10:38.310801",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 2300,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-08T17:01:30.785941",
+    "conversation_id": "423c2a38-02ed-4610-92cf-4d5aa5bf9238",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 15000,
+    "files_read": 8,
+    "duration_minutes": 60,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-09T11:36:18.420117",
+    "conversation_id": "235c0fa3-5c38-42bf-baaf-188926ff1c3f",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 3,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-09T12:20:05.956449",
+    "conversation_id": "235c0fa3-5c38-42bf-baaf-188926ff1c3f",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 4500,
+    "files_read": 0,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-09T12:25:01.106973",
+    "conversation_id": "c7adba7c-aff8-404a-a18b-f81f9ff33b82",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1500,
+    "files_read": 1,
+    "duration_minutes": 2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-09T12:29:54.490163",
+    "conversation_id": "c7adba7c-aff8-404a-a18b-f81f9ff33b82",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 800,
+    "files_read": 1,
+    "duration_minutes": 1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-09T12:34:38.263692",
+    "conversation_id": "c7adba7c-aff8-404a-a18b-f81f9ff33b82",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1300,
+    "files_read": 1,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-09T19:05:51.327372",
+    "conversation_id": "c7adba7c-aff8-404a-a18b-f81f9ff33b82",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 1400,
+    "files_read": 3,
+    "duration_minutes": 4,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T12:29:43.364281",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 28500,
+    "files_read": 11,
+    "duration_minutes": 6.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T12:36:03.049443",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 16200,
+    "files_read": 4,
+    "duration_minutes": 3.2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T12:43:24.122950",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 17800,
+    "files_read": 3,
+    "duration_minutes": 3.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T12:48:38.620810",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 18500,
+    "files_read": 4,
+    "duration_minutes": 3.1,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T12:52:34.452626",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 21400,
+    "files_read": 5,
+    "duration_minutes": 3.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T14:33:44.017606",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 25300,
+    "files_read": 7,
+    "duration_minutes": 4.2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T14:43:08.470228",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 15200,
+    "files_read": 18,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T14:58:21.846751",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 16800,
+    "files_read": 14,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T15:44:51.174926",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 6,
+    "duration_minutes": 5,
+    "sb_updates": 0
+  },
+  {
+    "timestamp": "2026-10-13T15:52:33.270284",
+    "conversation_id": "2afa5106-c76a-47a8-9332-a08035e31752",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 14200,
+    "files_read": 9,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T18:11:15.093214",
+    "conversation_id": "eebb67f2-1952-4405-ad1a-0c468382a171",
+    "project": "excel_finance_intelligence",
+    "task_description": "",
+    "tokens_spent": 15200,
+    "files_read": 6,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T18:32:16.267316",
+    "conversation_id": "eebb67f2-1952-4405-ad1a-0c468382a171",
+    "project": "excel_finance_intelligence",
+    "task_description": "",
+    "tokens_spent": 28500,
+    "files_read": 8,
+    "duration_minutes": 12,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-10-13T18:34:18.283317",
+    "conversation_id": "eebb67f2-1952-4405-ad1a-0c468382a171",
+    "project": "excel_finance_intelligence",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 3,
+    "duration_minutes": 3,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T18:48:04.441360",
+    "conversation_id": "eebb67f2-1952-4405-ad1a-0c468382a171",
+    "project": "excel_finance_intelligence",
+    "task_description": "",
+    "tokens_spent": 16800,
+    "files_read": 4,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-13T20:07:09.791973",
+    "conversation_id": "6fb1f2ee-dca2-423d-b7c7-3ac476119b9a",
+    "project": "financeiro_apex",
+    "task_description": "",
+    "tokens_spent": 45000,
+    "files_read": 8,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T15:45:35.268904",
+    "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 14500,
+    "files_read": 15,
+    "duration_minutes": 45,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T16:07:00.030140",
+    "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 6,
+    "duration_minutes": 15,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T16:23:10.703023",
+    "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 28500,
+    "files_read": 6,
+    "duration_minutes": 6.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T16:47:29.746345",
+    "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 31200,
+    "files_read": 7,
+    "duration_minutes": 7.2,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T16:50:46.484834",
+    "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 14500,
+    "files_read": 3,
+    "duration_minutes": 3.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T17:11:19.300884",
+    "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 18500,
+    "files_read": 5,
+    "duration_minutes": 8.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T21:50:49.638588",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "Criação de Planner de Melhorias do Projeto MAGIC",
+    "tokens_spent": 16800,
+    "files_read": 15,
+    "duration_minutes": 8.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T22:03:04.627250",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "Implementacao de Regra de Versionamento Granular Git e Migracoes MySQL",
+    "tokens_spent": 12400,
+    "files_read": 8,
+    "duration_minutes": 5.0,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-10-14T22:07:11.788175",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "Criacao de Planner de Versionamento Automatico Git e MySQL",
+    "tokens_spent": 11500,
+    "files_read": 7,
+    "duration_minutes": 4.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T22:19:36.446861",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "Implementacao e Validacao do Sistema de Versionamento Automatico Git e MySQL",
+    "tokens_spent": 15200,
+    "files_read": 9,
+    "duration_minutes": 7.0,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-10-14T22:23:06.761297",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "Verificacao e Ativacao do Boot Automatico de Migracoes MySQL",
+    "tokens_spent": 10200,
+    "files_read": 6,
+    "duration_minutes": 3.5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T22:28:42.329295",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "Criacao do MANUAL_DE_VERSOES.txt para usuarios finais",
+    "tokens_spent": 9500,
+    "files_read": 5,
+    "duration_minutes": 3.0,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-14T22:50:11.626810",
+    "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 8500,
+    "files_read": 12,
+    "duration_minutes": 18,
+    "sb_updates": 2
+  },
+  {
+    "timestamp": "2026-10-16T14:30:13.262507",
+    "conversation_id": "7759474e-61a5-4520-93ea-b42c43462b72",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 16500,
+    "files_read": 8,
+    "duration_minutes": 6,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-16T14:34:34.344210",
+    "conversation_id": "7759474e-61a5-4520-93ea-b42c43462b72",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 60000,
+    "files_read": 12,
+    "duration_minutes": 10,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-16T15:05:42.469963",
+    "conversation_id": "7759474e-61a5-4520-93ea-b42c43462b72",
+    "project": "RPA",
+    "task_description": "",
+    "tokens_spent": 14500,
+    "files_read": 12,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T11:07:03.989050",
+    "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 18500,
+    "files_read": 12,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T11:27:06.069117",
+    "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+    "project": "rpa",
+    "task_description": "",
+    "tokens_spent": 14200,
+    "files_read": 8,
+    "duration_minutes": 5,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T11:52:37.202382",
+    "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 8,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T12:04:07.553896",
+    "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 10500,
+    "files_read": 7,
+    "duration_minutes": 7,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T12:50:51.455524",
+    "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 12000,
+    "files_read": 7,
+    "duration_minutes": 8,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T14:06:52.333522",
+    "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+    "project": "uniq-rpa-professional",
+    "task_description": "",
+    "tokens_spent": 38000,
+    "files_read": 14,
+    "duration_minutes": 22,
+    "sb_updates": 1
+  },
+  {
+    "timestamp": "2026-10-19T14:14:52.381675",
+    "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+    "project": "second_brain",
+    "task_description": "",
+    "tokens_spent": 16500,
+    "files_read": 9,
+    "duration_minutes": 4.5,
+    "sb_updates": 3
+  },
+  {
+    "timestamp": "2026-10-19T14:44:07.461419",
+    "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+    "project": "second_brain_hub",
+    "task_description": "",
+    "tokens_spent": 16500,
+    "files_read": 14,
+    "duration_minutes": 18,
+    "sb_updates": 6
+  },
+  {
+    "timestamp": "2026-10-19T15:02:28.930449",
+    "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+    "project": "second_brain_governance",
+    "task_description": "",
+    "tokens_spent": 14200,
+    "files_read": 16,
+    "duration_minutes": 12,
+    "sb_updates": 5
+  }
+]

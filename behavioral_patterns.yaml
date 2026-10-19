@@ -1,0 +1,93 @@
+version: '1.0'
+last_validated: '2026-07-31'
+code_style:
+  python:
+    typing: strict
+    print_forbidden: true
+    naming: snake_case
+    no_accents_in_filenames: true
+    docstrings: google_style
+    imports: absolute
+    max_line_length: 120
+    error_handling: specific
+  javascript:
+    prefer: const
+    semicolons: true
+    quotes: single
+    framework_preference:
+    - react
+    - next.js
+  html_css:
+    methodology: bem_when_vanilla
+    css_preference: vanilla_first
+project_patterns:
+  rpa_uniq:
+    architecture: hub_spoke_modular
+    entry_points: main_<module>.py
+    six_folders:
+    - codigo
+    - documentacao
+    - logs
+    - dados
+    - configuracoes
+    - executaveis
+    governance: zero_trust_md
+    env_location: Backend/Global/infraestrutura/.env
+    driver_init: Global/servicos/driver.py::start_session()
+    log_format: '[ID] [RPA] [ETAPA] [TIPO] Mensagem'
+  general:
+    readme: always
+    git: conventional_commits
+    docs_language: pt-BR
+    code_language: en
+communication:
+  language: pt-BR
+  technical_level: senior
+  no_basic_explanations: true
+  prefer_code_over_prose: true
+  ask_questions: only_when_critical_ambiguity
+  anticipate_needs: true
+tools:
+  ide_primary: vscode
+  ide_secondary: cursor
+  terminal: powershell
+  os: windows
+  ai_agents:
+  - antigravity
+  - cursor
+  - claude
+design:
+  dark_mode: true
+  glassmorphism: true
+  micro_animations: true
+  no_purple_violet: true
+  premium_feel: true
+  i18n:
+  - pt-BR
+  - en
+anti_patterns:
+- generic try-except without specific exception
+- print() instead of logger
+- hardcoded credentials
+- loose .py files outside codigo/
+- accented filenames
+- full context loading without MASTER_INDEX check
+- modifying files in arquivos_intocaveis_rpa.md without explicit permission
+- creating AI-specific files inside project repos
+- basic explanations for senior-level concepts
+- using var in JavaScript
+auto_promoted:
+- id: CAND-REPEAT-2026-08-01-000
+  rule: '[RECOVERED|HIGH|explicit_correction] mas quando vejo sem abrir esse relatorio
+    desse dia esta mostrando apenas 12 faltante que ainda esta errado pois eram pra
+    ser 17 faltantes e 3 erros (src: ANTIGRAVITY:9e801578)'
+  promoted_on: '2026-08-02'
+  occurrences: 3
+  source: REPEATED_PATTERN | 3x
+- id: CAND-REPEAT-2026-08-02-000
+  rule: '[RECOVERED|HIGH|explicit_correction] mas quando vejo sem abrir esse relatorio
+    desse dia esta mostrando apenas 12 faltante que ainda esta errado pois eram pra
+    ser 17 faltantes e 3 erros (src: ANTIGRAVITY:9e801578)'
+  promoted_on: '2026-08-02'
+  occurrences: 3
+  source: REPEATED_PATTERN | 3x

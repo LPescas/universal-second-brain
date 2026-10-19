@@ -1,0 +1,39 @@
+# Second Brain Git Ignore
+# ============================================================
+
+# Python & bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Operational logs & local state
+*.log
+scripts/*.log
+backend/aurelio/logs/*.log
+*.db
+*.db-shm
+*.db-wal
+scripts/scanner_state.json
+scripts/watcher_state.json
+scripts/detect_report.json
+scripts/health_report.json
+scripts/dedup_report.json
+scripts/recovery_log.json
+
+# AG Kit internal caches & backups
+.agents/.ag-kit/
+.agents/.ag-kit-backups/
+.agents/.temp_ag_kit/
+.agents/memory/session-state.json
+
+# IDE & OS temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+

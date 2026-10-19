@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Second Brain Dashboard — Monitor inteligente do ecossistema de memória de IA" />
+  <title>Second Brain — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-mark">SB</div>
+        <div class="logo-text">
+          <span class="logo-title">Second Brain</span>
+          <span class="logo-version" id="sb-version">v2.0</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-item" data-section="projects">
+          <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Projetos
+        </a>
+        <a href="#" class="nav-item" data-section="history">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Histórico
+        </a>
+        <a href="#" class="nav-item" data-section="health">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Saúde
+        </a>
+        <a href="#" class="nav-item" data-section="knowledge">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Conhecimento
+        </a>
+        <a href="#" class="nav-item" data-section="evolution">
+          <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          Evolução
+        </a>
+      
+        <a href="#" class="nav-item" data-section="repos">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          Hub Repositórios
+        </a>
+        <a href="#" class="nav-item" data-section="graphs">
+          <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          Grafo Visual
+        </a>
+        <a href="#" class="nav-item" data-section="aurelio">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 7.523 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"/><circle cx="9" cy="10" r="1.5"/><circle cx="15" cy="10" r="1.5"/><path d="M15 15.5c-1 1.5-5 1.5-6 0"/></svg>
+          Aurelio AI
+        </a>
+</nav>
+
+      <div class="sidebar-footer">
+        <div class="health-indicator">
+          <span class="health-dot" id="health-dot"></span>
+          <span id="health-status-text">Verificando...</span>
+        </div>
+        <button class="refresh-btn" id="refresh-btn" title="Atualizar dados">
+          <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <h1 id="section-title">Dashboard</h1>
+          <span class="last-update" id="last-update">Carregando...</span>
+        </div>
+        <div class="header-right">
+          <div class="mode-badge">LOCAL</div>
+          <div class="owner-badge">USER</div>
+        </div>
+      </header>
+
+      <!-- SECTION: Dashboard -->
+      <section id="section-dashboard" class="section active">
+
+        <!-- KPI Row -->
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-interactions">
+            <div class="kpi-icon accent-blue">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-interactions">—</div>
+              <div class="kpi-label">Interações Totais</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpi-tokens">
+            <div class="kpi-icon accent-amber">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-tokens">—</div>
+              <div class="kpi-label">Média de Tokens Utilizados</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpi-files">
+            <div class="kpi-icon accent-cyan">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-files">—</div>
+              <div class="kpi-label">Média de Arq. Analisados</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpi-duration">
+            <div class="kpi-icon accent-violet">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-duration">—</div>
+              <div class="kpi-label">Tempo Médio por Processo</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpi-efficiency">
+            <div class="kpi-icon accent-rose">
+              <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-efficiency">—</div>
+              <div class="kpi-label">Eficiência (tokens/min)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+          <div class="chart-card wide">
+            <div class="chart-header">
+              <h3>Tokens Gastos por Sessão (Últimas 30)</h3>
+              <span class="chart-badge" id="total-spent-badge">—</span>
+            </div>
+            <div class="chart-area" id="timeline-chart">
+              <canvas id="timeline-canvas"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Por Projeto</h3>
+            </div>
+            <div id="project-bars"></div>
+          </div>
+        </div>
+
+        <!-- Before vs After -->
+        <div class="comparison-card">
+          <h3>Antes vs Depois do Second Brain</h3>
+          <p style="font-size: 0.75rem; color: rgba(148,163,184,0.6); margin: -0.5rem 0 1rem;">Base: multiplicador 3.5x (benchmark RAG vs no-RAG)</p>
+          <div class="comparison-grid">
+            <div class="comparison-col before">
+              <div class="col-label">SEM Second Brain (estimativa)</div>
+              <div class="comp-metric">
+                <span class="comp-icon bad">▲</span>
+                <span class="comp-value" id="before-tokens">—</span>
+                <span class="comp-desc">tokens médios por sessão</span>
+              </div>
+              <div class="comp-metric">
+                <span class="comp-icon bad">▲</span>
+                <span class="comp-value" id="before-files">—</span>
+                <span class="comp-desc">arquivos analisados por sessão</span>
+              </div>
+              <div class="comp-metric">
+                <span class="comp-icon bad">▲</span>
+                <span class="comp-value" id="before-duration">—</span>
+                <span class="comp-desc">minutos por sessão</span>
+              </div>
+            </div>
+            <div class="comparison-divider">
+              <div class="arrow-badge">→</div>
+            </div>
+            <div class="comparison-col after">
+              <div class="col-label">COM Second Brain (dados reais)</div>
+              <div class="comp-metric">
+                <span class="comp-icon good">▼</span>
+                <span class="comp-value" id="after-tokens">—</span>
+                <span class="comp-desc">tokens médios por sessão</span>
+              </div>
+              <div class="comp-metric">
+                <span class="comp-icon good">▼</span>
+                <span class="comp-value" id="after-files">—</span>
+                <span class="comp-desc">arquivos analisados por sessão</span>
+              </div>
+              <div class="comp-metric">
+                <span class="comp-icon good">▼</span>
+                <span class="comp-value" id="after-duration">—</span>
+                <span class="comp-desc">minutos por sessão</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SECTION: Projects -->
+      <section id="section-projects" class="section">
+        <div class="section-description">Todos os projetos registrados no Second Brain</div>
+        <div class="projects-grid" id="projects-grid">
+          <div class="loading-state">Carregando projetos...</div>
+        </div>
+      </section>
+
+      <!-- SECTION: History -->
+      <section id="section-history" class="section">
+        <div class="section-description">Histórico de utilizações do Second Brain</div>
+        <div class="history-filters">
+          <input type="text" id="history-search" placeholder="Filtrar por projeto ou tarefa..." class="filter-input" />
+          <select id="history-period" class="filter-select">
+            <option value="7">Últimas 7 sessões</option>
+            <option value="30" selected>Últimas 30 sessões</option>
+            <option value="all">Todo o histórico</option>
+          </select>
+        </div>
+        <div class="history-table-wrap">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Projeto</th>
+                <th>Tarefa</th>
+                <th>Tokens Gastos</th>
+                <th>Arq. Analisados</th>
+                <th>Duração (min)</th>
+                <th>Atualiz. SB</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody">
+              <tr><td colspan="7" class="loading-cell">Carregando histórico...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION: Health -->
+      <section id="section-health" class="section">
+        <div class="section-description">Integridade e saúde do Second Brain</div>
+        <div class="health-grid" id="health-grid">
+          <div class="loading-state">Carregando dados de saúde...</div>
+        </div>
+        <div class="issues-panel" id="issues-panel"></div>
+      </section>
+
+      <!-- SECTION: Knowledge -->
+      <section id="section-knowledge" class="section">
+        <div class="section-description">Base de conhecimento e regras ativas</div>
+        <div class="knowledge-grid" id="knowledge-grid">
+          <div class="loading-state">Carregando base de conhecimento...</div>
+        </div>
+      </section>
+
+      <!-- SECTION: Evolution -->
+      <section id="section-evolution" class="section">
+        <div class="section-description">Autoevolução e aprendizado contínuo do Second Brain</div>
+        <div class="evolution-timeline" id="evolution-timeline">
+          <div class="loading-state">Carregando histórico de evolução...</div>
+        </div>
+      </section>
+
+      <!-- SECTION: Hub de Repositórios -->
+      <section id="section-repos" class="section">
+        <div class="section-description">
+          Hub Universal de 25 Repositórios Especializados com Proteção Cold Snapshot
+        </div>
+        <div class="repos-toolbar">
+          <div class="repos-categories" id="repos-categories-filter">
+            <button class="cat-pill active" data-cat="all">Todos (25)</button>
+            <button class="cat-pill" data-cat="media_processing">Mídia</button>
+            <button class="cat-pill" data-cat="dev_reverse_engineering">Eng. Reversa</button>
+            <button class="cat-pill" data-cat="ui_ux_design">UI/UX</button>
+            <button class="cat-pill" data-cat="orchestration_governance">Orquestração</button>
+            <button class="cat-pill" data-cat="routing_gateways">Roteamento</button>
+            <button class="cat-pill" data-cat="memory_rag_graphs">Memória</button>
+            <button class="cat-pill" data-cat="document_web_parsers">Parsers</button>
+            <button class="cat-pill" data-cat="cloud_security_b2b">Cloud & Seg.</button>
+          </div>
+          <input type="text" id="repos-search" placeholder="Filtrar por nome, categoria ou gatilho..." class="filter-input" style="max-width:320px;" />
+        </div>
+        <div class="repos-grid" id="repos-grid">
+          <div class="loading-state">Carregando repositórios do Hub...</div>
+        </div>
+      </section>
+
+      <!-- SECTION: Grafo de Conhecimento -->
+      <section id="section-graphs" class="section">
+        <div class="section-description">
+          Grafo Interativo de Conexões: Core do Second Brain, Repositórios, Projetos e Agentes
+        </div>
+        <div class="graph-layout">
+          <div class="graph-canvas-wrap">
+            <canvas id="graph-canvas"></canvas>
+            <div class="graph-controls">
+              <button id="graph-reset-btn" class="graph-btn">Centralizar</button>
+              <button id="graph-toggle-physics" class="graph-btn">Pausar Física</button>
+            </div>
+            <div class="graph-legend">
+              <span class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span>Core</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#06b6d4"></span>Categorias</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span>25 Repositórios</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Projetos</span>
+            </div>
+          </div>
+          <div class="graph-details-card" id="graph-details-card">
+            <div class="details-placeholder">
+              <div class="placeholder-icon">🧠</div>
+              <div class="placeholder-title">Inspetor de Conexões</div>
+              <div class="placeholder-text">Clique ou passe o mouse em qualquer nó do grafo para inspecionar seus relacionamentos, contratos e detalhes técnicos.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal AI_GUIDE.md -->
+      <div id="ai-guide-modal" class="modal-backdrop" style="display:none;">
+        <div class="modal-card">
+          <div class="modal-header">
+            <h3 id="modal-repo-title">AI_GUIDE.md</h3>
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+          </div>
+          <div class="modal-body" id="modal-guide-content"></div>
+        </div>
+      </div>
+
+
+    
+      <!-- SECTION: Aurelio Chat -->
+      <section id="section-aurelio" class="section" style="display: none; height: 100%; flex-direction: column;">
+        <div class="chat-container">
+           <div class="chat-history" id="chat-history">
+              <div class="chat-message assistant">
+                <div class="message-content">
+                  Olá! Eu sou Aurelio, seu assistente inteligente Second Brain. Como posso ajudar?
+                </div>
+              </div>
+           </div>
+           <div class="chat-input-area">
+              <textarea id="chat-input" placeholder="Pergunte ao Aurelio..."></textarea>
+              <button id="chat-send">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+           </div>
+        </div>
+      </section>
+</main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

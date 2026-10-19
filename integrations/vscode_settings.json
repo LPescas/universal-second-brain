@@ -1,0 +1,30 @@
+{
+  "// SECOND BRAIN INTEGRATION": "Auto-generated. Merges with existing settings.",
+  "files.associations": {
+    "*.yaml": "yaml",
+    "*.md": "markdown"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/node_modules": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.rulers": [120]
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "gemini.secondBrain.masterIndex": "C:\\Users\\USER\\.second_brain\\MASTER_INDEX.yaml",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.venv": true,
+    "**/__pycache__": true
+  }
+}

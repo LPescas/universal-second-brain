@@ -1,0 +1,1188 @@
+{
+  "generated_at": "2026-10-19T15:02:28.949573",
+  "all_time": {
+    "total_interactions": 528,
+    "total_tokens_spent": 4296065,
+    "total_files_read": 1719,
+    "total_duration_minutes": 3572.7,
+    "total_sb_updates": 331,
+    "avg_tokens_per_session": 8136,
+    "avg_files_per_session": 3.3,
+    "avg_duration_per_session": 6.8,
+    "efficiency_tokens_per_minute": 1202.0
+  },
+  "by_project": [
+    {
+      "project": "Agente_Ia_Evolutivo",
+      "total_interactions": 2,
+      "total_tokens_spent": 2000,
+      "total_files_read": 2,
+      "total_duration_minutes": 7,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 1000,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 3.5,
+      "efficiency_tokens_per_minute": 286.0
+    },
+    {
+      "project": "Ai_Workflow_Documentation",
+      "total_interactions": 1,
+      "total_tokens_spent": 450,
+      "total_files_read": 1,
+      "total_duration_minutes": 1,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 450,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 450.0
+    },
+    {
+      "project": "Core_Rpa",
+      "total_interactions": 4,
+      "total_tokens_spent": 3650,
+      "total_files_read": 15,
+      "total_duration_minutes": 21,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 912,
+      "avg_files_per_session": 3.8,
+      "avg_duration_per_session": 5.2,
+      "efficiency_tokens_per_minute": 174.0
+    },
+    {
+      "project": "Ecosistema Global",
+      "total_interactions": 2,
+      "total_tokens_spent": 54800,
+      "total_files_read": 6,
+      "total_duration_minutes": 17.0,
+      "total_sb_updates": 7,
+      "avg_tokens_per_session": 27400,
+      "avg_files_per_session": 3.0,
+      "avg_duration_per_session": 8.5,
+      "efficiency_tokens_per_minute": 3224.0
+    },
+    {
+      "project": "Evolutivo",
+      "total_interactions": 4,
+      "total_tokens_spent": 12000,
+      "total_files_read": 3,
+      "total_duration_minutes": 5,
+      "total_sb_updates": 4,
+      "avg_tokens_per_session": 3000,
+      "avg_files_per_session": 0.8,
+      "avg_duration_per_session": 1.2,
+      "efficiency_tokens_per_minute": 2400.0
+    },
+    {
+      "project": "Excel_Finance_Intelligence",
+      "total_interactions": 4,
+      "total_tokens_spent": 69000,
+      "total_files_read": 21,
+      "total_duration_minutes": 28,
+      "total_sb_updates": 5,
+      "avg_tokens_per_session": 17250,
+      "avg_files_per_session": 5.2,
+      "avg_duration_per_session": 7.0,
+      "efficiency_tokens_per_minute": 2464.0
+    },
+    {
+      "project": "Financeiro_Apex",
+      "total_interactions": 1,
+      "total_tokens_spent": 45000,
+      "total_files_read": 8,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 45000,
+      "avg_files_per_session": 8.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 3000.0
+    },
+    {
+      "project": "General",
+      "total_interactions": 5,
+      "total_tokens_spent": 3800,
+      "total_files_read": 4,
+      "total_duration_minutes": 5,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 760,
+      "avg_files_per_session": 0.8,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 760.0
+    },
+    {
+      "project": "Gestao_Profissionais",
+      "total_interactions": 1,
+      "total_tokens_spent": 2500,
+      "total_files_read": 2,
+      "total_duration_minutes": 1,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 2500,
+      "avg_files_per_session": 2.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 2500.0
+    },
+    {
+      "project": "Gestao_Profissionais_V2",
+      "total_interactions": 11,
+      "total_tokens_spent": 37050,
+      "total_files_read": 26,
+      "total_duration_minutes": 57,
+      "total_sb_updates": 10,
+      "avg_tokens_per_session": 3368,
+      "avg_files_per_session": 2.4,
+      "avg_duration_per_session": 5.2,
+      "efficiency_tokens_per_minute": 650.0
+    },
+    {
+      "project": "Global",
+      "total_interactions": 1,
+      "total_tokens_spent": 250,
+      "total_files_read": 1,
+      "total_duration_minutes": 1.0,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 250,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 250.0
+    },
+    {
+      "project": "Lpescas/Uniq-Rpa-Professional",
+      "total_interactions": 5,
+      "total_tokens_spent": 5300,
+      "total_files_read": 12,
+      "total_duration_minutes": 24,
+      "total_sb_updates": 5,
+      "avg_tokens_per_session": 1060,
+      "avg_files_per_session": 2.4,
+      "avg_duration_per_session": 4.8,
+      "efficiency_tokens_per_minute": 221.0
+    },
+    {
+      "project": "Prompt_Migration",
+      "total_interactions": 3,
+      "total_tokens_spent": 4500,
+      "total_files_read": 1,
+      "total_duration_minutes": 3,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 0.3,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 1500.0
+    },
+    {
+      "project": "RPA",
+      "total_interactions": 336,
+      "total_tokens_spent": 2766615,
+      "total_files_read": 1012,
+      "total_duration_minutes": 2018.5,
+      "total_sb_updates": 173,
+      "avg_tokens_per_session": 8234,
+      "avg_files_per_session": 3.0,
+      "avg_duration_per_session": 6.0,
+      "efficiency_tokens_per_minute": 1371.0
+    },
+    {
+      "project": "Rpa_Agenda_Semanal",
+      "total_interactions": 1,
+      "total_tokens_spent": 15000,
+      "total_files_read": 4,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 15000,
+      "avg_files_per_session": 4.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 1000.0
+    },
+    {
+      "project": "Rpa_Atalho_Windows",
+      "total_interactions": 1,
+      "total_tokens_spent": 100,
+      "total_files_read": 0,
+      "total_duration_minutes": 1,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 100,
+      "avg_files_per_session": 0.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 100.0
+    },
+    {
+      "project": "Rpa_Auditoria_F84",
+      "total_interactions": 1,
+      "total_tokens_spent": 1500,
+      "total_files_read": 1,
+      "total_duration_minutes": 5,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 5.0,
+      "efficiency_tokens_per_minute": 300.0
+    },
+    {
+      "project": "Rpa_Autorizar",
+      "total_interactions": 3,
+      "total_tokens_spent": 13100,
+      "total_files_read": 34,
+      "total_duration_minutes": 122,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 4367,
+      "avg_files_per_session": 11.3,
+      "avg_duration_per_session": 40.7,
+      "efficiency_tokens_per_minute": 107.0
+    },
+    {
+      "project": "Rpa_Backend",
+      "total_interactions": 3,
+      "total_tokens_spent": 6500,
+      "total_files_read": 5,
+      "total_duration_minutes": 13,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 2167,
+      "avg_files_per_session": 1.7,
+      "avg_duration_per_session": 4.3,
+      "efficiency_tokens_per_minute": 500.0
+    },
+    {
+      "project": "Rpa_Bat_Update",
+      "total_interactions": 1,
+      "total_tokens_spent": 600,
+      "total_files_read": 2,
+      "total_duration_minutes": 3,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 600,
+      "avg_files_per_session": 2.0,
+      "avg_duration_per_session": 3.0,
+      "efficiency_tokens_per_minute": 200.0
+    },
+    {
+      "project": "Rpa_Consolidacao",
+      "total_interactions": 1,
+      "total_tokens_spent": 1500,
+      "total_files_read": 4,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 4.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 100.0
+    },
+    {
+      "project": "Rpa_Consolidacao_Historico",
+      "total_interactions": 1,
+      "total_tokens_spent": 4500,
+      "total_files_read": 3,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 4500,
+      "avg_files_per_session": 3.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 300.0
+    },
+    {
+      "project": "Rpa_Css_Refactoring",
+      "total_interactions": 1,
+      "total_tokens_spent": 900,
+      "total_files_read": 4,
+      "total_duration_minutes": 4,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 900,
+      "avg_files_per_session": 4.0,
+      "avg_duration_per_session": 4.0,
+      "efficiency_tokens_per_minute": 225.0
+    },
+    {
+      "project": "Rpa_Documentation",
+      "total_interactions": 1,
+      "total_tokens_spent": 400,
+      "total_files_read": 1,
+      "total_duration_minutes": 1,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 400,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 400.0
+    },
+    {
+      "project": "Rpa_Emissao_Guias",
+      "total_interactions": 10,
+      "total_tokens_spent": 58000,
+      "total_files_read": 31,
+      "total_duration_minutes": 80,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 5800,
+      "avg_files_per_session": 3.1,
+      "avg_duration_per_session": 8.0,
+      "efficiency_tokens_per_minute": 725.0
+    },
+    {
+      "project": "Rpa_Evolutivo",
+      "total_interactions": 22,
+      "total_tokens_spent": 105850,
+      "total_files_read": 78,
+      "total_duration_minutes": 197,
+      "total_sb_updates": 16,
+      "avg_tokens_per_session": 4811,
+      "avg_files_per_session": 3.5,
+      "avg_duration_per_session": 9.0,
+      "efficiency_tokens_per_minute": 537.0
+    },
+    {
+      "project": "Rpa_Frontend",
+      "total_interactions": 9,
+      "total_tokens_spent": 105800,
+      "total_files_read": 40,
+      "total_duration_minutes": 116,
+      "total_sb_updates": 5,
+      "avg_tokens_per_session": 11756,
+      "avg_files_per_session": 4.4,
+      "avg_duration_per_session": 12.9,
+      "efficiency_tokens_per_minute": 912.0
+    },
+    {
+      "project": "Rpa_Frontend_Autorizar",
+      "total_interactions": 1,
+      "total_tokens_spent": 9500,
+      "total_files_read": 2,
+      "total_duration_minutes": 10,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 9500,
+      "avg_files_per_session": 2.0,
+      "avg_duration_per_session": 10.0,
+      "efficiency_tokens_per_minute": 950.0
+    },
+    {
+      "project": "Rpa_Frontend_Backend_Fixes",
+      "total_interactions": 1,
+      "total_tokens_spent": 15200,
+      "total_files_read": 10,
+      "total_duration_minutes": 35,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 15200,
+      "avg_files_per_session": 10.0,
+      "avg_duration_per_session": 35.0,
+      "efficiency_tokens_per_minute": 434.0
+    },
+    {
+      "project": "Rpa_Frontend_Consolidacao",
+      "total_interactions": 1,
+      "total_tokens_spent": 4200,
+      "total_files_read": 2,
+      "total_duration_minutes": 4,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 4200,
+      "avg_files_per_session": 2.0,
+      "avg_duration_per_session": 4.0,
+      "efficiency_tokens_per_minute": 1050.0
+    },
+    {
+      "project": "Rpa_Frontend_Emissao",
+      "total_interactions": 1,
+      "total_tokens_spent": 6500,
+      "total_files_read": 2,
+      "total_duration_minutes": 7,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 6500,
+      "avg_files_per_session": 2.0,
+      "avg_duration_per_session": 7.0,
+      "efficiency_tokens_per_minute": 929.0
+    },
+    {
+      "project": "Rpa_Frontend_Historico",
+      "total_interactions": 4,
+      "total_tokens_spent": 50000,
+      "total_files_read": 10,
+      "total_duration_minutes": 40,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 12500,
+      "avg_files_per_session": 2.5,
+      "avg_duration_per_session": 10.0,
+      "efficiency_tokens_per_minute": 1250.0
+    },
+    {
+      "project": "Rpa_Frontend_Lancamento",
+      "total_interactions": 2,
+      "total_tokens_spent": 10700,
+      "total_files_read": 3,
+      "total_duration_minutes": 11,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 5350,
+      "avg_files_per_session": 1.5,
+      "avg_duration_per_session": 5.5,
+      "efficiency_tokens_per_minute": 973.0
+    },
+    {
+      "project": "Rpa_Frontend_Refactoring",
+      "total_interactions": 1,
+      "total_tokens_spent": 800,
+      "total_files_read": 1,
+      "total_duration_minutes": 2,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 800,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 2.0,
+      "efficiency_tokens_per_minute": 400.0
+    },
+    {
+      "project": "Rpa_Frontend_Refactoring_Applied",
+      "total_interactions": 1,
+      "total_tokens_spent": 1500,
+      "total_files_read": 4,
+      "total_duration_minutes": 6,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 4.0,
+      "avg_duration_per_session": 6.0,
+      "efficiency_tokens_per_minute": 250.0
+    },
+    {
+      "project": "Rpa_Gestao",
+      "total_interactions": 8,
+      "total_tokens_spent": 29000,
+      "total_files_read": 42,
+      "total_duration_minutes": 58,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 3625,
+      "avg_files_per_session": 5.2,
+      "avg_duration_per_session": 7.2,
+      "efficiency_tokens_per_minute": 500.0
+    },
+    {
+      "project": "Rpa_Global",
+      "total_interactions": 7,
+      "total_tokens_spent": 104100,
+      "total_files_read": 37,
+      "total_duration_minutes": 77,
+      "total_sb_updates": 5,
+      "avg_tokens_per_session": 14871,
+      "avg_files_per_session": 5.3,
+      "avg_duration_per_session": 11.0,
+      "efficiency_tokens_per_minute": 1352.0
+    },
+    {
+      "project": "Rpa_Historico",
+      "total_interactions": 1,
+      "total_tokens_spent": 14000,
+      "total_files_read": 4,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 14000,
+      "avg_files_per_session": 4.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 933.0
+    },
+    {
+      "project": "Rpa_Historico_Consolidacao_Evolutivo",
+      "total_interactions": 1,
+      "total_tokens_spent": 12500,
+      "total_files_read": 8,
+      "total_duration_minutes": 35,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 12500,
+      "avg_files_per_session": 8.0,
+      "avg_duration_per_session": 35.0,
+      "efficiency_tokens_per_minute": 357.0
+    },
+    {
+      "project": "Rpa_Historico_Fix",
+      "total_interactions": 1,
+      "total_tokens_spent": 16000,
+      "total_files_read": 3,
+      "total_duration_minutes": 5,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 16000,
+      "avg_files_per_session": 3.0,
+      "avg_duration_per_session": 5.0,
+      "efficiency_tokens_per_minute": 3200.0
+    },
+    {
+      "project": "Rpa_Investigacao_Cid",
+      "total_interactions": 1,
+      "total_tokens_spent": 150,
+      "total_files_read": 1,
+      "total_duration_minutes": 1,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 150,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 150.0
+    },
+    {
+      "project": "Rpa_Lancamento",
+      "total_interactions": 3,
+      "total_tokens_spent": 13800,
+      "total_files_read": 10,
+      "total_duration_minutes": 36,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 4600,
+      "avg_files_per_session": 3.3,
+      "avg_duration_per_session": 12.0,
+      "efficiency_tokens_per_minute": 383.0
+    },
+    {
+      "project": "Rpa_Limpeza",
+      "total_interactions": 1,
+      "total_tokens_spent": 1500,
+      "total_files_read": 0,
+      "total_duration_minutes": 5,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 0.0,
+      "avg_duration_per_session": 5.0,
+      "efficiency_tokens_per_minute": 300.0
+    },
+    {
+      "project": "Rpa_Limpeza_Frontend",
+      "total_interactions": 1,
+      "total_tokens_spent": 1000,
+      "total_files_read": 0,
+      "total_duration_minutes": 3,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1000,
+      "avg_files_per_session": 0.0,
+      "avg_duration_per_session": 3.0,
+      "efficiency_tokens_per_minute": 333.0
+    },
+    {
+      "project": "Rpa_Limpeza_Logs",
+      "total_interactions": 1,
+      "total_tokens_spent": 250,
+      "total_files_read": 0,
+      "total_duration_minutes": 1,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 250,
+      "avg_files_per_session": 0.0,
+      "avg_duration_per_session": 1.0,
+      "efficiency_tokens_per_minute": 250.0
+    },
+    {
+      "project": "Rpa_Limpeza_Raiz",
+      "total_interactions": 1,
+      "total_tokens_spent": 1500,
+      "total_files_read": 0,
+      "total_duration_minutes": 3,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 0.0,
+      "avg_duration_per_session": 3.0,
+      "efficiency_tokens_per_minute": 500.0
+    },
+    {
+      "project": "Rpa_Magic",
+      "total_interactions": 1,
+      "total_tokens_spent": 4200,
+      "total_files_read": 7,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 4200,
+      "avg_files_per_session": 7.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 280.0
+    },
+    {
+      "project": "Rpa_Master",
+      "total_interactions": 4,
+      "total_tokens_spent": 8900,
+      "total_files_read": 8,
+      "total_duration_minutes": 18,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 2225,
+      "avg_files_per_session": 2.0,
+      "avg_duration_per_session": 4.5,
+      "efficiency_tokens_per_minute": 494.0
+    },
+    {
+      "project": "Rpa_Md_Update",
+      "total_interactions": 1,
+      "total_tokens_spent": 800,
+      "total_files_read": 5,
+      "total_duration_minutes": 3,
+      "total_sb_updates": 5,
+      "avg_tokens_per_session": 800,
+      "avg_files_per_session": 5.0,
+      "avg_duration_per_session": 3.0,
+      "efficiency_tokens_per_minute": 267.0
+    },
+    {
+      "project": "Rpa_Medical",
+      "total_interactions": 3,
+      "total_tokens_spent": 8500,
+      "total_files_read": 14,
+      "total_duration_minutes": 27,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 2833,
+      "avg_files_per_session": 4.7,
+      "avg_duration_per_session": 9.0,
+      "efficiency_tokens_per_minute": 315.0
+    },
+    {
+      "project": "Rpa_Pacientes",
+      "total_interactions": 2,
+      "total_tokens_spent": 2600,
+      "total_files_read": 3,
+      "total_duration_minutes": 11,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 1300,
+      "avg_files_per_session": 1.5,
+      "avg_duration_per_session": 5.5,
+      "efficiency_tokens_per_minute": 236.0
+    },
+    {
+      "project": "Rpa_Portal",
+      "total_interactions": 8,
+      "total_tokens_spent": 128000,
+      "total_files_read": 25,
+      "total_duration_minutes": 33,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 16000,
+      "avg_files_per_session": 3.1,
+      "avg_duration_per_session": 4.1,
+      "efficiency_tokens_per_minute": 3879.0
+    },
+    {
+      "project": "Rpa_Reemissao",
+      "total_interactions": 1,
+      "total_tokens_spent": 12000,
+      "total_files_read": 3,
+      "total_duration_minutes": 15,
+      "total_sb_updates": 1,
+      "avg_tokens_per_session": 12000,
+      "avg_files_per_session": 3.0,
+      "avg_duration_per_session": 15.0,
+      "efficiency_tokens_per_minute": 800.0
+    },
+    {
+      "project": "Rpa_Refactoring_Sincronia",
+      "total_interactions": 1,
+      "total_tokens_spent": 1200,
+      "total_files_read": 1,
+      "total_duration_minutes": 4,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1200,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 4.0,
+      "efficiency_tokens_per_minute": 300.0
+    },
+    {
+      "project": "Rpa_Refactoring_Sincronia_Applied",
+      "total_interactions": 1,
+      "total_tokens_spent": 1500,
+      "total_files_read": 1,
+      "total_duration_minutes": 5,
+      "total_sb_updates": 0,
+      "avg_tokens_per_session": 1500,
+      "avg_files_per_session": 1.0,
+      "avg_duration_per_session": 5.0,
+      "efficiency_tokens_per_minute": 300.0
+    },
+    {
+      "project": "Rpa_Saude",
+      "total_interactions": 1,
+      "total_tokens_spent": 42000,
+      "total_files_read": 18,
+      "total_duration_minutes": 60,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 42000,
+      "avg_files_per_session": 18.0,
+      "avg_duration_per_session": 60.0,
+      "efficiency_tokens_per_minute": 700.0
+    },
+    {
+      "project": "Second_Brain",
+      "total_interactions": 6,
+      "total_tokens_spent": 49300,
+      "total_files_read": 20,
+      "total_duration_minutes": 32.5,
+      "total_sb_updates": 13,
+      "avg_tokens_per_session": 8217,
+      "avg_files_per_session": 3.3,
+      "avg_duration_per_session": 5.4,
+      "efficiency_tokens_per_minute": 1517.0
+    },
+    {
+      "project": "Second_Brain_Governance",
+      "total_interactions": 1,
+      "total_tokens_spent": 14200,
+      "total_files_read": 16,
+      "total_duration_minutes": 12,
+      "total_sb_updates": 5,
+      "avg_tokens_per_session": 14200,
+      "avg_files_per_session": 16.0,
+      "avg_duration_per_session": 12.0,
+      "efficiency_tokens_per_minute": 1183.0
+    },
+    {
+      "project": "Second_Brain_Hub",
+      "total_interactions": 1,
+      "total_tokens_spent": 16500,
+      "total_files_read": 14,
+      "total_duration_minutes": 18,
+      "total_sb_updates": 6,
+      "avg_tokens_per_session": 16500,
+      "avg_files_per_session": 14.0,
+      "avg_duration_per_session": 18.0,
+      "efficiency_tokens_per_minute": 917.0
+    },
+    {
+      "project": "Secondbrain_Aurelio",
+      "total_interactions": 2,
+      "total_tokens_spent": 15500,
+      "total_files_read": 6,
+      "total_duration_minutes": 13,
+      "total_sb_updates": 2,
+      "avg_tokens_per_session": 7750,
+      "avg_files_per_session": 3.0,
+      "avg_duration_per_session": 6.5,
+      "efficiency_tokens_per_minute": 1192.0
+    },
+    {
+      "project": "Uniq-Rpa",
+      "total_interactions": 5,
+      "total_tokens_spent": 8300,
+      "total_files_read": 11,
+      "total_duration_minutes": 45,
+      "total_sb_updates": 3,
+      "avg_tokens_per_session": 1660,
+      "avg_files_per_session": 2.2,
+      "avg_duration_per_session": 9.0,
+      "efficiency_tokens_per_minute": 184.0
+    },
+    {
+      "project": "Uniq-Rpa-Professional",
+      "total_interactions": 17,
+      "total_tokens_spent": 369700,
+      "total_files_read": 107,
+      "total_duration_minutes": 116.7,
+      "total_sb_updates": 16,
+      "avg_tokens_per_session": 21747,
+      "avg_files_per_session": 6.3,
+      "avg_duration_per_session": 6.9,
+      "efficiency_tokens_per_minute": 3168.0
+    }
+  ],
+  "session_timeline": [
+    {
+      "session": 1,
+      "date": "2026-10-13",
+      "project": "excel_finance_intelligence",
+      "tokens_spent": 15200,
+      "task": ""
+    },
+    {
+      "session": 2,
+      "date": "2026-10-13",
+      "project": "excel_finance_intelligence",
+      "tokens_spent": 28500,
+      "task": ""
+    },
+    {
+      "session": 3,
+      "date": "2026-10-13",
+      "project": "excel_finance_intelligence",
+      "tokens_spent": 8500,
+      "task": ""
+    },
+    {
+      "session": 4,
+      "date": "2026-10-13",
+      "project": "excel_finance_intelligence",
+      "tokens_spent": 16800,
+      "task": ""
+    },
+    {
+      "session": 5,
+      "date": "2026-10-13",
+      "project": "financeiro_apex",
+      "tokens_spent": 45000,
+      "task": ""
+    },
+    {
+      "session": 6,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 14500,
+      "task": ""
+    },
+    {
+      "session": 7,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 8500,
+      "task": ""
+    },
+    {
+      "session": 8,
+      "date": "2026-10-14",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 28500,
+      "task": ""
+    },
+    {
+      "session": 9,
+      "date": "2026-10-14",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 31200,
+      "task": ""
+    },
+    {
+      "session": 10,
+      "date": "2026-10-14",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 14500,
+      "task": ""
+    },
+    {
+      "session": 11,
+      "date": "2026-10-14",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 18500,
+      "task": ""
+    },
+    {
+      "session": 12,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 16800,
+      "task": "Criação de Planner de Melhorias do Projeto MAGIC"
+    },
+    {
+      "session": 13,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 12400,
+      "task": "Implementacao de Regra de Versionamento Granular Git e Migra"
+    },
+    {
+      "session": 14,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 11500,
+      "task": "Criacao de Planner de Versionamento Automatico Git e MySQL"
+    },
+    {
+      "session": 15,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 15200,
+      "task": "Implementacao e Validacao do Sistema de Versionamento Automa"
+    },
+    {
+      "session": 16,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 10200,
+      "task": "Verificacao e Ativacao do Boot Automatico de Migracoes MySQL"
+    },
+    {
+      "session": 17,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 9500,
+      "task": "Criacao do MANUAL_DE_VERSOES.txt para usuarios finais"
+    },
+    {
+      "session": 18,
+      "date": "2026-10-14",
+      "project": "rpa",
+      "tokens_spent": 8500,
+      "task": ""
+    },
+    {
+      "session": 19,
+      "date": "2026-10-16",
+      "project": "rpa",
+      "tokens_spent": 16500,
+      "task": ""
+    },
+    {
+      "session": 20,
+      "date": "2026-10-16",
+      "project": "rpa",
+      "tokens_spent": 60000,
+      "task": ""
+    },
+    {
+      "session": 21,
+      "date": "2026-10-16",
+      "project": "RPA",
+      "tokens_spent": 14500,
+      "task": ""
+    },
+    {
+      "session": 22,
+      "date": "2026-10-19",
+      "project": "rpa",
+      "tokens_spent": 18500,
+      "task": ""
+    },
+    {
+      "session": 23,
+      "date": "2026-10-19",
+      "project": "rpa",
+      "tokens_spent": 14200,
+      "task": ""
+    },
+    {
+      "session": 24,
+      "date": "2026-10-19",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 12000,
+      "task": ""
+    },
+    {
+      "session": 25,
+      "date": "2026-10-19",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 10500,
+      "task": ""
+    },
+    {
+      "session": 26,
+      "date": "2026-10-19",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 12000,
+      "task": ""
+    },
+    {
+      "session": 27,
+      "date": "2026-10-19",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 38000,
+      "task": ""
+    },
+    {
+      "session": 28,
+      "date": "2026-10-19",
+      "project": "second_brain",
+      "tokens_spent": 16500,
+      "task": ""
+    },
+    {
+      "session": 29,
+      "date": "2026-10-19",
+      "project": "second_brain_hub",
+      "tokens_spent": 16500,
+      "task": ""
+    },
+    {
+      "session": 30,
+      "date": "2026-10-19",
+      "project": "second_brain_governance",
+      "tokens_spent": 14200,
+      "task": ""
+    }
+  ],
+  "before_after": {
+    "multiplier": 3.5,
+    "multiplier_source": "RAG vs no-RAG industry benchmarks (conservative)",
+    "without_sb": {
+      "avg_tokens": 28476,
+      "avg_files": 11.5,
+      "avg_duration": 23.8
+    },
+    "with_sb": {
+      "avg_tokens": 8136,
+      "avg_files": 3.3,
+      "avg_duration": 6.8
+    }
+  },
+  "recent_entries": [
+    {
+      "timestamp": "2026-10-14T17:11:19.300884",
+      "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
+      "project": "uniq-rpa-professional",
+      "task_description": "",
+      "tokens_spent": 18500,
+      "files_read": 5,
+      "duration_minutes": 8.5,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-14T21:50:49.638588",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "Criação de Planner de Melhorias do Projeto MAGIC",
+      "tokens_spent": 16800,
+      "files_read": 15,
+      "duration_minutes": 8.0,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-14T22:03:04.627250",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "Implementacao de Regra de Versionamento Granular Git e Migracoes MySQL",
+      "tokens_spent": 12400,
+      "files_read": 8,
+      "duration_minutes": 5.0,
+      "sb_updates": 2
+    },
+    {
+      "timestamp": "2026-10-14T22:07:11.788175",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "Criacao de Planner de Versionamento Automatico Git e MySQL",
+      "tokens_spent": 11500,
+      "files_read": 7,
+      "duration_minutes": 4.5,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-14T22:19:36.446861",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "Implementacao e Validacao do Sistema de Versionamento Automatico Git e MySQL",
+      "tokens_spent": 15200,
+      "files_read": 9,
+      "duration_minutes": 7.0,
+      "sb_updates": 2
+    },
+    {
+      "timestamp": "2026-10-14T22:23:06.761297",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "Verificacao e Ativacao do Boot Automatico de Migracoes MySQL",
+      "tokens_spent": 10200,
+      "files_read": 6,
+      "duration_minutes": 3.5,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-14T22:28:42.329295",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "Criacao do MANUAL_DE_VERSOES.txt para usuarios finais",
+      "tokens_spent": 9500,
+      "files_read": 5,
+      "duration_minutes": 3.0,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-14T22:50:11.626810",
+      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
+      "project": "rpa",
+      "task_description": "",
+      "tokens_spent": 8500,
+      "files_read": 12,
+      "duration_minutes": 18,
+      "sb_updates": 2
+    },
+    {
+      "timestamp": "2026-10-16T14:30:13.262507",
+      "conversation_id": "7759474e-61a5-4520-93ea-b42c43462b72",
+      "project": "rpa",
+      "task_description": "",
+      "tokens_spent": 16500,
+      "files_read": 8,
+      "duration_minutes": 6,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-16T14:34:34.344210",
+      "conversation_id": "7759474e-61a5-4520-93ea-b42c43462b72",
+      "project": "rpa",
+      "task_description": "",
+      "tokens_spent": 60000,
+      "files_read": 12,
+      "duration_minutes": 10,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-16T15:05:42.469963",
+      "conversation_id": "7759474e-61a5-4520-93ea-b42c43462b72",
+      "project": "RPA",
+      "task_description": "",
+      "tokens_spent": 14500,
+      "files_read": 12,
+      "duration_minutes": 8,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T11:07:03.989050",
+      "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+      "project": "rpa",
+      "task_description": "",
+      "tokens_spent": 18500,
+      "files_read": 12,
+      "duration_minutes": 5,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T11:27:06.069117",
+      "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+      "project": "rpa",
+      "task_description": "",
+      "tokens_spent": 14200,
+      "files_read": 8,
+      "duration_minutes": 5,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T11:52:37.202382",
+      "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+      "project": "uniq-rpa-professional",
+      "task_description": "",
+      "tokens_spent": 12000,
+      "files_read": 8,
+      "duration_minutes": 8,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T12:04:07.553896",
+      "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+      "project": "uniq-rpa-professional",
+      "task_description": "",
+      "tokens_spent": 10500,
+      "files_read": 7,
+      "duration_minutes": 7,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T12:50:51.455524",
+      "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+      "project": "uniq-rpa-professional",
+      "task_description": "",
+      "tokens_spent": 12000,
+      "files_read": 7,
+      "duration_minutes": 8,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T14:06:52.333522",
+      "conversation_id": "888f2e16-0ee0-4f42-9bdb-32dc713352b6",
+      "project": "uniq-rpa-professional",
+      "task_description": "",
+      "tokens_spent": 38000,
+      "files_read": 14,
+      "duration_minutes": 22,
+      "sb_updates": 1
+    },
+    {
+      "timestamp": "2026-10-19T14:14:52.381675",
+      "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+      "project": "second_brain",
+      "task_description": "",
+      "tokens_spent": 16500,
+      "files_read": 9,
+      "duration_minutes": 4.5,
+      "sb_updates": 3
+    },
+    {
+      "timestamp": "2026-10-19T14:44:07.461419",
+      "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+      "project": "second_brain_hub",
+      "task_description": "",
+      "tokens_spent": 16500,
+      "files_read": 14,
+      "duration_minutes": 18,
+      "sb_updates": 6
+    },
+    {
+      "timestamp": "2026-10-19T15:02:28.930449",
+      "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+      "project": "second_brain_governance",
+      "task_description": "",
+      "tokens_spent": 14200,
+      "files_read": 16,
+      "duration_minutes": 12,
+      "sb_updates": 5
+    }
+  ]
+}

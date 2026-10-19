@@ -1,0 +1,75 @@
+[submodule "repos/media_processing/VoiceStudio"]
+	path = repos/media_processing/VoiceStudio
+	url = https://github.com/debpalash/VoiceStudio.git
+[submodule "repos/media_processing/editonny"]
+	path = repos/media_processing/editonny
+	url = https://github.com/soumatheusgomes/editonny.git
+[submodule "repos/media_processing/diagram-design"]
+	path = repos/media_processing/diagram-design
+	url = https://github.com/cathrynlavery/diagram-design.git
+[submodule "repos/media_processing/paperclip"]
+	path = repos/media_processing/paperclip
+	url = https://github.com/paperclipai/paperclip.git
+[submodule "repos/dev_reverse_engineering/rea"]
+	path = repos/dev_reverse_engineering/rea
+	url = https://github.com/morluto/rea.git
+[submodule "repos/dev_reverse_engineering/ECC"]
+	path = repos/dev_reverse_engineering/ECC
+	url = https://github.com/affaan-m/ECC.git
+[submodule "repos/dev_reverse_engineering/vibe-coding-toolkit"]
+	path = repos/dev_reverse_engineering/vibe-coding-toolkit
+	url = https://github.com/soumatheusgomes/vibe-coding-toolkit.git
+[submodule "repos/dev_reverse_engineering/andrej-karpathy-skills"]
+	path = repos/dev_reverse_engineering/andrej-karpathy-skills
+	url = https://github.com/multica-ai/andrej-karpathy-skills.git
+[submodule "repos/dev_reverse_engineering/superpowers"]
+	path = repos/dev_reverse_engineering/superpowers
+	url = https://github.com/obra/superpowers.git
+[submodule "repos/ui_ux_design/impeccable"]
+	path = repos/ui_ux_design/impeccable
+	url = https://github.com/pbakaus/impeccable.git
+[submodule "repos/orchestration_governance/ruflo"]
+	path = repos/orchestration_governance/ruflo
+	url = https://github.com/ruvnet/ruflo.git
+[submodule "repos/orchestration_governance/agentville"]
+	path = repos/orchestration_governance/agentville
+	url = https://github.com/soumatheusgomes/agentville.git
+[submodule "repos/orchestration_governance/framework-5p"]
+	path = repos/orchestration_governance/framework-5p
+	url = https://github.com/soumatheusgomes/framework-5p.git
+[submodule "repos/orchestration_governance/claude-plugins-official"]
+	path = repos/orchestration_governance/claude-plugins-official
+	url = https://github.com/anthropics/claude-plugins-official.git
+[submodule "repos/routing_gateways/OmniRoute"]
+	path = repos/routing_gateways/OmniRoute
+	url = https://github.com/diegosouzapw/OmniRoute.git
+[submodule "repos/routing_gateways/freellmapi"]
+	path = repos/routing_gateways/freellmapi
+	url = https://github.com/tashfeenahmed/freellmapi.git
+[submodule "repos/memory_rag_graphs/claude-mem"]
+	path = repos/memory_rag_graphs/claude-mem
+	url = https://github.com/thedotmack/claude-mem.git
+[submodule "repos/memory_rag_graphs/hindsight"]
+	path = repos/memory_rag_graphs/hindsight
+	url = https://github.com/vectorize-io/hindsight.git
+[submodule "repos/memory_rag_graphs/graphify"]
+	path = repos/memory_rag_graphs/graphify
+	url = https://github.com/Graphify-Labs/graphify.git
+[submodule "repos/document_web_parsers/docling"]
+	path = repos/document_web_parsers/docling
+	url = https://github.com/docling-project/docling.git
+[submodule "repos/document_web_parsers/ponytail"]
+	path = repos/document_web_parsers/ponytail
+	url = https://github.com/DietrichGebert/ponytail.git
+[submodule "repos/document_web_parsers/scientific-agent-skills"]
+	path = repos/document_web_parsers/scientific-agent-skills
+	url = https://github.com/K-Dense-AI/scientific-agent-skills.git
+[submodule "repos/cloud_security_b2b/security-audit-skill"]
+	path = repos/cloud_security_b2b/security-audit-skill
+	url = https://github.com/cloudflare/security-audit-skill.git
+[submodule "repos/cloud_security_b2b/Octop"]
+	path = repos/cloud_security_b2b/Octop
+	url = https://github.com/TencentCloud/Octop.git
+[submodule "repos/cloud_security_b2b/nango"]
+	path = repos/cloud_security_b2b/nango
+	url = https://github.com/NangoHQ/nango.git
