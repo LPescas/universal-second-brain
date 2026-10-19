@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-19T15:02:28.949573",
+  "generated_at": "2026-10-19T15:31:29.691292",
   "all_time": {
-    "total_interactions": 528,
-    "total_tokens_spent": 4296065,
-    "total_files_read": 1719,
-    "total_duration_minutes": 3572.7,
-    "total_sb_updates": 331,
-    "avg_tokens_per_session": 8136,
+    "total_interactions": 529,
+    "total_tokens_spent": 4299915,
+    "total_files_read": 1735,
+    "total_duration_minutes": 3579.2,
+    "total_sb_updates": 337,
+    "avg_tokens_per_session": 8128,
     "avg_files_per_session": 3.3,
     "avg_duration_per_session": 6.8,
-    "efficiency_tokens_per_minute": 1202.0
+    "efficiency_tokens_per_minute": 1201.0
   },
   "by_project": [
     {
@@ -686,15 +686,15 @@
     },
     {
       "project": "Second_Brain",
-      "total_interactions": 6,
-      "total_tokens_spent": 49300,
-      "total_files_read": 20,
-      "total_duration_minutes": 32.5,
-      "total_sb_updates": 13,
-      "avg_tokens_per_session": 8217,
-      "avg_files_per_session": 3.3,
-      "avg_duration_per_session": 5.4,
-      "efficiency_tokens_per_minute": 1517.0
+      "total_interactions": 7,
+      "total_tokens_spent": 53150,
+      "total_files_read": 36,
+      "total_duration_minutes": 39.0,
+      "total_sb_updates": 19,
+      "avg_tokens_per_session": 7593,
+      "avg_files_per_session": 5.1,
+      "avg_duration_per_session": 5.6,
+      "efficiency_tokens_per_minute": 1363.0
     },
     {
       "project": "Second_Brain_Governance",
@@ -762,210 +762,210 @@
       "session": 1,
       "date": "2026-10-13",
       "project": "excel_finance_intelligence",
-      "tokens_spent": 15200,
+      "tokens_spent": 28500,
       "task": ""
     },
     {
       "session": 2,
       "date": "2026-10-13",
       "project": "excel_finance_intelligence",
-      "tokens_spent": 28500,
+      "tokens_spent": 8500,
       "task": ""
     },
     {
       "session": 3,
       "date": "2026-10-13",
       "project": "excel_finance_intelligence",
-      "tokens_spent": 8500,
-      "task": ""
-    },
-    {
-      "session": 4,
-      "date": "2026-10-13",
-      "project": "excel_finance_intelligence",
       "tokens_spent": 16800,
       "task": ""
     },
     {
-      "session": 5,
+      "session": 4,
       "date": "2026-10-13",
       "project": "financeiro_apex",
       "tokens_spent": 45000,
       "task": ""
     },
     {
-      "session": 6,
+      "session": 5,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 14500,
       "task": ""
     },
     {
-      "session": 7,
+      "session": 6,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 8500,
       "task": ""
     },
     {
-      "session": 8,
+      "session": 7,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 28500,
       "task": ""
     },
     {
-      "session": 9,
+      "session": 8,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 31200,
       "task": ""
     },
     {
-      "session": 10,
+      "session": 9,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 14500,
       "task": ""
     },
     {
-      "session": 11,
+      "session": 10,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 18500,
       "task": ""
     },
     {
-      "session": 12,
+      "session": 11,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 16800,
       "task": "Criação de Planner de Melhorias do Projeto MAGIC"
     },
     {
-      "session": 13,
+      "session": 12,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 12400,
       "task": "Implementacao de Regra de Versionamento Granular Git e Migra"
     },
     {
-      "session": 14,
+      "session": 13,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 11500,
       "task": "Criacao de Planner de Versionamento Automatico Git e MySQL"
     },
     {
-      "session": 15,
+      "session": 14,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 15200,
       "task": "Implementacao e Validacao do Sistema de Versionamento Automa"
     },
     {
-      "session": 16,
+      "session": 15,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 10200,
       "task": "Verificacao e Ativacao do Boot Automatico de Migracoes MySQL"
     },
     {
-      "session": 17,
+      "session": 16,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 9500,
       "task": "Criacao do MANUAL_DE_VERSOES.txt para usuarios finais"
     },
     {
-      "session": 18,
+      "session": 17,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 8500,
       "task": ""
     },
     {
-      "session": 19,
+      "session": 18,
       "date": "2026-10-16",
       "project": "rpa",
       "tokens_spent": 16500,
       "task": ""
     },
     {
-      "session": 20,
+      "session": 19,
       "date": "2026-10-16",
       "project": "rpa",
       "tokens_spent": 60000,
       "task": ""
     },
     {
-      "session": 21,
+      "session": 20,
       "date": "2026-10-16",
       "project": "RPA",
       "tokens_spent": 14500,
       "task": ""
     },
     {
-      "session": 22,
+      "session": 21,
       "date": "2026-10-19",
       "project": "rpa",
       "tokens_spent": 18500,
       "task": ""
     },
     {
-      "session": 23,
+      "session": 22,
       "date": "2026-10-19",
       "project": "rpa",
       "tokens_spent": 14200,
       "task": ""
     },
     {
-      "session": 24,
+      "session": 23,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
       "tokens_spent": 12000,
       "task": ""
     },
     {
-      "session": 25,
+      "session": 24,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
       "tokens_spent": 10500,
       "task": ""
     },
     {
-      "session": 26,
+      "session": 25,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
       "tokens_spent": 12000,
       "task": ""
     },
     {
-      "session": 27,
+      "session": 26,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
       "tokens_spent": 38000,
       "task": ""
     },
     {
-      "session": 28,
+      "session": 27,
       "date": "2026-10-19",
       "project": "second_brain",
       "tokens_spent": 16500,
       "task": ""
     },
     {
-      "session": 29,
+      "session": 28,
       "date": "2026-10-19",
       "project": "second_brain_hub",
       "tokens_spent": 16500,
       "task": ""
     },
     {
-      "session": 30,
+      "session": 29,
       "date": "2026-10-19",
       "project": "second_brain_governance",
       "tokens_spent": 14200,
+      "task": ""
+    },
+    {
+      "session": 30,
+      "date": "2026-10-19",
+      "project": "second_brain",
+      "tokens_spent": 3850,
       "task": ""
     }
   ],
@@ -973,27 +973,17 @@
     "multiplier": 3.5,
     "multiplier_source": "RAG vs no-RAG industry benchmarks (conservative)",
     "without_sb": {
-      "avg_tokens": 28476,
+      "avg_tokens": 28448,
       "avg_files": 11.5,
       "avg_duration": 23.8
     },
     "with_sb": {
-      "avg_tokens": 8136,
+      "avg_tokens": 8128,
       "avg_files": 3.3,
       "avg_duration": 6.8
     }
   },
   "recent_entries": [
-    {
-      "timestamp": "2026-10-14T17:11:19.300884",
-      "conversation_id": "80506ee8-38e1-46b2-a8e7-2073786eece7",
-      "project": "uniq-rpa-professional",
-      "task_description": "",
-      "tokens_spent": 18500,
-      "files_read": 5,
-      "duration_minutes": 8.5,
-      "sb_updates": 1
-    },
     {
       "timestamp": "2026-10-14T21:50:49.638588",
       "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
@@ -1183,6 +1173,16 @@
       "files_read": 16,
       "duration_minutes": 12,
       "sb_updates": 5
+    },
+    {
+      "timestamp": "2026-10-19T15:31:29.672836",
+      "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+      "project": "second_brain",
+      "task_description": "",
+      "tokens_spent": 3850,
+      "files_read": 16,
+      "duration_minutes": 6.5,
+      "sb_updates": 6
     }
   ]
 }
