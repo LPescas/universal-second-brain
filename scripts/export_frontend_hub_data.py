@@ -13,8 +13,8 @@ import sys
 from pathlib import Path
 import yaml
 
-if hasattr(sys.stdout, "buffer"):
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 SB_ROOT = Path(r"C:\Users\USER\.second_brain")
 MANIFEST_PATH = SB_ROOT / "repos" / "repos_manifest.yaml"
@@ -152,6 +152,24 @@ def export_data():
     with open(OUTPUT_GRAPH, "w", encoding="utf-8") as f:
         json.dump(graph_data, f, indent=2, ensure_ascii=False)
     print(f"  [OK] Exportado graph_data.json ({len(nodes)} nós, {len(links)} conexões)")
+
+    # 3. Exporta o Grafo Completo dos Projetos da Máquina
+    try:
+        from map_user_projects_graph import build_projects_graph, OUTPUT_PATH as PROJ_GRAPH_PATH
+        proj_graph = build_projects_graph()
+        with open(PROJ_GRAPH_PATH, "w", encoding="utf-8") as f:
+            json.dump(proj_graph, f, indent=2, ensure_ascii=False)
+        print(f"  [OK] Exportado projects_graph_data.json ({len(proj_graph['nodes'])} nós, {len(proj_graph['links'])} conexões)")
+    except Exception as e:
+        print(f"  [AVISO] Falha ao exportar projects_graph_data.json: {e}")
+
+    # 4. Atualiza métricas e telemetria diária para o dashboard
+    try:
+        import usage_metrics
+        entries = usage_metrics.load_metrics()
+        usage_metrics.export_for_dashboard(entries)
+    except Exception as e:
+        print(f"  [AVISO] Falha ao exportar telemetria de uso: {e}")
 
 
 if __name__ == "__main__":

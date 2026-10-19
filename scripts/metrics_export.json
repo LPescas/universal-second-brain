@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-19T15:31:29.691292",
+  "generated_at": "2026-10-19T16:03:30.733728",
   "all_time": {
-    "total_interactions": 529,
-    "total_tokens_spent": 4299915,
-    "total_files_read": 1735,
-    "total_duration_minutes": 3579.2,
-    "total_sb_updates": 337,
-    "avg_tokens_per_session": 8128,
+    "total_interactions": 530,
+    "total_tokens_spent": 4302765,
+    "total_files_read": 1742,
+    "total_duration_minutes": 3583.2,
+    "total_sb_updates": 339,
+    "avg_tokens_per_session": 8118,
     "avg_files_per_session": 3.3,
     "avg_duration_per_session": 6.8,
     "efficiency_tokens_per_minute": 1201.0
@@ -686,15 +686,15 @@
     },
     {
       "project": "Second_Brain",
-      "total_interactions": 7,
-      "total_tokens_spent": 53150,
-      "total_files_read": 36,
-      "total_duration_minutes": 39.0,
-      "total_sb_updates": 19,
-      "avg_tokens_per_session": 7593,
-      "avg_files_per_session": 5.1,
-      "avg_duration_per_session": 5.6,
-      "efficiency_tokens_per_minute": 1363.0
+      "total_interactions": 8,
+      "total_tokens_spent": 56000,
+      "total_files_read": 43,
+      "total_duration_minutes": 43.0,
+      "total_sb_updates": 21,
+      "avg_tokens_per_session": 7000,
+      "avg_files_per_session": 5.4,
+      "avg_duration_per_session": 5.4,
+      "efficiency_tokens_per_minute": 1302.0
     },
     {
       "project": "Second_Brain_Governance",
@@ -762,238 +762,697 @@
       "session": 1,
       "date": "2026-10-13",
       "project": "excel_finance_intelligence",
-      "tokens_spent": 28500,
+      "tokens_spent": 8500,
       "task": ""
     },
     {
       "session": 2,
       "date": "2026-10-13",
       "project": "excel_finance_intelligence",
-      "tokens_spent": 8500,
-      "task": ""
-    },
-    {
-      "session": 3,
-      "date": "2026-10-13",
-      "project": "excel_finance_intelligence",
       "tokens_spent": 16800,
       "task": ""
     },
     {
-      "session": 4,
+      "session": 3,
       "date": "2026-10-13",
       "project": "financeiro_apex",
       "tokens_spent": 45000,
       "task": ""
     },
     {
-      "session": 5,
+      "session": 4,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 14500,
       "task": ""
     },
     {
-      "session": 6,
+      "session": 5,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 8500,
       "task": ""
     },
     {
-      "session": 7,
+      "session": 6,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 28500,
       "task": ""
     },
     {
-      "session": 8,
+      "session": 7,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 31200,
       "task": ""
     },
     {
-      "session": 9,
+      "session": 8,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 14500,
       "task": ""
     },
     {
-      "session": 10,
+      "session": 9,
       "date": "2026-10-14",
       "project": "uniq-rpa-professional",
       "tokens_spent": 18500,
       "task": ""
     },
     {
-      "session": 11,
+      "session": 10,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 16800,
       "task": "Criação de Planner de Melhorias do Projeto MAGIC"
     },
     {
-      "session": 12,
+      "session": 11,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 12400,
       "task": "Implementacao de Regra de Versionamento Granular Git e Migra"
     },
     {
-      "session": 13,
+      "session": 12,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 11500,
       "task": "Criacao de Planner de Versionamento Automatico Git e MySQL"
     },
     {
-      "session": 14,
+      "session": 13,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 15200,
       "task": "Implementacao e Validacao do Sistema de Versionamento Automa"
     },
     {
-      "session": 15,
+      "session": 14,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 10200,
       "task": "Verificacao e Ativacao do Boot Automatico de Migracoes MySQL"
     },
     {
-      "session": 16,
+      "session": 15,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 9500,
       "task": "Criacao do MANUAL_DE_VERSOES.txt para usuarios finais"
     },
     {
-      "session": 17,
+      "session": 16,
       "date": "2026-10-14",
       "project": "rpa",
       "tokens_spent": 8500,
       "task": ""
     },
     {
-      "session": 18,
+      "session": 17,
       "date": "2026-10-16",
       "project": "rpa",
       "tokens_spent": 16500,
       "task": ""
     },
     {
-      "session": 19,
+      "session": 18,
       "date": "2026-10-16",
       "project": "rpa",
       "tokens_spent": 60000,
       "task": ""
     },
     {
-      "session": 20,
+      "session": 19,
       "date": "2026-10-16",
       "project": "RPA",
       "tokens_spent": 14500,
       "task": ""
     },
     {
-      "session": 21,
+      "session": 20,
       "date": "2026-10-19",
       "project": "rpa",
       "tokens_spent": 18500,
       "task": ""
     },
     {
-      "session": 22,
+      "session": 21,
       "date": "2026-10-19",
       "project": "rpa",
       "tokens_spent": 14200,
+      "task": ""
+    },
+    {
+      "session": 22,
+      "date": "2026-10-19",
+      "project": "uniq-rpa-professional",
+      "tokens_spent": 12000,
       "task": ""
     },
     {
       "session": 23,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
-      "tokens_spent": 12000,
+      "tokens_spent": 10500,
       "task": ""
     },
     {
       "session": 24,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
-      "tokens_spent": 10500,
+      "tokens_spent": 12000,
       "task": ""
     },
     {
       "session": 25,
       "date": "2026-10-19",
       "project": "uniq-rpa-professional",
-      "tokens_spent": 12000,
-      "task": ""
-    },
-    {
-      "session": 26,
-      "date": "2026-10-19",
-      "project": "uniq-rpa-professional",
       "tokens_spent": 38000,
       "task": ""
     },
     {
-      "session": 27,
+      "session": 26,
       "date": "2026-10-19",
       "project": "second_brain",
       "tokens_spent": 16500,
       "task": ""
     },
     {
-      "session": 28,
+      "session": 27,
       "date": "2026-10-19",
       "project": "second_brain_hub",
       "tokens_spent": 16500,
       "task": ""
     },
     {
-      "session": 29,
+      "session": 28,
       "date": "2026-10-19",
       "project": "second_brain_governance",
       "tokens_spent": 14200,
       "task": ""
     },
     {
-      "session": 30,
+      "session": 29,
       "date": "2026-10-19",
       "project": "second_brain",
       "tokens_spent": 3850,
       "task": ""
+    },
+    {
+      "session": 30,
+      "date": "2026-10-19",
+      "project": "second_brain",
+      "tokens_spent": 2850,
+      "task": ""
     }
   ],
+  "daily_timeline": [
+    {
+      "date": "2026-08-29",
+      "total_tokens": 8000,
+      "interactions": 2,
+      "avg_tokens": 4000,
+      "avg_duration_minutes": 3.5,
+      "total_files_read": 6,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "total_tokens": 123000,
+      "interactions": 16,
+      "avg_tokens": 7688,
+      "avg_duration_minutes": 8.1,
+      "total_files_read": 49,
+      "projects": [
+        "RPA",
+        "RPA_Global",
+        "RPA_Medical",
+        "rpa_lancamento"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "total_tokens": 6700,
+      "interactions": 2,
+      "avg_tokens": 3350,
+      "avg_duration_minutes": 25.0,
+      "total_files_read": 9,
+      "projects": [
+        "rpa_evolutivo",
+        "rpa_magic"
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "total_tokens": 19800,
+      "interactions": 17,
+      "avg_tokens": 1165,
+      "avg_duration_minutes": 3.4,
+      "total_files_read": 23,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "total_tokens": 13100,
+      "interactions": 3,
+      "avg_tokens": 4367,
+      "avg_duration_minutes": 40.7,
+      "total_files_read": 34,
+      "projects": [
+        "RPA_Autorizar"
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "total_tokens": 58700,
+      "interactions": 9,
+      "avg_tokens": 6522,
+      "avg_duration_minutes": 6.7,
+      "total_files_read": 44,
+      "projects": [
+        "RPA",
+        "rpa"
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "total_tokens": 58600,
+      "interactions": 13,
+      "avg_tokens": 4508,
+      "avg_duration_minutes": 7.5,
+      "total_files_read": 25,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "total_tokens": 28000,
+      "interactions": 1,
+      "avg_tokens": 28000,
+      "avg_duration_minutes": 30.0,
+      "total_files_read": 12,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "total_tokens": 3500,
+      "interactions": 1,
+      "avg_tokens": 3500,
+      "avg_duration_minutes": 4.0,
+      "total_files_read": 5,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "total_tokens": 116050,
+      "interactions": 13,
+      "avg_tokens": 8927,
+      "avg_duration_minutes": 4.5,
+      "total_files_read": 46,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "total_tokens": 56890,
+      "interactions": 26,
+      "avg_tokens": 2188,
+      "avg_duration_minutes": 3.5,
+      "total_files_read": 50,
+      "projects": [
+        "RPA",
+        "rpa_evolutivo"
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "total_tokens": 32000,
+      "interactions": 1,
+      "avg_tokens": 32000,
+      "avg_duration_minutes": 18.0,
+      "total_files_read": 14,
+      "projects": [
+        "RPA_Evolutivo"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "total_tokens": 11000,
+      "interactions": 5,
+      "avg_tokens": 2200,
+      "avg_duration_minutes": 1.8,
+      "total_files_read": 5,
+      "projects": [
+        "RPA_evolutivo",
+        "SecondBrain_Aurelio",
+        "prompt_migration"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "total_tokens": 13500,
+      "interactions": 5,
+      "avg_tokens": 2700,
+      "avg_duration_minutes": 1.4,
+      "total_files_read": 4,
+      "projects": [
+        "Evolutivo",
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "total_tokens": 55450,
+      "interactions": 14,
+      "avg_tokens": 3961,
+      "avg_duration_minutes": 3.4,
+      "total_files_read": 27,
+      "projects": [
+        "AI_Workflow_Documentation",
+        "RPA_Documentation",
+        "SecondBrain_Aurelio",
+        "general",
+        "rpa_evolutivo",
+        "second_brain"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "total_tokens": 20750,
+      "interactions": 6,
+      "avg_tokens": 3458,
+      "avg_duration_minutes": 13.5,
+      "total_files_read": 16,
+      "projects": [
+        "RPA",
+        "RPA_Evolutivo"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "total_tokens": 23700,
+      "interactions": 19,
+      "avg_tokens": 1247,
+      "avg_duration_minutes": 3.4,
+      "total_files_read": 28,
+      "projects": [
+        "rpa"
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "total_tokens": 44150,
+      "interactions": 16,
+      "avg_tokens": 2759,
+      "avg_duration_minutes": 4.8,
+      "total_files_read": 33,
+      "projects": [
+        "agente_ia_evolutivo",
+        "gestao_profissionais",
+        "gestao_profissionais_v2",
+        "rpa_pacientes"
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "total_tokens": 35500,
+      "interactions": 3,
+      "avg_tokens": 11833,
+      "avg_duration_minutes": 17.3,
+      "total_files_read": 16,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "total_tokens": 5500,
+      "interactions": 2,
+      "avg_tokens": 2750,
+      "avg_duration_minutes": 12.5,
+      "total_files_read": 5,
+      "projects": [
+        "Uniq-RPA"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "total_tokens": 67000,
+      "interactions": 5,
+      "avg_tokens": 13400,
+      "avg_duration_minutes": 8.0,
+      "total_files_read": 17,
+      "projects": [
+        "Uniq-RPA",
+        "rpa",
+        "uniq-rpa-professional"
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "total_tokens": 534500,
+      "interactions": 44,
+      "avg_tokens": 12148,
+      "avg_duration_minutes": 6.9,
+      "total_files_read": 122,
+      "projects": [
+        "RPA",
+        "rpa"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "total_tokens": 37605,
+      "interactions": 28,
+      "avg_tokens": 1343,
+      "avg_duration_minutes": 4.4,
+      "total_files_read": 52,
+      "projects": [
+        "LPescas/uniq-rpa-professional",
+        "RPA",
+        "rpa",
+        "rpa_agenda_semanal"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "total_tokens": 108800,
+      "interactions": 9,
+      "avg_tokens": 12089,
+      "avg_duration_minutes": 10.3,
+      "total_files_read": 30,
+      "projects": [
+        "rpa_frontend_historico",
+        "rpa_historico",
+        "rpa_historico_fix",
+        "rpa_reemissao",
+        "uniq-rpa-professional"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "total_tokens": 15000,
+      "interactions": 1,
+      "avg_tokens": 15000,
+      "avg_duration_minutes": 60.0,
+      "total_files_read": 8,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "total_tokens": 11000,
+      "interactions": 6,
+      "avg_tokens": 1833,
+      "avg_duration_minutes": 4.5,
+      "total_files_read": 9,
+      "projects": [
+        "RPA"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "total_tokens": 296400,
+      "interactions": 15,
+      "avg_tokens": 19760,
+      "avg_duration_minutes": 7.0,
+      "total_files_read": 110,
+      "projects": [
+        "excel_finance_intelligence",
+        "financeiro_apex",
+        "rpa",
+        "uniq-rpa-professional"
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "total_tokens": 199800,
+      "interactions": 13,
+      "avg_tokens": 15369,
+      "avg_duration_minutes": 10.3,
+      "total_files_read": 104,
+      "projects": [
+        "rpa",
+        "uniq-rpa-professional"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "total_tokens": 91000,
+      "interactions": 3,
+      "avg_tokens": 30333,
+      "avg_duration_minutes": 8.0,
+      "total_files_read": 32,
+      "projects": [
+        "RPA",
+        "rpa"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "total_tokens": 159100,
+      "interactions": 11,
+      "avg_tokens": 14464,
+      "avg_duration_minutes": 9.1,
+      "total_files_read": 118,
+      "projects": [
+        "rpa",
+        "second_brain",
+        "second_brain_governance",
+        "second_brain_hub",
+        "uniq-rpa-professional"
+      ]
+    }
+  ],
+  "system_census": {
+    "skills_count": 47,
+    "agents_count": 20,
+    "workflows_count": 13,
+    "repos_count": 25,
+    "projects_count": 5,
+    "skills_sample": [
+      "api-patterns",
+      "app-builder",
+      "architecture",
+      "bash-linux",
+      "batch-operations",
+      "behavioral-modes",
+      "brainstorming",
+      "clean-code",
+      "code-review-checklist",
+      "code-review-graph",
+      "context-compression",
+      "coordinator-mode",
+      "database-design",
+      "deployment-procedures",
+      "design-spec",
+      "documentation-templates",
+      "frontend-architecture",
+      "frontend-design",
+      "game-development",
+      "geo-fundamentals",
+      "i18n-localization",
+      "intelligent-routing",
+      "lint-and-validate",
+      "mcp-builder",
+      "memory-system",
+      "mobile-design",
+      "nextjs-react-expert",
+      "nodejs-best-practices",
+      "parallel-agents",
+      "performance-profiling",
+      "plan-writing",
+      "powershell-windows",
+      "python-patterns",
+      "red-team-tactics",
+      "rust-pro",
+      "seo-fundamentals",
+      "server-management",
+      "simplify-code",
+      "skillify",
+      "systematic-debugging",
+      "tailwind-patterns",
+      "tdd-workflow",
+      "testing-patterns",
+      "verify-changes",
+      "vulnerability-scanner",
+      "web-design-guidelines",
+      "webapp-testing"
+    ],
+    "agents_sample": [
+      "backend-specialist",
+      "code-archaeologist",
+      "database-architect",
+      "debugger",
+      "devops-engineer",
+      "documentation-writer",
+      "explorer-agent",
+      "frontend-specialist",
+      "game-developer",
+      "mobile-developer",
+      "orchestrator",
+      "penetration-tester",
+      "performance-optimizer",
+      "product-manager",
+      "product-owner",
+      "project-planner",
+      "qa-automation-engineer",
+      "security-auditor",
+      "seo-specialist",
+      "test-engineer"
+    ],
+    "workflows_sample": [
+      "brainstorm",
+      "coordinate",
+      "create",
+      "debug",
+      "deploy",
+      "enhance",
+      "orchestrate",
+      "plan",
+      "preview",
+      "remember",
+      "status",
+      "test",
+      "verify"
+    ],
+    "projects_sample": [
+      ".agents",
+      "automationtest_122844",
+      "rpa",
+      "secondbrain_aurelio",
+      "wrpe_recorder"
+    ]
+  },
   "before_after": {
     "multiplier": 3.5,
     "multiplier_source": "RAG vs no-RAG industry benchmarks (conservative)",
     "without_sb": {
-      "avg_tokens": 28448,
+      "avg_tokens": 28413,
       "avg_files": 11.5,
       "avg_duration": 23.8
     },
     "with_sb": {
-      "avg_tokens": 8128,
+      "avg_tokens": 8118,
       "avg_files": 3.3,
       "avg_duration": 6.8
     }
   },
   "recent_entries": [
-    {
-      "timestamp": "2026-10-14T21:50:49.638588",
-      "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
-      "project": "rpa",
-      "task_description": "Criação de Planner de Melhorias do Projeto MAGIC",
-      "tokens_spent": 16800,
-      "files_read": 15,
-      "duration_minutes": 8.0,
-      "sb_updates": 1
-    },
     {
       "timestamp": "2026-10-14T22:03:04.627250",
       "conversation_id": "aeebb1c2-2bbe-4733-8179-f49210f9b9bc",
@@ -1183,6 +1642,16 @@
       "files_read": 16,
       "duration_minutes": 6.5,
       "sb_updates": 6
+    },
+    {
+      "timestamp": "2026-10-19T15:36:33.632356",
+      "conversation_id": "1fb5de6d-5204-4106-8e53-345441a82486",
+      "project": "second_brain",
+      "task_description": "",
+      "tokens_spent": 2850,
+      "files_read": 7,
+      "duration_minutes": 4.0,
+      "sb_updates": 2
     }
   ]
 }

@@ -1,0 +1,389 @@
+{
+  "title": "Grafo de Projetos Interligados na Máquina",
+  "description": "Mapeamento semântico completo dos projetos do usuário para consulta de IA com economia máxima de tokens.",
+  "nodes": [
+    {
+      "id": "workspace_root",
+      "label": "Máquina do Desenvolvedor (USER)",
+      "type": "root",
+      "group": "root",
+      "radius": 24,
+      "color": "#38bdf8",
+      "path": "C:/Projetos",
+      "description": "Estação de desenvolvimento principal contendo ecossistemas corporativos de RPA, IA local e automação web.",
+      "tech": [
+        "Python",
+        "Flask",
+        "Selenium",
+        "Playwright",
+        "SQLite",
+        "Ollama"
+      ]
+    },
+    {
+      "id": "proj_rpa",
+      "label": "UNIQ RPA (Produção)",
+      "type": "project",
+      "group": "rpa",
+      "radius": 19,
+      "color": "#10b981",
+      "path": "C:/Projetos/RPA",
+      "description": "Suíte corporativa de automação de backoffice para Clínica UNIQ. Executa emissão, faturamento, conciliação e autorização em lote.",
+      "tech": [
+        "Python 3.10",
+        "Flask",
+        "Selenium",
+        "SQLite WAL",
+        "HTML5",
+        "Vanilla JS"
+      ],
+      "entry_point": "app.py / main_*.py",
+      "protected_files": [
+        "app.py",
+        "database/schema.sql",
+        "Backend/Global/*"
+      ]
+    },
+    {
+      "id": "rpa_emissao",
+      "label": "Módulo Emissão SADT",
+      "type": "submodule",
+      "group": "rpa",
+      "radius": 12,
+      "color": "#34d399",
+      "path": "C:/Projetos/RPA/Backend/Emissao",
+      "description": "Automação de emissão de guias SP/SADT no portal operadora via Selenium.",
+      "entry_point": "Backend/Emissao/main_emissao.py"
+    },
+    {
+      "id": "rpa_lancamento",
+      "label": "Módulo Lançamento FATTISS",
+      "type": "submodule",
+      "group": "rpa",
+      "radius": 13,
+      "color": "#34d399",
+      "path": "C:/Projetos/RPA/Backend/Lancamento",
+      "description": "Faturamento TISS e digitação de guias SP/SADT com tratamento de rascunhos em tempo real.",
+      "entry_point": "Backend/Lancamento/main_lancamento.py",
+      "web_page": "Frontend/lancamento.html"
+    },
+    {
+      "id": "rpa_consolidacao",
+      "label": "Módulo Consolidação ETL",
+      "type": "submodule",
+      "group": "rpa",
+      "radius": 12,
+      "color": "#34d399",
+      "path": "C:/Projetos/RPA/Backend/Consolidacao",
+      "description": "Pipeline ETL de conciliação de faturamento, convênios e relatórios financeiros.",
+      "entry_point": "Backend/Consolidacao/main_consolidacao.py"
+    },
+    {
+      "id": "rpa_autorizar",
+      "label": "Módulo Autorizar",
+      "type": "submodule",
+      "group": "rpa",
+      "radius": 12,
+      "color": "#34d399",
+      "path": "C:/Projetos/RPA/Backend/Autorizar",
+      "description": "Mapeamento facial e autorização prévia de procedimentos médicos.",
+      "entry_point": "Backend/Autorizar/main_autorizar.py"
+    },
+    {
+      "id": "rpa_db",
+      "label": "Banco SQLite (RPA)",
+      "type": "database",
+      "group": "rpa",
+      "radius": 12,
+      "color": "#059669",
+      "path": "C:/Projetos/RPA/Backend/dados/rpa_database.db",
+      "description": "Tabelas tb_agenda_profissionais, tb_usuarios, tb_guias, logs de ciclo.",
+      "rules": "Sincronização mandatória com Guia_Simplificado_Sistema_RPA.docx e rpa_database_schema_audit.md"
+    },
+    {
+      "id": "rpa_monitor",
+      "label": "Frontend Monitor Paralelo",
+      "type": "ui",
+      "group": "rpa",
+      "radius": 12,
+      "color": "#6ee7b7",
+      "path": "C:/Projetos/RPA/Frontend/monitor.html",
+      "description": "Interface web de observabilidade ao vivo das instâncias de robôs em execução paralela."
+    },
+    {
+      "id": "proj_wrpe",
+      "label": "WRPE Recorder",
+      "type": "project",
+      "group": "wrpe",
+      "radius": 18,
+      "color": "#8b5cf6",
+      "path": "C:/Projetos/WRPE_Recorder",
+      "description": "Microsserviço de captura e gravação de interações de tela em alta fidelidade com replay autônomo.",
+      "tech": [
+        "Python",
+        "Playwright",
+        "Selenium",
+        "Chrome Extension",
+        "SQLAlchemy",
+        "SQLite"
+      ],
+      "entry_point": "main_uniq_recorder.py"
+    },
+    {
+      "id": "wrpe_engine",
+      "label": "Motor Híbrido Playwright/Selenium",
+      "type": "submodule",
+      "group": "wrpe",
+      "radius": 12,
+      "color": "#a78bfa",
+      "path": "C:/Projetos/WRPE_Recorder/codigo",
+      "description": "Engine de orquestração de navegadores para replay fiel de gravações de formulários."
+    },
+    {
+      "id": "wrpe_ext",
+      "label": "Chrome Extension Captura",
+      "type": "ui",
+      "group": "wrpe",
+      "radius": 12,
+      "color": "#c4b5fd",
+      "path": "C:/Projetos/WRPE_Recorder/executaveis/chrome_extension",
+      "description": "Extensão injetada no navegador do usuário para capturar cliques, inputs e seletores CSS exatos."
+    },
+    {
+      "id": "proj_aurelio",
+      "label": "SecondBrain Aurelio",
+      "type": "project",
+      "group": "aurelio",
+      "radius": 18,
+      "color": "#ec4899",
+      "path": "C:/Projetos/SecondBrain_Aurelio",
+      "description": "Agente Jarvis desktop autônomo rodando 100% local sobre Ollama com busca híbrida de memória.",
+      "tech": [
+        "Python Stdlib",
+        "Ollama Local (qwen2.5 / hermes3)",
+        "SQLite WAL",
+        "nomic-embed-text"
+      ],
+      "entry_point": "backend/aurelio/core/orchestrator.py"
+    },
+    {
+      "id": "aurelio_pipeline",
+      "label": "Pipeline 7 Passos (Imutável)",
+      "type": "submodule",
+      "group": "aurelio",
+      "radius": 13,
+      "color": "#f472b6",
+      "path": "C:/Projetos/SecondBrain_Aurelio/core/orchestrator.py",
+      "description": "Gargalo único de processamento: validação -> busca hibrida -> prompt 3 partes -> inferência Ollama -> persistência."
+    },
+    {
+      "id": "aurelio_memory",
+      "label": "Memória Híbrida (BM25 + Vec)",
+      "type": "submodule",
+      "group": "aurelio",
+      "radius": 12,
+      "color": "#f472b6",
+      "path": "C:/Projetos/SecondBrain_Aurelio/memory/memory.py",
+      "description": "Recuperação de contexto com pontuação híbrida: 0.7 semântica vetorial + 0.3 recência temporal."
+    },
+    {
+      "id": "aurelio_models",
+      "label": "Ollama Multi-Model Manager",
+      "type": "submodule",
+      "group": "aurelio",
+      "radius": 12,
+      "color": "#f472b6",
+      "path": "C:/Projetos/SecondBrain_Aurelio/models/model_manager.py",
+      "description": "Conexão direta HTTP ao daemon local do Ollama com fallback inteligente entre modelos."
+    },
+    {
+      "id": "proj_auto122",
+      "label": "AutomationTest 122844",
+      "type": "project",
+      "group": "test",
+      "radius": 16,
+      "color": "#f59e0b",
+      "path": "C:/Projetos/AutomationTest_122844",
+      "description": "Bateria de testes automatizados E2E e validação de regressão para fluxos web corporativos.",
+      "tech": [
+        "Python",
+        "Selenium WebDriver",
+        "PyTest"
+      ]
+    },
+    {
+      "id": "proj_sb",
+      "label": "Second Brain Hub v2.0",
+      "type": "project",
+      "group": "sb",
+      "radius": 20,
+      "color": "#06b6d4",
+      "path": "C:/Users/USER/.second_brain",
+      "description": "Cérebro central de governança Zero Trust, memória de longo prazo, telemetria real e 25 repositórios de ferramentas.",
+      "tech": [
+        "Python",
+        "HTML5 Canvas",
+        "Git Submodules",
+        "AG Kit Framework",
+        "Zero Trust Guardian"
+      ]
+    },
+    {
+      "id": "sb_guardian",
+      "label": "Guardião de Execução Zero Trust",
+      "type": "governance",
+      "group": "sb",
+      "radius": 13,
+      "color": "#22d3ee",
+      "path": "C:/Users/USER/.second_brain/core/governanca/guardiao_execucao.py",
+      "description": "Barreira de segurança contra desvios de arquitetura, arquivos soltos e violação de regras."
+    },
+    {
+      "id": "sb_repos_hub",
+      "label": "Hub de 25 Ferramentas",
+      "type": "hub",
+      "group": "sb",
+      "radius": 14,
+      "color": "#22d3ee",
+      "path": "C:/Users/USER/.second_brain/repos",
+      "description": "25 repositórios especializados clonados com Cold Snapshot (Docling, REA, VoiceStudio, Impeccable, OmniRoute...)"
+    },
+    {
+      "id": "sb_knowledge",
+      "label": "Base de Conhecimento & Decisões",
+      "type": "knowledge",
+      "group": "sb",
+      "radius": 13,
+      "color": "#22d3ee",
+      "path": "C:/Users/USER/.second_brain/knowledge",
+      "description": "learning_log.md, project_decisions.md e catálogo unificado de skills e contratos de IA."
+    },
+    {
+      "id": "sb_agkit",
+      "label": "AG Kit (47 Skills & 20 Agentes)",
+      "type": "agents",
+      "group": "sb",
+      "radius": 14,
+      "color": "#22d3ee",
+      "path": "C:/Users/USER/.second_brain/.agents",
+      "description": "20 especialistas e 47 habilidades de engenharia orquestradas com governança estrita."
+    }
+  ],
+  "links": [
+    {
+      "source": "workspace_root",
+      "target": "proj_rpa",
+      "label": "Governa automação clínica"
+    },
+    {
+      "source": "workspace_root",
+      "target": "proj_wrpe",
+      "label": "Grava interações de tela"
+    },
+    {
+      "source": "workspace_root",
+      "target": "proj_aurelio",
+      "label": "Assistente Jarvis desktop"
+    },
+    {
+      "source": "workspace_root",
+      "target": "proj_auto122",
+      "label": "Testes de regressão"
+    },
+    {
+      "source": "workspace_root",
+      "target": "proj_sb",
+      "label": "Cérebro Central & Governança"
+    },
+    {
+      "source": "proj_rpa",
+      "target": "rpa_emissao"
+    },
+    {
+      "source": "proj_rpa",
+      "target": "rpa_lancamento"
+    },
+    {
+      "source": "proj_rpa",
+      "target": "rpa_consolidacao"
+    },
+    {
+      "source": "proj_rpa",
+      "target": "rpa_autorizar"
+    },
+    {
+      "source": "proj_rpa",
+      "target": "rpa_db"
+    },
+    {
+      "source": "proj_rpa",
+      "target": "rpa_monitor"
+    },
+    {
+      "source": "proj_wrpe",
+      "target": "wrpe_engine"
+    },
+    {
+      "source": "proj_wrpe",
+      "target": "wrpe_ext"
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "aurelio_pipeline"
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "aurelio_memory"
+    },
+    {
+      "source": "proj_aurelio",
+      "target": "aurelio_models"
+    },
+    {
+      "source": "proj_sb",
+      "target": "sb_guardian"
+    },
+    {
+      "source": "proj_sb",
+      "target": "sb_repos_hub"
+    },
+    {
+      "source": "proj_sb",
+      "target": "sb_knowledge"
+    },
+    {
+      "source": "proj_sb",
+      "target": "sb_agkit"
+    },
+    {
+      "source": "proj_sb",
+      "target": "proj_rpa",
+      "label": "Preserva regras e schemas do banco"
+    },
+    {
+      "source": "proj_sb",
+      "target": "proj_aurelio",
+      "label": "Alimenta memória RAG do Aurelio"
+    },
+    {
+      "source": "proj_wrpe",
+      "target": "proj_rpa",
+      "label": "Gera seletores para robôs RPA"
+    },
+    {
+      "source": "proj_auto122",
+      "target": "proj_rpa",
+      "label": "Testa endpoints e rotas do RPA"
+    },
+    {
+      "source": "sb_repos_hub",
+      "target": "proj_rpa",
+      "label": "Fornece Docling e Diagramas ao RPA"
+    },
+    {
+      "source": "sb_agkit",
+      "target": "proj_aurelio",
+      "label": "Provê skills de engenharia ao Jarvis"
+    }
+  ]
+}

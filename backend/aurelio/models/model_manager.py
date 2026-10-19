@@ -17,15 +17,30 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
-# ─────────────────────────────────────────────
-# Configuração de Modelos
-# ─────────────────────────────────────────────
-MODELOS_DISPONIVEIS = ["qwen2.5", "llama3", "mistral"]
-MODEL_ATUAL = "qwen2.5"
-FALLBACK_MODELS = ["mistral", "llama3"]
+MODELOS_DISPONIVEIS = [
+    "qwen2.5-coder:7b",
+    "qwen2.5",
+    "qwen2.5:7b",
+    "qwen2.5:3b",
+    "hermes3:8b",
+    "llama3.2:3b",
+    "llama3",
+    "mistral",
+]
+MODEL_ATUAL = "qwen2.5-coder:7b"
+FALLBACK_MODELS = ["qwen2.5:3b", "qwen2.5", "mistral", "llama3"]
 EMBEDDING_MODEL = "nomic-embed-text"
 
 OLLAMA_BASE_URL = "http://localhost:11434"
+
+
+def definir_modelo_atual(modelo: str) -> bool:
+    """Altera o modelo atual do gerenciador."""
+    global MODEL_ATUAL
+    clean_name = modelo.strip()
+    MODEL_ATUAL = clean_name
+    logger.info("Modelo atual alterado para: %s", clean_name)
+    return True
 
 
 # ─────────────────────────────────────────────

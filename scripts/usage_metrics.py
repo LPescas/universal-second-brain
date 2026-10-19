@@ -158,6 +158,100 @@ def compute_session_timeline(entries: list[dict], max_sessions: int = 30) -> lis
     return result
 
 
+def compute_daily_timeline(entries: list[dict], max_days: int = 30) -> list[dict]:
+    """Group entries by calendar day (YYYY-MM-DD) with real token consumption."""
+    daily_map: dict[str, dict] = {}
+    for e in entries:
+        ts = e.get("timestamp", "")
+        day = ts[:10] if ts else "unknown"
+        if day not in daily_map:
+            daily_map[day] = {
+                "date": day,
+                "total_tokens": 0,
+                "interactions": 0,
+                "total_duration": 0.0,
+                "files_read": 0,
+                "projects": set(),
+            }
+        daily_map[day]["total_tokens"] += e.get("tokens_spent", 0)
+        daily_map[day]["interactions"] += 1
+        daily_map[day]["total_duration"] += e.get("duration_minutes", 0.0)
+        daily_map[day]["files_read"] += e.get("files_read", 0)
+        daily_map[day]["projects"].add(e.get("project", "unknown"))
+
+    sorted_days = sorted(daily_map.keys())
+    if len(sorted_days) > max_days:
+        sorted_days = sorted_days[-max_days:]
+
+    result = []
+    for d in sorted_days:
+        item = daily_map[d]
+        count = item["interactions"]
+        result.append({
+            "date": item["date"],
+            "total_tokens": item["total_tokens"],
+            "interactions": count,
+            "avg_tokens": round(item["total_tokens"] / count) if count > 0 else 0,
+            "avg_duration_minutes": round(item["total_duration"] / count, 1) if count > 0 else 0.0,
+            "total_files_read": item["files_read"],
+            "projects": sorted(list(item["projects"])),
+        })
+    return result
+
+
+def get_system_census() -> dict:
+    """Dynamically count all active skills, agents, workflows, repos and projects."""
+    skills_dir = BRAIN_ROOT / ".agents" / "skills"
+    agents_dir = BRAIN_ROOT / ".agents" / "agent"
+    workflows_dir = BRAIN_ROOT / ".agents" / "workflows"
+    repos_manifest = BRAIN_ROOT / "repos" / "repos_manifest.yaml"
+    projects_dir = BRAIN_ROOT / "projects"
+
+    skills = []
+    if skills_dir.exists():
+        for s in sorted(skills_dir.iterdir()):
+            if s.is_dir() and (s / "SKILL.md").exists():
+                skills.append(s.name)
+
+    agents = []
+    if agents_dir.exists():
+        for a in sorted(agents_dir.glob("*.md")):
+            if a.name != "README.md":
+                agents.append(a.stem)
+
+    workflows = []
+    if workflows_dir.exists():
+        for w in sorted(workflows_dir.glob("*.md")):
+            workflows.append(w.stem)
+
+    repos_count = 25
+    if repos_manifest.exists():
+        try:
+            import yaml
+            with repos_manifest.open("r", encoding="utf-8") as f:
+                data = yaml.safe_load(f)
+                repos_count = len(data.get("repositories", []))
+        except Exception:
+            pass
+
+    projects = []
+    if projects_dir.exists():
+        for p in sorted(projects_dir.glob("*_context.md")):
+            projects.append(p.stem.replace("_context", ""))
+
+    return {
+        "skills_count": len(skills),
+        "agents_count": len(agents),
+        "workflows_count": len(workflows),
+        "repos_count": repos_count,
+        "projects_count": len(projects),
+        "skills_sample": skills,
+        "agents_sample": agents,
+        "workflows_sample": workflows,
+        "projects_sample": projects,
+    }
+
+
 def compute_before_after(entries: list[dict]) -> dict:
     """Calculate Before vs After comparison using research-based multiplier."""
     stats = compute_stats(entries)
@@ -222,11 +316,16 @@ def export_for_dashboard(entries: list[dict]) -> dict:
     stats = compute_stats(entries)
     comparison = compute_before_after(entries)
 
+    census = get_system_census()
+    daily_timeline = compute_daily_timeline(entries, max_days=30)
+
     export = {
         "generated_at": datetime.now().isoformat(),
         "all_time": stats,
         "by_project": compute_by_project(entries),
         "session_timeline": compute_session_timeline(entries, max_sessions=30),
+        "daily_timeline": daily_timeline,
+        "system_census": census,
         "before_after": comparison,
         "recent_entries": entries[-20:] if len(entries) > 20 else entries,
     }

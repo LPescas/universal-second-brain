@@ -19,6 +19,7 @@ const DATA_CONFIG = {
     learningLog:    '../learning_log.md',      // text fetch only
     reposData:      'repos_data.json',
     graphData:      'graph_data.json',
+    projectsGraphData: 'projects_graph_data.json',
   },
 };
 
@@ -312,11 +313,27 @@ function renderDashboard(metrics, health) {
     if (el) el.textContent = val;
   };
 
+  // Tokens Today
+  let tokensToday = 0;
+  const todayStr = new Date().toISOString().slice(0, 10);
+  if (metrics.daily_timeline && metrics.daily_timeline.length > 0) {
+    const todayEntry = metrics.daily_timeline.find(d => d.date === todayStr);
+    tokensToday = todayEntry ? todayEntry.total_tokens : metrics.daily_timeline[metrics.daily_timeline.length - 1].total_tokens;
+  }
+  set('val-tokens-today', formatNumber(tokensToday));
+
   set('val-interactions', formatNumber(at.total_interactions));
   set('val-tokens', formatNumber(at.avg_tokens_per_session));
-  set('val-files', formatNumber(at.avg_files_per_session));
   set('val-duration', (at.avg_duration_per_session || 0) + ' min');
   set('val-efficiency', formatNumber(at.efficiency_tokens_per_minute) + ' /min');
+
+  // System Census KPI
+  if (metrics.system_census) {
+    const c = metrics.system_census;
+    set('val-census', `${c.skills_count} Skills / ${c.repos_count} Repos`);
+  } else {
+    set('val-census', '47 Skills / 25 Repos');
+  }
 
   // Total spent badge
   set('total-spent-badge', formatNumber(at.total_tokens_spent) + ' tokens total');
@@ -329,13 +346,39 @@ function renderDashboard(metrics, health) {
   set('after-files', formatNumber(baWith.avg_files || 0));
   set('after-duration', (baWith.avg_duration || 0) + ' min');
 
-  // Session timeline chart (last 30 sessions, NOT calendar days)
-  if (metrics.session_timeline && metrics.session_timeline.length > 0) {
-    var sessionData = metrics.session_timeline.map(function(s) {
-      return { date: '#' + s.session + ' ' + s.date.slice(5), tokens_saved: s.tokens_spent };
-    });
-    requestAnimationFrame(function() { drawTimeline('timeline-canvas', sessionData); });
-  }
+  // Dynamic Timeline mode (Daily vs Session)
+  window.updateTimelineDisplay = function(mode) {
+    if (mode) currentTimelineMode = mode;
+    const dailyBtn = document.getElementById('toggle-timeline-daily');
+    const sessionBtn = document.getElementById('toggle-timeline-session');
+    const titleEl = document.getElementById('timeline-chart-title');
+
+    if (currentTimelineMode === 'daily') {
+      if (dailyBtn) dailyBtn.classList.add('active');
+      if (sessionBtn) sessionBtn.classList.remove('active');
+      if (titleEl) titleEl.textContent = 'Tokens Utilizados por Dia (Real)';
+      if (metrics.daily_timeline && metrics.daily_timeline.length > 0) {
+        const dailyData = metrics.daily_timeline.map(d => ({
+          date: d.date.slice(5),
+          tokens_saved: d.total_tokens
+        }));
+        requestAnimationFrame(() => drawTimeline('timeline-canvas', dailyData));
+      }
+    } else {
+      if (dailyBtn) dailyBtn.classList.remove('active');
+      if (sessionBtn) sessionBtn.classList.add('active');
+      if (titleEl) titleEl.textContent = 'Tokens Gastos por Sessão (Últimas 30)';
+      if (metrics.session_timeline && metrics.session_timeline.length > 0) {
+        const sessionData = metrics.session_timeline.map(s => ({
+          date: '#' + s.session + ' ' + s.date.slice(5),
+          tokens_saved: s.tokens_spent
+        }));
+        requestAnimationFrame(() => drawTimeline('timeline-canvas', sessionData));
+      }
+    }
+  };
+
+  updateTimelineDisplay(currentTimelineMode || 'daily');
 
   // Project bars (tokens spent, not saved)
   var barsEl = document.getElementById('project-bars');
@@ -738,7 +781,11 @@ window.openAiGuideModal = function(repoName) {
 
 let isGraphInitialized = false;
 
-async function initKnowledgeGraph() {
+let currentGraphView = 'hub'; // 'hub' | 'projects'
+let currentTimelineMode = 'daily'; // 'daily' | 'session'
+
+async function initKnowledgeGraph(viewType) {
+  if (viewType) currentGraphView = viewType;
   const canvas = document.getElementById('graph-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -751,24 +798,52 @@ async function initKnowledgeGraph() {
   }
   resizeCanvas();
 
+  const dataFile = currentGraphView === 'projects' ? 'projects_graph_data.json' : 'graph_data.json';
   let graphData = null;
   try {
-    const res = await fetch('graph_data.json');
-    if (!res.ok) throw new Error("Falha ao ler graph_data.json");
+    const res = await fetch(dataFile);
+    if (!res.ok) throw new Error("Falha ao ler " + dataFile);
     graphData = await res.json();
   } catch (e) {
     console.error("Erro no graph_data:", e);
     return;
   }
 
-  const nodes = graphData.nodes;
-  const links = graphData.links;
+  const legendContainer = document.getElementById('graph-legend-container');
+  if (legendContainer) {
+    if (currentGraphView === 'projects') {
+      legendContainer.innerHTML = `
+        <span class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span>Estação/Root</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Projetos</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#34d399"></span>Módulos / Backend</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span>Bancos SQLite</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#6366f1"></span>Frontend</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Regras / Guardião</span>
+      `;
+    } else {
+      legendContainer.innerHTML = `
+        <span class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span>Core</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#06b6d4"></span>Categorias</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span>25 Repositórios</span>
+        <span class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Projetos</span>
+      `;
+    }
+  }
+
+  const nodes = graphData.nodes || [];
+  const links = graphData.links || [];
   const centerX = canvas.width / 2;
   const centerY = canvas.height / 2;
 
   nodes.forEach((n, i) => {
     const angle = (i / nodes.length) * Math.PI * 2;
-    const dist = n.type === 'core' ? 0 : n.type === 'category' ? 140 : n.type === 'project' ? 220 : 280;
+    let dist = 220;
+    if (n.type === 'core' || n.type === 'root') dist = 0;
+    else if (n.type === 'project' || n.type === 'category') dist = 140;
+    else if (n.type === 'database') dist = 200;
+    else if (n.type === 'submodule' || n.type === 'module') dist = 260;
+    else dist = 290;
+
     n.x = centerX + Math.cos(angle) * dist + (Math.random() - 0.5) * 40;
     n.y = centerY + Math.sin(angle) * dist + (Math.random() - 0.5) * 40;
     n.vx = 0;
@@ -956,7 +1031,7 @@ async function initKnowledgeGraph() {
     const connectedLinks = allLinks.filter(l => l.source === node || l.target === node);
     const related = connectedLinks.map(l => (l.source === node ? l.target : l.source));
 
-    const typeBadge = node.type.toUpperCase();
+    const typeBadge = (node.type || 'NÓ').toUpperCase();
     const linksHtml = related.map(r => `
       <div class="inspector-link-item" onclick="inspectByName('${r.label}')" style="cursor:pointer;">
         <span class="legend-dot" style="background:${r.color || '#3b82f6'}"></span>
@@ -964,16 +1039,66 @@ async function initKnowledgeGraph() {
       </div>
     `).join('');
 
+    let metaHtml = '';
+    if (node.path) {
+      metaHtml += `
+        <div class="inspector-meta-row" style="margin-top:0.6rem; font-size:0.75rem; background:rgba(15,23,42,0.6); padding:6px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.08); font-family:monospace; color:#38bdf8; word-break:break-all;">
+          📂 <strong>Caminho:</strong> ${node.path}
+        </div>
+      `;
+    }
+    if (node.entry_point) {
+      metaHtml += `
+        <div class="inspector-meta-row" style="margin-top:0.4rem; font-size:0.75rem; color:#94a3b8; font-family:monospace;">
+          ⚡ <strong>Entry Point:</strong> ${node.entry_point}
+        </div>
+      `;
+    }
+    if (node.web_page) {
+      metaHtml += `
+        <div class="inspector-meta-row" style="margin-top:0.4rem; font-size:0.75rem; color:#a78bfa;">
+          🌐 <strong>Página / Interface:</strong> ${node.web_page}
+        </div>
+      `;
+    }
+    if (node.tech && Array.isArray(node.tech) && node.tech.length > 0) {
+      metaHtml += `
+        <div class="inspector-section-label" style="margin-top:0.8rem;">Stack Tecnológica</div>
+        <div style="display:flex; flex-wrap:wrap; gap:4px; margin-top:4px;">
+          ${node.tech.map(t => `<span style="font-size:0.7rem; background:rgba(59,130,246,0.15); color:#60a5fa; border:1px solid rgba(59,130,246,0.3); padding:2px 8px; border-radius:12px;">${t}</span>`).join('')}
+        </div>
+      `;
+    }
+    if (node.protected_files && Array.isArray(node.protected_files) && node.protected_files.length > 0) {
+      metaHtml += `
+        <div class="inspector-section-label" style="margin-top:0.8rem; color:#f87171;">⚠️ Arquivos Intocáveis / Protegidos</div>
+        <div style="font-size:0.72rem; color:#fca5a5; font-family:monospace; background:rgba(239,68,68,0.1); padding:6px 8px; border-radius:6px; border:1px solid rgba(239,68,68,0.2); margin-top:4px;">
+          ${node.protected_files.join('<br>')}
+        </div>
+      `;
+    }
+    if (node.rules) {
+      metaHtml += `
+        <div class="inspector-section-label" style="margin-top:0.8rem;">Regras & Governança</div>
+        <div style="font-size:0.75rem; color:#cbd5e1; background:rgba(255,255,255,0.03); padding:6px 8px; border-radius:6px; margin-top:4px;">
+          ${node.rules}
+        </div>
+      `;
+    }
+
     let extraAction = '';
     if (node.type === 'repository') {
       extraAction = `<button class="repo-guide-btn" style="width:100%; margin-top:1rem; padding:0.6rem;" onclick="openAiGuideModal('${node.label}')">Abrir Manual AI_GUIDE.md</button>`;
     }
 
+    const descText = node.description || node.desc || 'Nó de relacionamento e topologia da máquina.';
+
     detailsCard.innerHTML = `
       <div class="node-inspector-title">${node.label}</div>
       <div class="node-inspector-type" style="color:${node.color || '#38bdf8'}">${typeBadge}</div>
-      <div class="node-inspector-desc">${node.desc || 'Nó de relacionamento do ecossistema Second Brain.'}</div>
-      <div class="inspector-section-label">Conexões Diretas (${related.length})</div>
+      <div class="node-inspector-desc">${descText}</div>
+      ${metaHtml}
+      <div class="inspector-section-label" style="margin-top:0.8rem;">Conexões Diretas (${related.length})</div>
       <div class="inspector-links-list">
         ${linksHtml}
       </div>
@@ -1093,6 +1218,44 @@ async function init() {
         }
       });
 
+      // Timeline mode switcher (Por Dia vs Por Sessão)
+      const dailyBtn = document.getElementById('toggle-timeline-daily');
+      const sessionBtn = document.getElementById('toggle-timeline-session');
+      if (dailyBtn && sessionBtn) {
+        dailyBtn.addEventListener('click', () => {
+          dailyBtn.classList.add('active');
+          sessionBtn.classList.remove('active');
+          currentTimelineMode = 'daily';
+          const chartTitle = document.getElementById('timeline-chart-title');
+          if (chartTitle) chartTitle.textContent = 'Tokens Utilizados por Dia (Real)';
+          if (window.updateTimelineDisplay) window.updateTimelineDisplay('daily');
+        });
+        sessionBtn.addEventListener('click', () => {
+          sessionBtn.classList.add('active');
+          dailyBtn.classList.remove('active');
+          currentTimelineMode = 'session';
+          const chartTitle = document.getElementById('timeline-chart-title');
+          if (chartTitle) chartTitle.textContent = 'Tokens por Sessão (Últimos 30 Pedidos)';
+          if (window.updateTimelineDisplay) window.updateTimelineDisplay('session');
+        });
+      }
+
+      // Graph view switcher (Hub Ferramentas vs Projetos da Máquina)
+      const hubBtn = document.getElementById('graph-view-hub');
+      const projBtn = document.getElementById('graph-view-projects');
+      if (hubBtn && projBtn) {
+        hubBtn.addEventListener('click', () => {
+          hubBtn.classList.add('active');
+          projBtn.classList.remove('active');
+          initKnowledgeGraph('hub');
+        });
+        projBtn.addEventListener('click', () => {
+          projBtn.classList.add('active');
+          hubBtn.classList.remove('active');
+          initKnowledgeGraph('projects');
+        });
+      }
+
       isEventsBound = true;
     }
   } catch (err) {
@@ -1110,61 +1273,198 @@ async function init() {
 document.addEventListener('DOMContentLoaded', init);
 
 
-// Aurelio Chat Integration
-document.addEventListener('DOMContentLoaded', () => {
-    const chatInput = document.getElementById('chat-input');
-    const chatSend = document.getElementById('chat-send');
-    const chatHistory = document.getElementById('chat-history');
-    
-    if(!chatInput || !chatSend) return;
+// ============================================================
+// AURELIO AI CHAT INTEGRATION (OLLAMA & SECOND BRAIN)
+// ============================================================
 
-    function addMessage(text, role) {
-        const div = document.createElement('div');
-        div.className = `chat-message ${role}`;
-        div.innerHTML = `<div class="message-content">${text.replace(/</g, '&lt;')}</div>`;
-        chatHistory.appendChild(div);
-        chatHistory.scrollTop = chatHistory.scrollHeight;
+let currentAurelioMode = 'restrito';
+
+async function checkOllamaStatus() {
+  const dot = document.getElementById('ollama-status-dot');
+  const text = document.getElementById('ollama-status-text');
+  const select = document.getElementById('aurelio-model-select');
+  if (!dot || !text) return;
+
+  try {
+    const res = await fetch('/api/aurelio/status');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (data.online) {
+      dot.className = 'ollama-status-dot online';
+      text.textContent = 'Ollama: Online (' + (data.modelo_atual || 'pronto') + ')';
+      if (select && data.modelo_atual) {
+        select.value = data.modelo_atual;
+      }
+    } else {
+      dot.className = 'ollama-status-dot offline';
+      text.textContent = 'Ollama: Offline (Inicie o serviço)';
     }
+  } catch (err) {
+    dot.className = 'ollama-status-dot offline';
+    text.textContent = 'Ollama: Indisponível (Sem servidor)';
+  }
+}
 
-    async function sendMessage() {
-        const text = chatInput.value.trim();
-        if(!text) return;
-        
-        addMessage(text, 'user');
-        chatInput.value = '';
-        
-        const loader = document.createElement('div');
-        loader.className = 'chat-loading';
-        loader.textContent = 'Aurelio pensando...';
-        chatHistory.appendChild(loader);
-        chatHistory.scrollTop = chatHistory.scrollHeight;
+function initAurelioChat() {
+  const chatInput = document.getElementById('chat-input');
+  const chatSend = document.getElementById('chat-send');
+  const chatHistory = document.getElementById('chat-history');
+  const modelSelect = document.getElementById('aurelio-model-select');
+  const modeBtn = document.getElementById('aurelio-mode-btn');
+  const clearBtn = document.getElementById('aurelio-clear-btn');
 
-        try {
-            const res = await fetch('/api/chat', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({mensagem: text})
-            });
-            const data = await res.json();
-            chatHistory.removeChild(loader);
-            
-            let responseText = data.resposta || 'Erro ao processar resposta.';
-            if (data.sugestao_proativa) {
-                responseText += '\n\n⚡ Sugestão Proativa: ' + data.sugestao_proativa;
-            }
-            
-            addMessage(responseText, 'assistant');
-        } catch(e) {
-            chatHistory.removeChild(loader);
-            addMessage('Erro de conexão com o backend Aurelio: ' + e, 'assistant');
+  if (!chatInput || !chatSend) return;
+
+  // Poll status initially and periodically
+  checkOllamaStatus();
+  setInterval(checkOllamaStatus, 15000);
+
+  // Model switch
+  if (modelSelect) {
+    modelSelect.addEventListener('change', async () => {
+      const chosenModel = modelSelect.value;
+      try {
+        const res = await fetch('/api/aurelio/model', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ modelo: chosenModel })
+        });
+        const data = await res.json();
+        if (data.status === 'ok') {
+          const text = document.getElementById('ollama-status-text');
+          if (text) text.textContent = 'Ollama: Online (' + chosenModel + ')';
         }
-    }
-
-    chatSend.addEventListener('click', sendMessage);
-    chatInput.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            sendMessage();
-        }
+      } catch (e) {
+        console.warn('Não foi possível alterar modelo via API:', e);
+      }
     });
-});
+  }
+
+  // Mode button toggle
+  if (modeBtn) {
+    modeBtn.addEventListener('click', () => {
+      if (currentAurelioMode === 'restrito') {
+        currentAurelioMode = 'expandido';
+        modeBtn.setAttribute('data-mode', 'expandido');
+        modeBtn.textContent = 'Modo: Expandido (Geral)';
+      } else {
+        currentAurelioMode = 'restrito';
+        modeBtn.setAttribute('data-mode', 'restrito');
+        modeBtn.textContent = 'Modo: Restrito (Second Brain)';
+      }
+    });
+  }
+
+  // Clear button
+  if (clearBtn && chatHistory) {
+    clearBtn.addEventListener('click', () => {
+      chatHistory.innerHTML = `
+        <div class="chat-message assistant">
+          <div class="message-content">
+            <strong>[AÇÃO/RESPOSTA DIRETA]</strong><br>
+            Conversa reiniciada. Como posso ajudar com a arquitetura, projetos da máquina ou skills do Second Brain agora?
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // Quick prompts
+  document.querySelectorAll('.quick-prompt-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const msg = btn.getAttribute('data-msg');
+      if (chatInput && msg) {
+        chatInput.value = msg;
+        sendMessage();
+      }
+    });
+  });
+
+  function addMessage(text, role, extraHtml = '') {
+    const div = document.createElement('div');
+    div.className = 'chat-message ' + role;
+    const formattedText = text
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n/g, '<br>');
+    div.innerHTML = '<div class="message-content">' + formattedText + extraHtml + '</div>';
+    chatHistory.appendChild(div);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    chatInput.value = '';
+
+    const loader = document.createElement('div');
+    loader.className = 'chat-loading';
+    loader.textContent = 'Aurélio pensando e consultando o Second Brain...';
+    chatHistory.appendChild(loader);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+
+    try {
+      const chosenModel = modelSelect ? modelSelect.value : 'qwen2.5-coder:7b';
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          mensagem: text,
+          modo: currentAurelioMode,
+          modelo: chosenModel
+        })
+      });
+      const data = await res.json();
+      if (chatHistory.contains(loader)) {
+        chatHistory.removeChild(loader);
+      }
+
+      let responseText = data.resposta || 'Erro ao processar resposta.';
+      let extraHtml = '';
+
+      if (data.sugestao_proativa) {
+        extraHtml += `
+          <div class="proactive-tip" style="margin-top:0.8rem; padding:0.6rem 0.8rem; background:rgba(16,185,129,0.1); border-left:3px solid #10b981; border-radius:4px; font-size:0.82rem; color:#6ee7b7;">
+            ⚡ <strong>Sugestão Proativa de Arquitetura:</strong><br>${data.sugestao_proativa}
+          </div>
+        `;
+      }
+
+      if (data.skills_sugeridas && Array.isArray(data.skills_sugeridas) && data.skills_sugeridas.length > 0) {
+        const chipsHtml = data.skills_sugeridas.map(s => {
+          const recName = s.skill || s.repo || 'Recurso';
+          const recReason = s.motivo || '';
+          return `<span class="skill-rec-chip" style="display:inline-flex; align-items:center; gap:4px; font-size:0.75rem; background:rgba(56,189,248,0.15); border:1px solid rgba(56,189,248,0.3); color:#38bdf8; padding:3px 8px; border-radius:12px; margin:2px;">🎯 <strong>${recName}</strong>: ${recReason}</span>`;
+        }).join('');
+
+        extraHtml += `
+          <div class="skills-recommendation-box" style="margin-top:0.8rem; padding:0.7rem; background:rgba(15,23,42,0.6); border:1px solid rgba(56,189,248,0.25); border-radius:8px;">
+            <div style="font-size:0.78rem; font-weight:600; color:#38bdf8; margin-bottom:0.4rem;">📚 Recomendações Automáticas para esta Demanda:</div>
+            <div style="display:flex; flex-wrap:wrap; gap:4px;">${chipsHtml}</div>
+          </div>
+        `;
+      }
+
+      addMessage(responseText, 'assistant', extraHtml);
+    } catch (e) {
+      if (chatHistory.contains(loader)) {
+        chatHistory.removeChild(loader);
+      }
+      addMessage('Erro de conexão com o backend Aurélio: ' + e.message, 'assistant');
+    }
+  }
+
+  chatSend.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initAurelioChat);
+

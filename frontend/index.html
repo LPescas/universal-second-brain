@@ -94,6 +94,16 @@
 
         <!-- KPI Row -->
         <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-tokens-today">
+            <div class="kpi-icon accent-emerald">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-tokens-today">—</div>
+              <div class="kpi-label">Tokens Utilizados Hoje</div>
+            </div>
+          </div>
+
           <div class="kpi-card" id="kpi-interactions">
             <div class="kpi-icon accent-blue">
               <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -104,33 +114,33 @@
             </div>
           </div>
 
-          <div class="kpi-card" id="kpi-tokens">
-            <div class="kpi-icon accent-amber">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div class="kpi-body">
-              <div class="kpi-value" id="val-tokens">—</div>
-              <div class="kpi-label">Média de Tokens Utilizados</div>
-            </div>
-          </div>
-
-          <div class="kpi-card" id="kpi-files">
-            <div class="kpi-icon accent-cyan">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            </div>
-            <div class="kpi-body">
-              <div class="kpi-value" id="val-files">—</div>
-              <div class="kpi-label">Média de Arq. Analisados</div>
-            </div>
-          </div>
-
           <div class="kpi-card" id="kpi-duration">
             <div class="kpi-icon accent-violet">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <div class="kpi-body">
               <div class="kpi-value" id="val-duration">—</div>
-              <div class="kpi-label">Tempo Médio por Processo</div>
+              <div class="kpi-label">Tempo Médio / Pedido</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpi-tokens">
+            <div class="kpi-icon accent-amber">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-tokens">—</div>
+              <div class="kpi-label">Média Tokens / Sessão</div>
+            </div>
+          </div>
+
+          <div class="kpi-card" id="kpi-census">
+            <div class="kpi-icon accent-cyan">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" id="val-census">—</div>
+              <div class="kpi-label">Censo: 47 Skills & 25 Repos</div>
             </div>
           </div>
 
@@ -149,7 +159,13 @@
         <div class="charts-row">
           <div class="chart-card wide">
             <div class="chart-header">
-              <h3>Tokens Gastos por Sessão (Últimas 30)</h3>
+              <div class="chart-title-wrap">
+                <h3 id="timeline-chart-title">Tokens Utilizados por Dia (Real)</h3>
+                <div class="timeline-mode-toggle">
+                  <button id="toggle-timeline-daily" class="timeline-tab-btn active" data-mode="daily">Por Dia</button>
+                  <button id="toggle-timeline-session" class="timeline-tab-btn" data-mode="session">Por Sessão</button>
+                </div>
+              </div>
               <span class="chart-badge" id="total-spent-badge">—</span>
             </div>
             <div class="chart-area" id="timeline-chart">
@@ -305,16 +321,20 @@
       <!-- SECTION: Grafo de Conhecimento -->
       <section id="section-graphs" class="section">
         <div class="section-description">
-          Grafo Interativo de Conexões: Core do Second Brain, Repositórios, Projetos e Agentes
+          Grafo Interativo de Conexões: Visualize a Topologia do Hub e os Projetos Locais da sua Máquina
         </div>
         <div class="graph-layout">
           <div class="graph-canvas-wrap">
             <canvas id="graph-canvas"></canvas>
             <div class="graph-controls">
+              <div class="graph-view-pill-group">
+                <button id="graph-view-hub" class="cat-pill active">Hub Ferramentas (25)</button>
+                <button id="graph-view-projects" class="cat-pill">Projetos da Máquina</button>
+              </div>
               <button id="graph-reset-btn" class="graph-btn">Centralizar</button>
               <button id="graph-toggle-physics" class="graph-btn">Pausar Física</button>
             </div>
-            <div class="graph-legend">
+            <div class="graph-legend" id="graph-legend-container">
               <span class="legend-item"><span class="legend-dot" style="background:#38bdf8"></span>Core</span>
               <span class="legend-item"><span class="legend-dot" style="background:#06b6d4"></span>Categorias</span>
               <span class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span>25 Repositórios</span>
@@ -342,24 +362,63 @@
         </div>
       </div>
 
-
-    
       <!-- SECTION: Aurelio Chat -->
       <section id="section-aurelio" class="section" style="display: none; height: 100%; flex-direction: column;">
         <div class="chat-container">
-           <div class="chat-history" id="chat-history">
-              <div class="chat-message assistant">
-                <div class="message-content">
-                  Olá! Eu sou Aurelio, seu assistente inteligente Second Brain. Como posso ajudar?
+          <!-- Aurelio Header & Model Switcher -->
+          <div class="aurelio-chat-header">
+            <div class="aurelio-status-info">
+              <div class="aurelio-avatar">🤖</div>
+              <div>
+                <div class="aurelio-title">Aurélio AI — Jarvis Desktop</div>
+                <div class="ollama-status-badge">
+                  <span class="ollama-status-dot online" id="ollama-status-dot"></span>
+                  <span id="ollama-status-text">Ollama: Verificando...</span>
                 </div>
               </div>
-           </div>
-           <div class="chat-input-area">
-              <textarea id="chat-input" placeholder="Pergunte ao Aurelio..."></textarea>
-              <button id="chat-send">
-                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-              </button>
-           </div>
+            </div>
+
+            <div class="aurelio-controls">
+              <select id="aurelio-model-select" class="aurelio-select" title="Selecione o modelo Ollama">
+                <option value="qwen2.5-coder:7b" selected>qwen2.5-coder:7b [4.7GB] (Recomendado)</option>
+                <option value="qwen2.5:3b">qwen2.5:3b [2.2GB] (Ultra-Leve)</option>
+                <option value="hermes3:8b">hermes3:8b [5.0GB] (Agentes & Skills)</option>
+                <option value="mistral">mistral [4.5GB]</option>
+              </select>
+              <button id="aurelio-mode-btn" class="chat-mode-badge" data-mode="restrito" title="Alternar entre modo restrito ao Second Brain ou expandido">Modo: Restrito (Second Brain)</button>
+              <button id="aurelio-clear-btn" class="chat-action-btn" title="Limpar conversa">Limpar</button>
+            </div>
+          </div>
+
+          <!-- Quick Prompts Chips -->
+          <div class="quick-prompts-row" id="quick-prompts-row">
+            <button class="quick-prompt-btn" data-msg="Qual a arquitetura completa do RPA e quais são seus arquivos protegidos?">🏛️ Arquitetura RPA</button>
+            <button class="quick-prompt-btn" data-msg="Qual a melhor skill ou ferramenta do Second Brain para criar uma interface moderna e bonita?">🎨 Skill para UI/UX</button>
+            <button class="quick-prompt-btn" data-msg="Como fazer engenharia reversa de um executável ou DLL no ecossistema?">🔍 Engenharia Reversa</button>
+            <button class="quick-prompt-btn" data-msg="Quais projetos estão mapeados localmente na minha máquina e o que cada um faz?">🗺️ Projetos da Máquina</button>
+          </div>
+
+          <!-- Chat History -->
+          <div class="chat-history" id="chat-history">
+            <div class="chat-message assistant">
+              <div class="message-content">
+                <strong>[AÇÃO/RESPOSTA DIRETA]</strong><br>
+                Olá. Eu sou o Aurélio, seu assistente de inteligência e arquitetura conectado ao Second Brain e ao Ollama local.<br><br>
+                <strong>[CONTEXTO]</strong><br>
+                Estou pronto para orientar decisões de código, melhorias arquiteturais e recomendar as melhores skills de engenharia para cada tarefa da sua máquina.<br><br>
+                <strong>[SUGESTÃO]</strong><br>
+                Você pode me fazer uma pergunta técnica, clicar em uma das sugestões rápidas acima ou pedir uma recomendação de skill.
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="chat-input-area">
+            <textarea id="chat-input" placeholder="Pergunte ao Aurélio sobre arquitetura, melhorias ou recomendação de skills (Pressione Enter para enviar)..." rows="1"></textarea>
+            <button id="chat-send" title="Enviar mensagem">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
         </div>
       </section>
 </main>
