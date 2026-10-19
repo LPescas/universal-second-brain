@@ -18,12 +18,25 @@ backend/aurelio/logs/*.log
 *.db
 *.db-shm
 *.db-wal
+backend/aurelio/data/*.db
 scripts/scanner_state.json
 scripts/watcher_state.json
 scripts/detect_report.json
 scripts/health_report.json
 scripts/dedup_report.json
 scripts/recovery_log.json
+
+# Environment variables, credentials & secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+credentials.json
+secrets.json
+node_modules/
 
 # AG Kit internal caches & backups
 .agents/.ag-kit/

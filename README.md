@@ -119,25 +119,39 @@ The Second Brain includes 25 specialized open-source tools organized into 8 func
 
 ---
 
-## 🖥️ The Real-Time Frontend & Knowledge Graph
+## 🖥️ The Real-Time Frontend, Knowledge Graph & Aurélio AI Desktop
 
 The Second Brain features a local dashboard built with modern HTML5, Vanilla CSS, and Canvas:
 
-### 1. Interactive Knowledge Graph Visualizer (`/frontend/index.html#graphs`)
-- **Physics Simulation (60 FPS):** Visualizes the living relationships between the **Second Brain Core**, **8 Taxonomy Categories**, **25 Toolkits**, and **Active Projects** (RPA, WRPE, Aurelio).
-- **Interactive Node Inspector:** Click or hover any node on the canvas to see its description, direct connection links, category tags, and trigger words.
-- **Direct Manual Launcher:** Click directly from any repository node in the graph to open its full `AI_GUIDE.md`.
-- **Physics Control:** Pause gravity or re-center the canvas at any time.
+### 1. Interactive Dual Knowledge Graph Visualizer (`/frontend/index.html#graphs`)
+- **Physics Simulation (60 FPS):** Visualizes the living relationships between components with smooth physics, drag-and-drop, and camera reset.
+- **Dual Perspective Switcher:**
+  - **Hub Ferramentas (25):** Explores the 25 specialized open-source tools across 8 taxonomy categories. Click directly on any node to open its full `AI_GUIDE.md` semantic contract.
+  - **Projetos da Máquina (Machine Projects):** Maps the user's actual local projects (`RPA`, `WRPE_Recorder`, `SecondBrain_Aurelio`, `AutomationTest_122844`, `.second_brain`).
+- **Deep Inspector Card:** Displays project directories (`path`), entry points (`entry_point`), web routes/pages (`web_page`), tech stack tags, untouchable protected files, and architectural governance rules.
 
-### 2. Hub Repositories Explorer (`/frontend/index.html#repos`)
+### 2. Aurélio AI Desktop Assistant (Ollama Local) (`/frontend/index.html#aurelio`)
+- **Local Desktop AI:** Directly connects to your local Ollama daemon (`http://localhost:11434`) without sending private data or tokens to third parties.
+- **Low-RAM Model Selector:** One-click model switching with RAM footprints displayed:
+  - `qwen2.5-coder:7b` [4.7 GB] (Recommended for system architecture & coding)
+  - `qwen2.5:3b` [2.2 GB] (Ultra-lightweight for memory-constrained machines)
+  - `hermes3:8b` [5.0 GB] (Specialized in agentic workflows and skills)
+  - `mistral` [4.5 GB]
+- **Dual Mode Toggle:** Switch between `Modo: Restrito (Second Brain)` (focused exclusively on workspace rules and code) and `Modo: Expandido (Geral)`.
+- **Proactive Recommendations:** Evaluates user prompts in real time and renders badges with the best skills and toolkits to solve the demand.
+- **Quick Prompt Chips:** 1-click prompts for RPA architecture, UI/UX skills, reverse engineering, and machine projects.
+
+### 3. Real Daily Telemetry & Observability (`/frontend/index.html#dashboard`)
+- **Real Calendar-Day Timeline:** Aggregates real tokens consumed per calendar day without fabricated data.
+- **Timeline Switcher:** Toggle between `Por Dia` (Daily aggregated consumption) and `Por Sessão` (last 30 user requests).
+- **Dynamic System Census:** Live counts of 47 skills, 20 agents, 13 workflows, 25 hub tools, and 5 local projects.
+- **Comparative Metrics:** Measures tokens per session, files analyzed, execution duration, and efficiency (tokens/min).
+
+### 4. Hub Repositories Explorer (`/frontend/index.html#repos`)
 - **Live Filtering:** Instant filtering by category pills (Media, Reverse Eng, UI/UX, Orchestration, Gateways, Memory, Parsers, Security).
 - **Real-Time Search:** Search tools by name, functionality, or trigger intent.
 - **Contract Modal:** One-click modal view of each tool's `AI_GUIDE.md` instructions, CLI commands, and Python code snippets.
 - **Cold Snapshot Indicator:** Green badge for `OK` and amber badge for `COLD SNAPSHOT` protection status.
-
-### 3. Telemetry & Observability
-- Tracks **Total Interactions**, **Tokens Spent vs. Saved**, **Execution Duration**, and **Files Read vs. Avoided**.
-- 30-Day trend graphs and historical session auditor.
 
 ---
 
@@ -272,6 +286,6 @@ Distributed under the **MIT License**. See `LICENSE` for more information.
 
 ## 👤 Author & Maintainer
 
-- **Developer:** USER
+- **Developer & Maintainer:** [@LPescas](https://github.com/LPescas)
 - **Architecture & System Design:** Universal Second Brain Core v2.0
-- **Supported Agents:** Google Antigravity, Claude Code, Gemini CLI, Ollama, OpenAI, VS Code & Cursor IDE
+- **Supported AI Environments:** Google Antigravity, Claude Code, Gemini CLI, Ollama, OpenAI, VS Code & Cursor IDE
